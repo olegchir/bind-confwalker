@@ -117,4 +117,76 @@ public class ElementsTest extends ParserTestTemplate {
 
         failStage1Silent("acl_name must be word of alphanumeric chars");
     }
+
+    @Test
+    public void test_validIpPortType1() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip_port 80; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validIpPortType2() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip_port *; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_invalidIpPort() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip_port asd; } ";
+
+        failStage1Silent("ip_port must be number");
+    }
+
+    @Test
+    public void test_validIpPrefixType1() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip_prefix 127/24; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validIpPrefixType2() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip_prefix 192.168/24; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validIpPrefixType3() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip_prefix 192.168.1/24; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validIpPrefixType4() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip_prefix 192.168.1.0/24; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_invalidIpPrefix() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip_prefix 192/asd; } ";
+
+        failStage1Silent("ip_prefix must be in 'ip/length' format, and trailing zeros in ip can be omitted.");
+    }
 }
