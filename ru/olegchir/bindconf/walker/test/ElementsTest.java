@@ -95,7 +95,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_validACLNameType1() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { acl_field asd; } ";
+        cmd = "testing { acl_name asd; } ";
 
         successStage1();
     }
@@ -104,7 +104,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_validACLNameType2() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { acl_field 1; } ";
+        cmd = "testing { acl_name 1; } ";
 
         successStage1();
     }
@@ -113,7 +113,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_invalidACLName() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { acl_field @; } ";
+        cmd = "testing { acl_name @; } ";
 
         failStage1Silent("acl_name must be word of alphanumeric chars");
     }
@@ -224,5 +224,23 @@ public class ElementsTest extends ParserTestTemplate {
         cmd = "testing { key_list \"yandex.ru ; hahaha;\"; } ";
 
         failStage1Silent("only domain_names allowed in key_list");
+    }
+
+    @Test
+    public void test_validNumber() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { number 3; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_invalidNumber() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { number asd; } ";
+
+        failStage1Silent("must be positive integer");
     }
 }

@@ -252,12 +252,13 @@ testing_param
 	|	testing_element_ip_prefix
 	|	testing_element_key_id
 	|	testing_element_key_list
+	|	testing_element_number
 	;
 testing_element_acl
-	:	'acl_field' el_acl_name ';' -> ^(PLIST_PARAM 'acl_field' el_acl_name)
+	:	'acl_name' el_acl_name ';' -> ^(PLIST_PARAM 'acl_name' el_acl_name)
 	;
 testing_element_domain_name
-	:	'acl_domain_name' el_domain_name ';' -> ^(PLIST_PARAM 'acl_field' el_domain_name)
+	:	'domain_name' el_domain_name ';' -> ^(PLIST_PARAM 'domain_name' el_domain_name)
 	;
 testing_element_ip4
 	:	'ip4' el_ip4_addr ';' -> ^(PLIST_PARAM 'ip4' el_ip4_addr)
@@ -279,19 +280,23 @@ testing_element_key_id
 	;
 testing_element_key_list
 	:	'key_list' '"' el_key_list '"' ';' -> ^(PLIST_PARAM 'key_list' el_key_list)
+	;
+testing_element_number
+	:	'number' el_number ';' -> ^(PLIST_PARAM 'number' el_number)
 	;		
 //Semantic support for Configfile elements
 el_acl_name: ALPHANUM_WORD | NUMBER;
 el_domain_name
 	: (ALPHANUM_WORD'.')+ALPHANUM_WORD
 	;	
-el_ip_addr : el_ip4_addr | el_ip6_addr;
-el_ip4_addr:	IP4_ADDR;
-el_ip6_addr:	IP6_ADDR | ALPHANUM_WORD; //It's very rough hack: I don't know if we able to create ID-like IP6 addr ("asd") 
+el_ip_addr 	: 	el_ip4_addr | el_ip6_addr;
+el_ip4_addr	:	IP4_ADDR;
+el_ip6_addr	:	IP6_ADDR | ALPHANUM_WORD; //It's very rough hack: I don't know if we able to create ID-like IP6 addr ("asd") 
 el_ip_port	:	NUMBER|'*';
 el_ip_prefix	: 	(NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR)'/'NUMBER;
 el_key_id	: 	el_domain_name;
-el_key_list	:	el_key_id (';' el_key_id)* ';';	
+el_key_list	:	el_key_id (';' el_key_id)* ';';
+el_number	:	NUMBER;	
 
 //Comments
 COMMENT	:	(C_COMMENT | CPP_COMMENT | PERL_COMMENT){ $channel=HIDDEN; }
