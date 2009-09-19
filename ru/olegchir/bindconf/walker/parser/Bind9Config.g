@@ -152,9 +152,11 @@ zone
 	: 'zone' zone_name zone_class? zone_forward_block  -> ^(ST_ZONE_FORWARD zone_name zone_class? zone_forward_block)	
 	| 'zone' zone_name zone_class? zone_delegation_block  -> ^(ST_ZONE_DELEGATION zone_name zone_class?)
 	;
-zone_name 
+
+zone_name
 	:	ID
 	;
+
 zone_class
 	:	'IN'|'HS'|'CHAOS'
 	;
@@ -200,11 +202,20 @@ zone_type_delegation
 	;
 	
 //System types	
-fragment TYPE_YES_OR_NO
+TYPE_YES_OR_NO
 	:	'yes'|'no'|'true'|'false'|'0'|'1'
 	;
-
+IP4_ADDR:	FOUR_SYMBOL_NUMBER'.'FOUR_SYMBOL_NUMBER'.'FOUR_SYMBOL_NUMBER'.'FOUR_SYMBOL_NUMBER
+	;
 //Sprcial types
+fragment FOUR_SYMBOL_NUMBER 
+	:	NUMBER
+	|	NUMBER NUMBER
+	|	NUMBER NUMBER NUMBER
+	|	NUMBER NUMBER NUMBER NUMBER
+	;
+
+fragment NUMBER	: '0'..'9';
 
 ID      : 	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')* ;
 

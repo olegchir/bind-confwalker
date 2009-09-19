@@ -40,12 +40,24 @@ public class ParserTest {
     public void test_invalidGrammar() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
+        cmd = "asdf";
+
+        testSilent();
+
+        failStage1("Completely invalid syntax cannot be passed");
+    }
+
+
+    @Test
+    public void test_invalidGrammarInZoneDef() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
         cmd = "zone 1test IN {type delegation-only; }";
 
         testSilent();
 
-        assertTrue("Must detect invalid grammar",
-                lexer.getOverrider().getLexicalErrorCount() != 0);
+        assertTrue("Must can't find so strange zone def",
+                parser.getOverrider().getSemanticErrorCount() != 0);
     }
 
 
@@ -158,9 +170,13 @@ public class ParserTest {
     }
 
     public void testValid() {
-        assertTrue("Grammar must be valid on (Parser/stage1)",
+        assertTrue("Must be semantic-valid on (Parser/stage1)",
                 parser.getOverrider().getSemanticErrorCount() == 0);
-        assertTrue("Grammar must be valid on (Lexer/stage1)",
+        assertTrue("Must be lexical-valid on (Parser/stage1)",
+                parser.getOverrider().getLexicalErrorCount() == 0);
+        assertTrue("Must be semantic-valid on (Lexer/stage1)",
+                parser.getOverrider().getSemanticErrorCount() == 0);
+        assertTrue("Must be lexical-valid on (Lexer/stage1)",
                 parser.getOverrider().getLexicalErrorCount() == 0);
     }
 
@@ -182,5 +198,12 @@ public class ParserTest {
 
     public void testVerbose() throws Exception {
         overrideAndParse();
+    }
+
+    public void failStage1(String reason) {
+        assertTrue(reason,(parser.getOverrider().getSemanticErrorCount() > 0) ||
+                (parser.getOverrider().getLexicalErrorCount() > 0) ||
+                (parser.getOverrider().getSemanticErrorCount() > 0) ||
+                (parser.getOverrider().getLexicalErrorCount() > 0));
     }
 }
