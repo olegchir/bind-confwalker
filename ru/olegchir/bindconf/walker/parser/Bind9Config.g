@@ -154,7 +154,7 @@ zone
 	;
 
 zone_name
-	:	ID
+	:	ALPHANUM_WORD
 	;
 
 zone_class
@@ -178,9 +178,8 @@ zone_testparam_def
 	:	'testparam' zone_testparam_alts ';'
 	;
 zone_testparam_alts
-	: IP4_ADDR
-	| IP6_ADDR | ID //It's very rough hack: I don't know if we able to create ID-like IP6 addr ("asd") 
-	;	
+	:	domain_name	
+	;
 zone_forward_switch_def
 	:	'forward' zone_forward_switch ';' -> ^(PLIST_PARAM 'forward' zone_forward_switch)
 	;
@@ -209,7 +208,17 @@ zone_type_delegation
 	:	'type' 'delegation-only' ';' -> 'delegation-only'
 	;
 	
-//System types	
+//Semantic support for Configfile elements
+acl_name: ALPHANUM_WORD;
+domain_name
+	: (ALPHANUM_WORD'.')+ALPHANUM_WORD
+	;
+	
+ip_addr : IP4_ADDR
+	| IP6_ADDR | ALPHANUM_WORD //It's very rough hack: I don't know if we able to create ID-like IP6 addr ("asd") 
+	;	
+		
+//Pure lexical part
 TYPE_YES_OR_NO
 	:	'yes'|'no'|'true'|'false'|'0'|'1'
 	;
@@ -226,7 +235,7 @@ fragment FOUR_SYMBOL_NUMBER
 
 fragment NUMBER	: '0'..'9';
 
-ID 	:	('a'..'z'|'A'..'Z'|'_'|'0'..'9')* ;
+ALPHANUM_WORD 	:	('a'..'z'|'A'..'Z'|'_'|'0'..'9')* ;
 
 fragment ANY_ASCII_ALPHANUM
 	:	('\u0020'..'\u007F')

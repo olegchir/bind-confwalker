@@ -104,7 +104,7 @@ public class ParserTest {
     public void test_validForwardZone() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "zone validForwardZone {type forward; forward first; testparam asdf;}";
+        cmd = "zone validForwardZone {type forward; forward first; testparam yandex.ru;}";
 
         testNormal();
     }
