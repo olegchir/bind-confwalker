@@ -49,6 +49,7 @@ public class ParserTest {
     }
 
 
+    @Test
     public void test_CStyleCommentGrammar() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
@@ -57,7 +58,7 @@ public class ParserTest {
         testNormal();
     }
 
-
+    @Test
     public void test_CPPStyleCommentGrammar() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
@@ -66,7 +67,7 @@ public class ParserTest {
         testNormal();
     }
 
-
+    @Test
     public void test_PerlStyleCommentGrammar() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
