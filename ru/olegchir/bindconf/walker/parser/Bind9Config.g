@@ -253,6 +253,7 @@ testing_param
 	|	testing_element_key_id
 	|	testing_element_key_list
 	|	testing_element_number
+	|	testing_element_path_name
 	;
 testing_element_acl
 	:	'acl_name' el_acl_name ';' -> ^(PLIST_PARAM 'acl_name' el_acl_name)
@@ -283,6 +284,9 @@ testing_element_key_list
 	;
 testing_element_number
 	:	'number' el_number ';' -> ^(PLIST_PARAM 'number' el_number)
+	;
+testing_element_path_name
+	:	'path_name' el_path_name ';' -> ^(PLIST_PARAM 'path_name' el_path_name)
 	;		
 //Semantic support for Configfile elements
 el_acl_name: ALPHANUM_WORD | NUMBER;
@@ -297,6 +301,7 @@ el_ip_prefix	: 	(NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR)'/'NUMBER;
 el_key_id	: 	el_domain_name;
 el_key_list	:	el_key_id (';' el_key_id)* ';';
 el_number	:	NUMBER;	
+el_path_name	:	'"' (~('\r'|'\n'|'"'))* '"';
 
 //Comments
 COMMENT	:	(C_COMMENT | CPP_COMMENT | PERL_COMMENT){ $channel=HIDDEN; }

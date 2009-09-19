@@ -243,4 +243,22 @@ public class ElementsTest extends ParserTestTemplate {
 
         failStage1Silent("must be positive integer");
     }
+
+    @Test
+    public void test_validPathName() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { path_name \"C:/a.txt\"; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_invalidPathName() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { path_name asd; } ";
+
+        failStage1Silent("path must be in quotes");
+    }
 }
