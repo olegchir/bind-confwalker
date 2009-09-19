@@ -52,7 +52,7 @@ public class ParserTest {
     public void test_invalidGrammarInZoneDef() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "zone 1test IN {type delegation-only; }";
+        cmd = "zone 1test- IN {type delegation-only; }";
 
         testSilent();
 
@@ -104,7 +104,7 @@ public class ParserTest {
     public void test_validForwardZone() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "zone validForwardZone {type forward; forward first;}";
+        cmd = "zone validForwardZone {type forward; forward first; testparam asdf;}";
 
         testNormal();
     }

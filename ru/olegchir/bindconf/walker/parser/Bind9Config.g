@@ -167,12 +167,20 @@ zone_forward_block
 	;
 zone_forward_param
 	:	zone_forward_switch_def
+	|	zone_testparam_def
 	;
 zone_delegation_block
 	:	'{' zone_type_delegation '}'
 	;
 
 //Parameter definitions
+zone_testparam_def
+	:	'testparam' zone_testparam_alts ';'
+	;
+zone_testparam_alts
+	: IP4_ADDR
+	| IP6_ADDR | ID //It's very rough hack: I don't know if we able to create ID-like IP6 addr ("asd") 
+	;	
 zone_forward_switch_def
 	:	'forward' zone_forward_switch ';' -> ^(PLIST_PARAM 'forward' zone_forward_switch)
 	;
@@ -205,6 +213,7 @@ zone_type_delegation
 TYPE_YES_OR_NO
 	:	'yes'|'no'|'true'|'false'|'0'|'1'
 	;
+	
 IP4_ADDR:	FOUR_SYMBOL_NUMBER'.'FOUR_SYMBOL_NUMBER'.'FOUR_SYMBOL_NUMBER'.'FOUR_SYMBOL_NUMBER
 	;
 //Sprcial types
@@ -217,12 +226,19 @@ fragment FOUR_SYMBOL_NUMBER
 
 fragment NUMBER	: '0'..'9';
 
-ID      : 	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')* ;
+ID 	:	('a'..'z'|'A'..'Z'|'_'|'0'..'9')* ;
 
 fragment ANY_ASCII_ALPHANUM
 	:	('\u0020'..'\u007F')
 	;
-
+	
+IP6_ADDR:	(IP6_VALID_CHAR)+
+	;
+	
+fragment IP6_VALID_CHAR
+	: (('a'..'z')|('A'..'Z')|':'|'%'|('0'..'9'))+
+	;
+	
 //Whitespace forms		
 WS	: (' '|'\t'|'\f')+
 		{ $channel=HIDDEN; }
