@@ -35,6 +35,11 @@ public class ParserTestTemplate {
     protected String currentTestName;
     protected String cmd;
 
+    /**
+     * Create all parsers and run process
+     * @throws IOException
+     * @throws RecognitionException
+     */
     private void parse() throws IOException, RecognitionException {
         cmdIs = new ByteArrayInputStream(cmd.getBytes());
 
@@ -60,20 +65,35 @@ public class ParserTestTemplate {
         }
     }
 
+    /**
+     * Create all overriders.
+     */
     private void override() {
         poverrider = new Bind9ParserOverrider();
         loverrider = new Bind9LexerOverrider();
     }
 
+    /**
+     * Sets the silent debug mode flags in overriders.
+     */
     private void silent() {
         loverrider.setErrorReportingVisibility(Bind9RecognizerOverrider.ERROR_REPORTING_SILENT);
         poverrider.setErrorReportingVisibility(Bind9RecognizerOverrider.ERROR_REPORTING_SILENT);
     }
 
+    /**
+     * Shortcut to setter of test name. For better semantic purposes.
+     * @param name
+     */
     private void testname(String name) {
         currentTestName = name;
     }
 
+    /**
+     * Evaluate current test name by immediate stacktrace.
+     * Must be first statement in any test.
+     * @param e
+     */
     public void trace(StackTraceElement e[]) {
       boolean doNext = false;
       for (StackTraceElement s : e) {
@@ -85,6 +105,10 @@ public class ParserTestTemplate {
       }
     }
 
+    /**
+     * Check for errors in overriders (just check, without parsing).
+     * There's no "reason" param because we don't judge winners.
+     */
     public void testValid() {
         assertTrue("Must be semantic-valid on (Parser/stage1)",
                 parser.getOverrider().getSemanticErrorCount() == 0);
@@ -96,22 +120,41 @@ public class ParserTestTemplate {
                 lexer.getOverrider().getLexicalErrorCount() == 0);
     }
 
+    /**
+     * Shortcut to run default parsing (Stage1)
+     * @throws Exception
+     */
     public void overrideAndParse() throws Exception {
         override();
         parse();
     }
 
+    /**
+     * Parse (Stage1) and test errors in overriders.
+     * Useful for tests with expected success.
+     * @throws Exception
+     */
     public void testNormal() throws Exception {
         overrideAndParse();
         testValid();
     }
 
+    /**
+     * Parse (Stage1) with disabled visible debug in overriders.
+     * Useful for test with expected failure.
+     * @throws Exception
+     */
     public void testSilent() throws Exception {
             override();
             silent();
             parse();
     }
 
+    /**
+     * Parse with testSilent() surpressing all errors.
+     * Useful for test with expected failure.
+     * @return
+     */
     public boolean testSilentWithoutErrors() {
         boolean failed = false;
         try {
@@ -122,10 +165,20 @@ public class ParserTestTemplate {
         return failed;
     }
 
+    /**
+     * Parse with Stage1 without warning surpressing.
+     * Useful for test with expected failure.
+     * @throws Exception
+     */
     public void testVerbose() throws Exception {
         overrideAndParse();
     }
 
+    /**
+     * Check that Stage1 failed (just check, without parsing).
+     * Useful for test with expected failure.
+     * @param reason
+     */
     public void failStage1(String reason) {
         assertTrue(reason,(parser.getOverrider().getSemanticErrorCount() > 0) ||
                 (parser.getOverrider().getLexicalErrorCount() > 0) ||
@@ -133,6 +186,11 @@ public class ParserTestTemplate {
                 (parser.getOverrider().getLexicalErrorCount() > 0));
     }
 
+    /**
+     * Silently run parsing (Stage-1) and surpress all visible errors.
+     * Useful for test with expected failure.
+     * @param reason
+     */
     public void failStage1Silent(String reason) {
         boolean failed = false;
 
