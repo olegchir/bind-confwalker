@@ -189,4 +189,40 @@ public class ElementsTest extends ParserTestTemplate {
 
         failStage1Silent("ip_prefix must be in 'ip/length' format, and trailing zeros in ip can be omitted.");
     }
+
+    @Test
+    public void test_validKeyListType1() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { key_list \"yandex.ru;\"; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validKeyListype2() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { key_list \"yandex.ru ; google.com;\"; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_invalidKeyListType1() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { key_list \"yandex.ru ; google.com\"; } ";
+
+        failStage1Silent("key_list must end with semicolon");
+    }
+
+    @Test
+    public void test_invalidKeyListType2() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { key_list \"yandex.ru ; hahaha;\"; } ";
+
+        failStage1Silent("only domain_names allowed in key_list");
+    }
 }
