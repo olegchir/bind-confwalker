@@ -188,7 +188,7 @@ zone
 	;
 
 zone_name
-	:	ALPHANUM_WORD
+	:	ALPHANUM_WORD | NUMBER
 	;
 
 zone_class
@@ -269,7 +269,7 @@ testing_element_ip_port
 	:	'ip_port' el_ip_port ';' -> ^(PLIST_PARAM 'ip_port' el_ip_port)
 	;	
 //Semantic support for Configfile elements
-el_acl_name: ALPHANUM_WORD;
+el_acl_name: ALPHANUM_WORD | NUMBER;
 el_domain_name
 	: (ALPHANUM_WORD'.')+ALPHANUM_WORD
 	;	
@@ -299,7 +299,7 @@ fragment NL
   	| '\r'
   	;		
 //Pure lexical part
-TYPE_YES_OR_NO
+fragment TYPE_YES_OR_NO
 	:	'yes'|'no'|'true'|'false'|'0'|'1'
 	;
 	

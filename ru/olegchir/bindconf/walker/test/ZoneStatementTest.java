@@ -67,5 +67,13 @@ public class ZoneStatementTest extends ParserTestTemplate {
         testNormal();
     }
 
+    @Test
+    public void test_validNumericZoneName() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "zone 1 {type delegation-only; }";
+
+        testNormal();
+    }
 
 }

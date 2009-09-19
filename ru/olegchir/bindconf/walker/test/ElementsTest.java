@@ -92,13 +92,23 @@ public class ElementsTest extends ParserTestTemplate {
     }
 
     @Test
-    public void test_validACLName() throws Exception {
+    public void test_validACLNameType1() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
         cmd = "testing { acl_field asd; } ";
 
         successStage1();
     }
+
+    @Test
+    public void test_validACLNameType2() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { acl_field 1; } ";
+
+        successStage1();
+    }
+    
     @Test
     public void test_invalidACLName() throws Exception {
         trace(Thread.currentThread().getStackTrace());
