@@ -207,9 +207,7 @@ zone_delegation_block
 	;
 
 //Parameter definitions
-zone_testparam_alts
-	:	domain_name	
-	;
+
 zone_forward_switch_def
 	:	'forward' zone_forward_switch ';' -> ^(PLIST_PARAM 'forward' zone_forward_switch)
 	;
@@ -245,21 +243,40 @@ testing_block
 	:	pl = '{' (testing_param*)'}' -> ^(ST_TESTING_PLIST[$pl,"ST_TESTING_PLIST"] testing_param*)
 	;
 testing_param
-	:	testing_element_ip4
+	:	testing_element_domain_name
+	|	testing_element_acl
+	|	testing_element_ip4
+	|	testing_element_ip6
+	|	testing_element_ip
+	|	testing_element_ip_port
+	;
+testing_element_acl
+	:	'acl_field' el_acl_name ';' -> ^(PLIST_PARAM 'acl_field' el_acl_name)
+	;
+testing_element_domain_name
+	:	'acl_domain_name' el_domain_name ';' -> ^(PLIST_PARAM 'acl_field' el_domain_name)
 	;
 testing_element_ip4
-	:	'ip4' ip4_addr ';' -> ^(PLIST_PARAM 'ip4' ip4_addr)
+	:	'ip4' el_ip4_addr ';' -> ^(PLIST_PARAM 'ip4' el_ip4_addr)
 	;
-	
+testing_element_ip6
+	:	'ip6' el_ip6_addr ';' -> ^(PLIST_PARAM 'ip6' el_ip6_addr)
+	;
+testing_element_ip
+	:	'ip' el_ip_addr ';' -> ^(PLIST_PARAM 'ip' el_ip_addr)
+	;
+testing_element_ip_port
+	:	'ip_port' el_ip_port ';' -> ^(PLIST_PARAM 'ip_port' el_ip_port)
+	;	
 //Semantic support for Configfile elements
-acl_name: ALPHANUM_WORD;
-domain_name
+el_acl_name: ALPHANUM_WORD;
+el_domain_name
 	: (ALPHANUM_WORD'.')+ALPHANUM_WORD
 	;	
-ip_addr : ip4_addr | ip6_addr;
-ip4_addr:	IP4_ADDR;
-ip6_addr:	IP6_ADDR | ALPHANUM_WORD; //It's very rough hack: I don't know if we able to create ID-like IP6 addr ("asd") 
-ip_port	:	NUMBER;	
+el_ip_addr : el_ip4_addr | el_ip6_addr;
+el_ip4_addr:	IP4_ADDR;
+el_ip6_addr:	IP6_ADDR | ALPHANUM_WORD; //It's very rough hack: I don't know if we able to create ID-like IP6 addr ("asd") 
+el_ip_port	:	NUMBER;	
 
 //Comments
 COMMENT	:	(C_COMMENT | CPP_COMMENT | PERL_COMMENT){ $channel=HIDDEN; }
@@ -286,14 +303,13 @@ TYPE_YES_OR_NO
 	:	'yes'|'no'|'true'|'false'|'0'|'1'
 	;
 	
-IP4_ADDR:	FOUR_DIGIT_NUMBER'.'FOUR_DIGIT_NUMBER'.'FOUR_DIGIT_NUMBER'.'FOUR_DIGIT_NUMBER
+IP4_ADDR:	THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER
 	;
 //Sprcial types
-fragment FOUR_DIGIT_NUMBER 
+fragment THREE_DIGIT_NUMBER 
 	:	DIGIT
 	|	DIGIT DIGIT
 	|	DIGIT DIGIT DIGIT
-	|	DIGIT DIGIT DIGIT DIGIT
 	;
 	
 NUMBER	:	DIGIT+;

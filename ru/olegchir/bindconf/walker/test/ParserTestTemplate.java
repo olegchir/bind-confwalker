@@ -109,7 +109,7 @@ public class ParserTestTemplate {
      * Check for errors in overriders (just check, without parsing).
      * There's no "reason" param because we don't judge winners.
      */
-    public void testValid() {
+    public void testValidCheck() {
         assertTrue("Must be semantic-valid on (Parser/stage1)",
                 parser.getOverrider().getSemanticErrorCount() == 0);
         assertTrue("Must be lexical-valid on (Parser/stage1)",
@@ -136,7 +136,7 @@ public class ParserTestTemplate {
      */
     public void testNormal() throws Exception {
         overrideAndParse();
-        testValid();
+        testValidCheck();
     }
 
     /**
@@ -179,11 +179,11 @@ public class ParserTestTemplate {
      * Useful for test with expected failure.
      * @param reason
      */
-    public void failStage1(String reason) {
+    public void failStage1Check(String reason) {
         assertTrue(reason,(parser.getOverrider().getSemanticErrorCount() > 0) ||
                 (parser.getOverrider().getLexicalErrorCount() > 0) ||
-                (parser.getOverrider().getSemanticErrorCount() > 0) ||
-                (parser.getOverrider().getLexicalErrorCount() > 0));
+                (lexer.getOverrider().getSemanticErrorCount() > 0) ||
+                (lexer.getOverrider().getLexicalErrorCount() > 0));
     }
 
     /**
@@ -206,5 +206,25 @@ public class ParserTestTemplate {
                 failedLexerSemantic ||
                 failedLexerLexical ||
                 failed);       
+    }
+
+    /**
+     * Silently run parsing (Stage-1)
+     * Useful for test with expected failure.
+     * @param reason
+     */
+    public void failStage1(String reason) throws Exception {
+        testSilent();
+        failStage1Check(reason);
+    }
+
+    /**
+     * Run verbose testing and check errors on Stage1.
+     * Useful for test with expected success.
+     * @throws Exception
+     */
+    public void successStage1() throws Exception {
+        testNormal();
+        testValidCheck();
     }
 }
