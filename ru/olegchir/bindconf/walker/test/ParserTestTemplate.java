@@ -1,11 +1,10 @@
 package ru.olegchir.bindconf.walker.test;
 
-import org.junit.*;
-import static org.junit.Assert.*;
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.tree.CommonTree;
+import static org.junit.Assert.assertTrue;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -19,105 +18,22 @@ import ru.olegchir.bindconf.walker.parser.override.Bind9RecognizerOverrider;
 /**
  * Created by IntelliJ IDEA.
  * User: Olga
- * Date: 15.09.2009
- * Time: 23:26:36
+ * Date: 19.09.2009
+ * Time: 17:03:47
  * To change this template use File | Settings | File Templates.
  */
-public class ParserTest {
-    private ByteArrayInputStream cmdIs;
-    private ANTLRInputStream input;
-    private Bind9ConfigLexer lexer;
-    private CommonTokenStream tokens;
-    private Bind9ConfigParser parser;
-    private Bind9ParserOverrider poverrider;
-    private Bind9LexerOverrider loverrider;
-    private Bind9ConfigParser.list_return lr;
-    private CommonTree lrtree;
-    private String currentTestName;
-    private String cmd;
-
-    @Test
-    public void test_invalidGrammar() throws Exception {
-        trace(Thread.currentThread().getStackTrace());
-
-        cmd = "asdf";
-
-        testSilent();
-
-        failStage1("Completely invalid syntax cannot be passed");
-    }
-
-
-    @Test
-    public void test_invalidGrammarInZoneDef() throws Exception {
-        trace(Thread.currentThread().getStackTrace());
-
-        cmd = "zone 1test- IN {type delegation-only; }";
-
-        testSilent();
-
-        assertTrue("Must can't find so strange zone def",
-                parser.getOverrider().getSemanticErrorCount() != 0);
-    }
-
-
-    @Test
-    public void test_CStyleCommentGrammar() throws Exception {
-        trace(Thread.currentThread().getStackTrace());
-
-        cmd = "/*C-Style comment first line\r\nC-Style comment second line*/";
-
-        testNormal();
-    }
-
-    @Test
-    public void test_CPPStyleCommentGrammar() throws Exception {
-        trace(Thread.currentThread().getStackTrace());
-
-        cmd = "//CPP-Style comment";
-
-        testNormal();
-    }
-
-    @Test
-    public void test_PerlStyleCommentGrammar() throws Exception {
-        trace(Thread.currentThread().getStackTrace());
-
-        cmd = "#Perl-Style comment";
-
-        testNormal();
-    }
-
-    @Test
-    public void test_invalidDelegationZone() throws Exception {
-        trace(Thread.currentThread().getStackTrace());
-
-        cmd = "zone invalidDelegationZone IN {type delegation-only; forward first;}";
-
-        testSilent();
-        
-        assertTrue("Grammar must not be valid on Semantic Predicates (Parser/stage1)",
-                parser.getOverrider().getSemanticErrorCount() > 0);
-    }
-
-    @Test
-    public void test_validForwardZone() throws Exception {
-        trace(Thread.currentThread().getStackTrace());
-
-        cmd = "zone validForwardZone {type forward; forward first; testparam yandex.ru;}";
-
-        testNormal();
-    }
-
-
-    @Test
-    public void test_validDelegationZone() throws Exception {
-        trace(Thread.currentThread().getStackTrace());
-        
-        cmd = "zone validDelegationZone IN {type delegation-only; }";
-
-        testNormal();
-    }
+public class ParserTestTemplate {
+    protected ByteArrayInputStream cmdIs;
+    protected ANTLRInputStream input;
+    protected Bind9ConfigLexer lexer;
+    protected CommonTokenStream tokens;
+    protected Bind9ConfigParser parser;
+    protected Bind9ParserOverrider poverrider;
+    protected Bind9LexerOverrider loverrider;
+    protected Bind9ConfigParser.list_return lr;
+    protected CommonTree lrtree;
+    protected String currentTestName;
+    protected String cmd;
 
     private void parse() throws IOException, RecognitionException {
         cmdIs = new ByteArrayInputStream(cmd.getBytes());
@@ -155,7 +71,7 @@ public class ParserTest {
     }
 
     private void testname(String name) {
-        currentTestName = name;    
+        currentTestName = name;
     }
 
     public void trace(StackTraceElement e[]) {
@@ -191,9 +107,19 @@ public class ParserTest {
     }
 
     public void testSilent() throws Exception {
-        override();
-        silent();
-        parse();
+            override();
+            silent();
+            parse();
+    }
+
+    public boolean testSilentWithoutErrors() {
+        boolean failed = false;
+        try {
+            testSilent();
+        } catch (Exception e) {
+            failed = true;
+        }
+        return failed;
     }
 
     public void testVerbose() throws Exception {
@@ -205,5 +131,22 @@ public class ParserTest {
                 (parser.getOverrider().getLexicalErrorCount() > 0) ||
                 (parser.getOverrider().getSemanticErrorCount() > 0) ||
                 (parser.getOverrider().getLexicalErrorCount() > 0));
+    }
+
+    public void failStage1Silent(String reason) {
+        boolean failed = false;
+
+        failed = testSilentWithoutErrors();
+
+        boolean failedParserSemantic = parser.getOverrider().getSemanticErrorCount() > 0;
+        boolean failedParserLexical = parser.getOverrider().getLexicalErrorCount() > 0;
+        boolean failedLexerSemantic = lexer.getOverrider().getSemanticErrorCount() > 0;
+        boolean failedLexerLexical = lexer.getOverrider().getLexicalErrorCount() > 0;
+
+        assertTrue(reason, failedParserSemantic ||
+                failedParserLexical ||
+                failedLexerSemantic ||
+                failedLexerLexical ||
+                failed);       
     }
 }

@@ -1,6 +1,7 @@
 grammar Bind9Config;
 options {output=AST;} // build trees
 tokens {
+	//Zone statement group
 	ST_ZONE_MASTER;
 	ST_ZONE_SLAVE;
 	ST_ZONE_HINT;
@@ -9,6 +10,11 @@ tokens {
 	ST_ZONE_DELEGATION;
 	
 	ST_ZONE_PLIST;
+	
+	//Testing statement group
+	ST_TESTING;
+	ST_TESTING_PLIST;
+	
 	PLIST_PARAM;
 }
 
@@ -132,6 +138,7 @@ list	:	entity*
 	;
 entity	:	COMMENT!
 	|	zone
+	|	testing
 	|	NL!
 	;
 
@@ -167,16 +174,12 @@ zone_forward_block
 	;
 zone_forward_param
 	:	zone_forward_switch_def
-	|	zone_testparam_def
 	;
 zone_delegation_block
 	:	'{' zone_type_delegation '}'
 	;
 
 //Parameter definitions
-zone_testparam_def
-	:	'testparam' zone_testparam_alts ';'
-	;
 zone_testparam_alts
 	:	domain_name	
 	;
@@ -208,32 +211,47 @@ zone_type_delegation
 	:	'type' 'delegation-only' ';' -> 'delegation-only'
 	;
 	
+//Testing statement
+testing : 'testing' testing_block -> ^(ST_TESTING testing_block)
+	;
+testing_block
+	:	pl = '{' (testing_param*)'}' -> ^(ST_TESTING_PLIST[$pl,"ST_TESTING_PLIST"] testing_param*)
+	;
+testing_param
+	:	testing_element_ip4
+	;
+testing_element_ip4
+	:	'ip4' ip4_addr ';' -> ^(PLIST_PARAM 'ip4' ip4_addr)
+	;
+	
 //Semantic support for Configfile elements
 acl_name: ALPHANUM_WORD;
 domain_name
 	: (ALPHANUM_WORD'.')+ALPHANUM_WORD
-	;
-	
-ip_addr : IP4_ADDR
-	| IP6_ADDR | ALPHANUM_WORD //It's very rough hack: I don't know if we able to create ID-like IP6 addr ("asd") 
 	;	
+ip_addr : ip4_addr | ip6_addr;
+ip4_addr:	IP4_ADDR;
+ip6_addr:	IP6_ADDR | ALPHANUM_WORD; //It's very rough hack: I don't know if we able to create ID-like IP6 addr ("asd") 
+ip_port	:	NUMBER;	
 		
 //Pure lexical part
 TYPE_YES_OR_NO
 	:	'yes'|'no'|'true'|'false'|'0'|'1'
 	;
 	
-IP4_ADDR:	FOUR_SYMBOL_NUMBER'.'FOUR_SYMBOL_NUMBER'.'FOUR_SYMBOL_NUMBER'.'FOUR_SYMBOL_NUMBER
+IP4_ADDR:	FOUR_DIGIT_NUMBER'.'FOUR_DIGIT_NUMBER'.'FOUR_DIGIT_NUMBER'.'FOUR_DIGIT_NUMBER
 	;
 //Sprcial types
-fragment FOUR_SYMBOL_NUMBER 
-	:	NUMBER
-	|	NUMBER NUMBER
-	|	NUMBER NUMBER NUMBER
-	|	NUMBER NUMBER NUMBER NUMBER
+fragment FOUR_DIGIT_NUMBER 
+	:	DIGIT
+	|	DIGIT DIGIT
+	|	DIGIT DIGIT DIGIT
+	|	DIGIT DIGIT DIGIT DIGIT
 	;
+	
+NUMBER	:	DIGIT+;
 
-fragment NUMBER	: '0'..'9';
+fragment DIGIT	: '0'..'9';
 
 ALPHANUM_WORD 	:	('a'..'z'|'A'..'Z'|'_'|'0'..'9')* ;
 

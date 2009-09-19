@@ -1,4 +1,4 @@
-// $ANTLR 3.1.2 O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g 2009-09-19 16:09:32
+// $ANTLR 3.1.2 O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g 2009-09-19 18:48:41
 
 package ru.olegchir.bindconf.walker.parser.generated;
 import ru.olegchir.bindconf.walker.parser.override.Bind9LexerOverrider;
@@ -11,37 +11,40 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.HashMap;
 public class Bind9ConfigLexer extends Lexer {
+    public static final int IP6_VALID_CHAR=28;
     public static final int ST_ZONE_PLIST=10;
-    public static final int IP6_VALID_CHAR=25;
-    public static final int T__29=29;
-    public static final int T__28=28;
     public static final int ST_ZONE_MASTER=4;
     public static final int ST_ZONE_FORWARD=8;
-    public static final int FOUR_SYMBOL_NUMBER=22;
     public static final int EOF=-1;
     public static final int ST_ZONE_SLAVE=5;
     public static final int ST_ZONE_DELEGATION=9;
     public static final int ST_ZONE_STUB=7;
-    public static final int PERL_COMMENT=17;
-    public static final int ANY_ASCII_ALPHANUM=24;
-    public static final int CPP_COMMENT=16;
-    public static final int NL=14;
-    public static final int COMMENT=13;
-    public static final int TYPE_YES_OR_NO=21;
+    public static final int PERL_COMMENT=19;
+    public static final int ANY_ASCII_ALPHANUM=27;
+    public static final int CPP_COMMENT=18;
+    public static final int NL=16;
+    public static final int DIGIT=26;
+    public static final int COMMENT=15;
+    public static final int TYPE_YES_OR_NO=24;
     public static final int T__42=42;
     public static final int T__43=43;
     public static final int T__40=40;
     public static final int T__41=41;
+    public static final int T__46=46;
+    public static final int T__47=47;
     public static final int T__44=44;
     public static final int T__45=45;
+    public static final int T__48=48;
+    public static final int ST_TESTING_PLIST=12;
+    public static final int T__49=49;
     public static final int NUMBER=23;
-    public static final int PLIST_PARAM=11;
+    public static final int ST_TESTING=11;
+    public static final int PLIST_PARAM=13;
     public static final int ST_ZONE_HINT=6;
-    public static final int T__30=30;
     public static final int T__31=31;
-    public static final int NLF=27;
+    public static final int NLF=30;
     public static final int T__32=32;
-    public static final int WS=26;
+    public static final int WS=29;
     public static final int T__33=33;
     public static final int T__34=34;
     public static final int T__35=35;
@@ -49,11 +52,12 @@ public class Bind9ConfigLexer extends Lexer {
     public static final int T__37=37;
     public static final int T__38=38;
     public static final int T__39=39;
-    public static final int BAD=12;
-    public static final int IP4_ADDR=19;
-    public static final int IP6_ADDR=20;
-    public static final int ALPHANUM_WORD=18;
-    public static final int C_COMMENT=15;
+    public static final int BAD=14;
+    public static final int IP4_ADDR=21;
+    public static final int IP6_ADDR=22;
+    public static final int ALPHANUM_WORD=20;
+    public static final int C_COMMENT=17;
+    public static final int FOUR_DIGIT_NUMBER=25;
 
     private Bind9LexerOverrider overrider;
 
@@ -85,78 +89,15 @@ public class Bind9ConfigLexer extends Lexer {
     }
     public String getGrammarFileName() { return "O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g"; }
 
-    // $ANTLR start "T__28"
-    public final void mT__28() throws RecognitionException {
-        try {
-            int _type = T__28;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:25:7: ( 'zone' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:25:9: 'zone'
-            {
-            match("zone"); if (state.failed) return ;
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__28"
-
-    // $ANTLR start "T__29"
-    public final void mT__29() throws RecognitionException {
-        try {
-            int _type = T__29;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:26:7: ( 'IN' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:26:9: 'IN'
-            {
-            match("IN"); if (state.failed) return ;
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__29"
-
-    // $ANTLR start "T__30"
-    public final void mT__30() throws RecognitionException {
-        try {
-            int _type = T__30;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:27:7: ( 'HS' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:27:9: 'HS'
-            {
-            match("HS"); if (state.failed) return ;
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__30"
-
     // $ANTLR start "T__31"
     public final void mT__31() throws RecognitionException {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:28:7: ( 'CHAOS' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:28:9: 'CHAOS'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:25:7: ( 'zone' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:25:9: 'zone'
             {
-            match("CHAOS"); if (state.failed) return ;
+            match("zone"); if (state.failed) return ;
 
 
             }
@@ -174,10 +115,11 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:29:7: ( '{' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:29:9: '{'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:26:7: ( 'IN' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:26:9: 'IN'
             {
-            match('{'); if (state.failed) return ;
+            match("IN"); if (state.failed) return ;
+
 
             }
 
@@ -194,10 +136,11 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:30:7: ( '}' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:30:9: '}'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:27:7: ( 'HS' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:27:9: 'HS'
             {
-            match('}'); if (state.failed) return ;
+            match("HS"); if (state.failed) return ;
+
 
             }
 
@@ -214,10 +157,10 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:31:7: ( 'testparam' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:31:9: 'testparam'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:28:7: ( 'CHAOS' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:28:9: 'CHAOS'
             {
-            match("testparam"); if (state.failed) return ;
+            match("CHAOS"); if (state.failed) return ;
 
 
             }
@@ -235,10 +178,10 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:32:7: ( ';' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:32:9: ';'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:29:7: ( '{' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:29:9: '{'
             {
-            match(';'); if (state.failed) return ;
+            match('{'); if (state.failed) return ;
 
             }
 
@@ -255,11 +198,10 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:33:7: ( 'forward' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:33:9: 'forward'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:30:7: ( '}' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:30:9: '}'
             {
-            match("forward"); if (state.failed) return ;
-
+            match('}'); if (state.failed) return ;
 
             }
 
@@ -276,10 +218,10 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:34:7: ( 'first' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:34:9: 'first'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:31:7: ( 'forward' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:31:9: 'forward'
             {
-            match("first"); if (state.failed) return ;
+            match("forward"); if (state.failed) return ;
 
 
             }
@@ -297,11 +239,10 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:35:7: ( 'only' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:35:9: 'only'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:32:7: ( ';' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:32:9: ';'
             {
-            match("only"); if (state.failed) return ;
-
+            match(';'); if (state.failed) return ;
 
             }
 
@@ -318,10 +259,10 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:36:7: ( 'type' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:36:9: 'type'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:33:7: ( 'first' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:33:9: 'first'
             {
-            match("type"); if (state.failed) return ;
+            match("first"); if (state.failed) return ;
 
 
             }
@@ -339,10 +280,10 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:37:7: ( 'master' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:37:9: 'master'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:34:7: ( 'only' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:34:9: 'only'
             {
-            match("master"); if (state.failed) return ;
+            match("only"); if (state.failed) return ;
 
 
             }
@@ -360,10 +301,10 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:38:7: ( 'slave' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:38:9: 'slave'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:35:7: ( 'type' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:35:9: 'type'
             {
-            match("slave"); if (state.failed) return ;
+            match("type"); if (state.failed) return ;
 
 
             }
@@ -381,10 +322,10 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:39:7: ( 'stub' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:39:9: 'stub'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:36:7: ( 'master' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:36:9: 'master'
             {
-            match("stub"); if (state.failed) return ;
+            match("master"); if (state.failed) return ;
 
 
             }
@@ -402,10 +343,10 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:40:7: ( 'hint' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:40:9: 'hint'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:37:7: ( 'slave' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:37:9: 'slave'
             {
-            match("hint"); if (state.failed) return ;
+            match("slave"); if (state.failed) return ;
 
 
             }
@@ -423,10 +364,10 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:41:7: ( 'delegation-only' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:41:9: 'delegation-only'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:38:7: ( 'stub' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:38:9: 'stub'
             {
-            match("delegation-only"); if (state.failed) return ;
+            match("stub"); if (state.failed) return ;
 
 
             }
@@ -444,10 +385,11 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:42:7: ( '.' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:42:9: '.'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:39:7: ( 'hint' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:39:9: 'hint'
             {
-            match('.'); if (state.failed) return ;
+            match("hint"); if (state.failed) return ;
+
 
             }
 
@@ -459,12 +401,95 @@ public class Bind9ConfigLexer extends Lexer {
     }
     // $ANTLR end "T__45"
 
+    // $ANTLR start "T__46"
+    public final void mT__46() throws RecognitionException {
+        try {
+            int _type = T__46;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:40:7: ( 'delegation-only' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:40:9: 'delegation-only'
+            {
+            match("delegation-only"); if (state.failed) return ;
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__46"
+
+    // $ANTLR start "T__47"
+    public final void mT__47() throws RecognitionException {
+        try {
+            int _type = T__47;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:41:7: ( 'testing' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:41:9: 'testing'
+            {
+            match("testing"); if (state.failed) return ;
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__47"
+
+    // $ANTLR start "T__48"
+    public final void mT__48() throws RecognitionException {
+        try {
+            int _type = T__48;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:42:7: ( 'ip4' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:42:9: 'ip4'
+            {
+            match("ip4"); if (state.failed) return ;
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__48"
+
+    // $ANTLR start "T__49"
+    public final void mT__49() throws RecognitionException {
+        try {
+            int _type = T__49;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:43:7: ( '.' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:43:9: '.'
+            {
+            match('.'); if (state.failed) return ;
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__49"
+
     // $ANTLR start "COMMENT"
     public final void mCOMMENT() throws RecognitionException {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:139:9: ( C_COMMENT | CPP_COMMENT | PERL_COMMENT )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:146:9: ( C_COMMENT | CPP_COMMENT | PERL_COMMENT )
             int alt1=3;
             int LA1_0 = input.LA(1);
 
@@ -497,21 +522,21 @@ public class Bind9ConfigLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:139:11: C_COMMENT
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:146:11: C_COMMENT
                     {
                     mC_COMMENT(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:139:23: CPP_COMMENT
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:146:23: CPP_COMMENT
                     {
                     mCPP_COMMENT(); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:139:37: PERL_COMMENT
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:146:37: PERL_COMMENT
                     {
                     mPERL_COMMENT(); if (state.failed) return ;
 
@@ -530,12 +555,12 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "C_COMMENT"
     public final void mC_COMMENT() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:20: ( '/*' ( (~ '*' | '*' ~ '/' )=> . )* '*/' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:22: '/*' ( (~ '*' | '*' ~ '/' )=> . )* '*/'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:148:20: ( '/*' ( (~ '*' | '*' ~ '/' )=> . )* '*/' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:148:22: '/*' ( (~ '*' | '*' ~ '/' )=> . )* '*/'
             {
             match("/*"); if (state.failed) return ;
 
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:27: ( (~ '*' | '*' ~ '/' )=> . )*
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:148:27: ( (~ '*' | '*' ~ '/' )=> . )*
             loop2:
             do {
                 int alt2=2;
@@ -572,7 +597,7 @@ public class Bind9ConfigLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:29: (~ '*' | '*' ~ '/' )=> .
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:148:29: (~ '*' | '*' ~ '/' )=> .
             	    {
             	    matchAny(); if (state.failed) return ;
 
@@ -598,12 +623,12 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "CPP_COMMENT"
     public final void mCPP_COMMENT() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:144:2: ( '//' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )? )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:144:4: '//' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )?
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:151:2: ( '//' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )? )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:151:4: '//' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )?
             {
             match("//"); if (state.failed) return ;
 
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:144:9: ( (~ '\\r' | ~ '\\n' )=> . )*
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:151:9: ( (~ '\\r' | ~ '\\n' )=> . )*
             loop3:
             do {
                 int alt3=2;
@@ -634,7 +659,7 @@ public class Bind9ConfigLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:144:10: (~ '\\r' | ~ '\\n' )=> .
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:151:10: (~ '\\r' | ~ '\\n' )=> .
             	    {
             	    matchAny(); if (state.failed) return ;
 
@@ -646,7 +671,7 @@ public class Bind9ConfigLexer extends Lexer {
                 }
             } while (true);
 
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:144:32: ( NL )?
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:151:32: ( NL )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -655,7 +680,7 @@ public class Bind9ConfigLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:144:33: NL
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:151:33: NL
                     {
                     mNL(); if (state.failed) return ;
 
@@ -676,11 +701,11 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "PERL_COMMENT"
     public final void mPERL_COMMENT() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:147:2: ( '#' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )? )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:147:4: '#' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )?
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:154:2: ( '#' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )? )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:154:4: '#' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )?
             {
             match('#'); if (state.failed) return ;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:147:8: ( (~ '\\r' | ~ '\\n' )=> . )*
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:154:8: ( (~ '\\r' | ~ '\\n' )=> . )*
             loop5:
             do {
                 int alt5=2;
@@ -711,7 +736,7 @@ public class Bind9ConfigLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:147:9: (~ '\\r' | ~ '\\n' )=> .
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:154:9: (~ '\\r' | ~ '\\n' )=> .
             	    {
             	    matchAny(); if (state.failed) return ;
 
@@ -723,7 +748,7 @@ public class Bind9ConfigLexer extends Lexer {
                 }
             } while (true);
 
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:147:31: ( NL )?
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:154:31: ( NL )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -732,7 +757,7 @@ public class Bind9ConfigLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:147:32: NL
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:154:32: NL
                     {
                     mNL(); if (state.failed) return ;
 
@@ -755,7 +780,7 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = TYPE_YES_OR_NO;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:223:2: ( 'yes' | 'no' | 'true' | 'false' | '0' | '1' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:239:2: ( 'yes' | 'no' | 'true' | 'false' | '0' | '1' )
             int alt7=6;
             switch ( input.LA(1) ) {
             case 'y':
@@ -798,7 +823,7 @@ public class Bind9ConfigLexer extends Lexer {
 
             switch (alt7) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:223:4: 'yes'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:239:4: 'yes'
                     {
                     match("yes"); if (state.failed) return ;
 
@@ -806,7 +831,7 @@ public class Bind9ConfigLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:223:10: 'no'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:239:10: 'no'
                     {
                     match("no"); if (state.failed) return ;
 
@@ -814,7 +839,7 @@ public class Bind9ConfigLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:223:15: 'true'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:239:15: 'true'
                     {
                     match("true"); if (state.failed) return ;
 
@@ -822,7 +847,7 @@ public class Bind9ConfigLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:223:22: 'false'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:239:22: 'false'
                     {
                     match("false"); if (state.failed) return ;
 
@@ -830,14 +855,14 @@ public class Bind9ConfigLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:223:30: '0'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:239:30: '0'
                     {
                     match('0'); if (state.failed) return ;
 
                     }
                     break;
                 case 6 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:223:34: '1'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:239:34: '1'
                     {
                     match('1'); if (state.failed) return ;
 
@@ -858,16 +883,16 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = IP4_ADDR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:226:9: ( FOUR_SYMBOL_NUMBER '.' FOUR_SYMBOL_NUMBER '.' FOUR_SYMBOL_NUMBER '.' FOUR_SYMBOL_NUMBER )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:226:11: FOUR_SYMBOL_NUMBER '.' FOUR_SYMBOL_NUMBER '.' FOUR_SYMBOL_NUMBER '.' FOUR_SYMBOL_NUMBER
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:242:9: ( FOUR_DIGIT_NUMBER '.' FOUR_DIGIT_NUMBER '.' FOUR_DIGIT_NUMBER '.' FOUR_DIGIT_NUMBER )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:242:11: FOUR_DIGIT_NUMBER '.' FOUR_DIGIT_NUMBER '.' FOUR_DIGIT_NUMBER '.' FOUR_DIGIT_NUMBER
             {
-            mFOUR_SYMBOL_NUMBER(); if (state.failed) return ;
+            mFOUR_DIGIT_NUMBER(); if (state.failed) return ;
             match('.'); if (state.failed) return ;
-            mFOUR_SYMBOL_NUMBER(); if (state.failed) return ;
+            mFOUR_DIGIT_NUMBER(); if (state.failed) return ;
             match('.'); if (state.failed) return ;
-            mFOUR_SYMBOL_NUMBER(); if (state.failed) return ;
+            mFOUR_DIGIT_NUMBER(); if (state.failed) return ;
             match('.'); if (state.failed) return ;
-            mFOUR_SYMBOL_NUMBER(); if (state.failed) return ;
+            mFOUR_DIGIT_NUMBER(); if (state.failed) return ;
 
             }
 
@@ -879,10 +904,10 @@ public class Bind9ConfigLexer extends Lexer {
     }
     // $ANTLR end "IP4_ADDR"
 
-    // $ANTLR start "FOUR_SYMBOL_NUMBER"
-    public final void mFOUR_SYMBOL_NUMBER() throws RecognitionException {
+    // $ANTLR start "FOUR_DIGIT_NUMBER"
+    public final void mFOUR_DIGIT_NUMBER() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:230:2: ( NUMBER | NUMBER NUMBER | NUMBER NUMBER NUMBER | NUMBER NUMBER NUMBER NUMBER )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:246:2: ( DIGIT | DIGIT DIGIT | DIGIT DIGIT DIGIT | DIGIT DIGIT DIGIT DIGIT )
             int alt8=4;
             int LA8_0 = input.LA(1);
 
@@ -916,36 +941,36 @@ public class Bind9ConfigLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:230:4: NUMBER
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:246:4: DIGIT
                     {
-                    mNUMBER(); if (state.failed) return ;
+                    mDIGIT(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:231:4: NUMBER NUMBER
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:247:4: DIGIT DIGIT
                     {
-                    mNUMBER(); if (state.failed) return ;
-                    mNUMBER(); if (state.failed) return ;
+                    mDIGIT(); if (state.failed) return ;
+                    mDIGIT(); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:232:4: NUMBER NUMBER NUMBER
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:4: DIGIT DIGIT DIGIT
                     {
-                    mNUMBER(); if (state.failed) return ;
-                    mNUMBER(); if (state.failed) return ;
-                    mNUMBER(); if (state.failed) return ;
+                    mDIGIT(); if (state.failed) return ;
+                    mDIGIT(); if (state.failed) return ;
+                    mDIGIT(); if (state.failed) return ;
 
                     }
                     break;
                 case 4 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:233:4: NUMBER NUMBER NUMBER NUMBER
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:249:4: DIGIT DIGIT DIGIT DIGIT
                     {
-                    mNUMBER(); if (state.failed) return ;
-                    mNUMBER(); if (state.failed) return ;
-                    mNUMBER(); if (state.failed) return ;
-                    mNUMBER(); if (state.failed) return ;
+                    mDIGIT(); if (state.failed) return ;
+                    mDIGIT(); if (state.failed) return ;
+                    mDIGIT(); if (state.failed) return ;
+                    mDIGIT(); if (state.failed) return ;
 
                     }
                     break;
@@ -955,13 +980,63 @@ public class Bind9ConfigLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "FOUR_SYMBOL_NUMBER"
+    // $ANTLR end "FOUR_DIGIT_NUMBER"
 
     // $ANTLR start "NUMBER"
     public final void mNUMBER() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:236:17: ( '0' .. '9' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:236:19: '0' .. '9'
+            int _type = NUMBER;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:252:8: ( ( DIGIT )+ )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:252:10: ( DIGIT )+
+            {
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:252:10: ( DIGIT )+
+            int cnt9=0;
+            loop9:
+            do {
+                int alt9=2;
+                int LA9_0 = input.LA(1);
+
+                if ( ((LA9_0>='0' && LA9_0<='9')) ) {
+                    alt9=1;
+                }
+
+
+                switch (alt9) {
+            	case 1 :
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:252:10: DIGIT
+            	    {
+            	    mDIGIT(); if (state.failed) return ;
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt9 >= 1 ) break loop9;
+            	    if (state.backtracking>0) {state.failed=true; return ;}
+                        EarlyExitException eee =
+                            new EarlyExitException(9, input);
+                        throw eee;
+                }
+                cnt9++;
+            } while (true);
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "NUMBER"
+
+    // $ANTLR start "DIGIT"
+    public final void mDIGIT() throws RecognitionException {
+        try {
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:254:16: ( '0' .. '9' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:254:18: '0' .. '9'
             {
             matchRange('0','9'); if (state.failed) return ;
 
@@ -971,28 +1046,28 @@ public class Bind9ConfigLexer extends Lexer {
         finally {
         }
     }
-    // $ANTLR end "NUMBER"
+    // $ANTLR end "DIGIT"
 
     // $ANTLR start "ALPHANUM_WORD"
     public final void mALPHANUM_WORD() throws RecognitionException {
         try {
             int _type = ALPHANUM_WORD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:238:16: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:238:18: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:256:16: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:256:18: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:238:18: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
-            loop9:
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:256:18: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            loop10:
             do {
-                int alt9=2;
-                int LA9_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( ((LA9_0>='0' && LA9_0<='9')||(LA9_0>='A' && LA9_0<='Z')||LA9_0=='_'||(LA9_0>='a' && LA9_0<='z')) ) {
-                    alt9=1;
+                if ( ((LA10_0>='0' && LA10_0<='9')||(LA10_0>='A' && LA10_0<='Z')||LA10_0=='_'||(LA10_0>='a' && LA10_0<='z')) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt9) {
+                switch (alt10) {
             	case 1 :
             	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:
             	    {
@@ -1011,7 +1086,7 @@ public class Bind9ConfigLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop9;
+            	    break loop10;
                 }
             } while (true);
 
@@ -1029,11 +1104,11 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "ANY_ASCII_ALPHANUM"
     public final void mANY_ASCII_ALPHANUM() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:241:2: ( ( '\\u0020' .. '\\u007F' ) )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:241:4: ( '\\u0020' .. '\\u007F' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:259:2: ( ( '\\u0020' .. '\\u007F' ) )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:259:4: ( '\\u0020' .. '\\u007F' )
             {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:241:4: ( '\\u0020' .. '\\u007F' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:241:5: '\\u0020' .. '\\u007F'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:259:4: ( '\\u0020' .. '\\u007F' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:259:5: '\\u0020' .. '\\u007F'
             {
             matchRange(' ','\u007F'); if (state.failed) return ;
 
@@ -1053,24 +1128,24 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = IP6_ADDR;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:244:9: ( ( IP6_VALID_CHAR )+ )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:244:11: ( IP6_VALID_CHAR )+
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:262:9: ( ( IP6_VALID_CHAR )+ )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:262:11: ( IP6_VALID_CHAR )+
             {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:244:11: ( IP6_VALID_CHAR )+
-            int cnt10=0;
-            loop10:
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:262:11: ( IP6_VALID_CHAR )+
+            int cnt11=0;
+            loop11:
             do {
-                int alt10=2;
-                int LA10_0 = input.LA(1);
+                int alt11=2;
+                int LA11_0 = input.LA(1);
 
-                if ( (LA10_0=='%'||(LA10_0>='0' && LA10_0<=':')||(LA10_0>='A' && LA10_0<='Z')||(LA10_0>='a' && LA10_0<='z')) ) {
-                    alt10=1;
+                if ( (LA11_0=='%'||(LA11_0>='0' && LA11_0<=':')||(LA11_0>='A' && LA11_0<='Z')||(LA11_0>='a' && LA11_0<='z')) ) {
+                    alt11=1;
                 }
 
 
-                switch (alt10) {
+                switch (alt11) {
             	case 1 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:244:12: IP6_VALID_CHAR
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:262:12: IP6_VALID_CHAR
             	    {
             	    mIP6_VALID_CHAR(); if (state.failed) return ;
 
@@ -1078,13 +1153,13 @@ public class Bind9ConfigLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt10 >= 1 ) break loop10;
+            	    if ( cnt11 >= 1 ) break loop11;
             	    if (state.backtracking>0) {state.failed=true; return ;}
                         EarlyExitException eee =
-                            new EarlyExitException(10, input);
+                            new EarlyExitException(11, input);
                         throw eee;
                 }
-                cnt10++;
+                cnt11++;
             } while (true);
 
 
@@ -1101,14 +1176,14 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "IP6_VALID_CHAR"
     public final void mIP6_VALID_CHAR() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:2: ( ( ( 'a' .. 'z' ) | ( 'A' .. 'Z' ) | ':' | '%' | ( '0' .. '9' ) )+ )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:4: ( ( 'a' .. 'z' ) | ( 'A' .. 'Z' ) | ':' | '%' | ( '0' .. '9' ) )+
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:2: ( ( ( 'a' .. 'z' ) | ( 'A' .. 'Z' ) | ':' | '%' | ( '0' .. '9' ) )+ )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:4: ( ( 'a' .. 'z' ) | ( 'A' .. 'Z' ) | ':' | '%' | ( '0' .. '9' ) )+
             {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:4: ( ( 'a' .. 'z' ) | ( 'A' .. 'Z' ) | ':' | '%' | ( '0' .. '9' ) )+
-            int cnt11=0;
-            loop11:
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:4: ( ( 'a' .. 'z' ) | ( 'A' .. 'Z' ) | ':' | '%' | ( '0' .. '9' ) )+
+            int cnt12=0;
+            loop12:
             do {
-                int alt11=6;
+                int alt12=6;
                 switch ( input.LA(1) ) {
                 case 'a':
                 case 'b':
@@ -1137,7 +1212,7 @@ public class Bind9ConfigLexer extends Lexer {
                 case 'y':
                 case 'z':
                     {
-                    alt11=1;
+                    alt12=1;
                     }
                     break;
                 case 'A':
@@ -1167,17 +1242,17 @@ public class Bind9ConfigLexer extends Lexer {
                 case 'Y':
                 case 'Z':
                     {
-                    alt11=2;
+                    alt12=2;
                     }
                     break;
                 case ':':
                     {
-                    alt11=3;
+                    alt12=3;
                     }
                     break;
                 case '%':
                     {
-                    alt11=4;
+                    alt12=4;
                     }
                     break;
                 case '0':
@@ -1191,18 +1266,18 @@ public class Bind9ConfigLexer extends Lexer {
                 case '8':
                 case '9':
                     {
-                    alt11=5;
+                    alt12=5;
                     }
                     break;
 
                 }
 
-                switch (alt11) {
+                switch (alt12) {
             	case 1 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:5: ( 'a' .. 'z' )
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:5: ( 'a' .. 'z' )
             	    {
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:5: ( 'a' .. 'z' )
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:6: 'a' .. 'z'
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:5: ( 'a' .. 'z' )
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:6: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); if (state.failed) return ;
 
@@ -1212,10 +1287,10 @@ public class Bind9ConfigLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:16: ( 'A' .. 'Z' )
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:16: ( 'A' .. 'Z' )
             	    {
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:16: ( 'A' .. 'Z' )
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:17: 'A' .. 'Z'
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:16: ( 'A' .. 'Z' )
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:17: 'A' .. 'Z'
             	    {
             	    matchRange('A','Z'); if (state.failed) return ;
 
@@ -1225,24 +1300,24 @@ public class Bind9ConfigLexer extends Lexer {
             	    }
             	    break;
             	case 3 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:27: ':'
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:27: ':'
             	    {
             	    match(':'); if (state.failed) return ;
 
             	    }
             	    break;
             	case 4 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:31: '%'
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:31: '%'
             	    {
             	    match('%'); if (state.failed) return ;
 
             	    }
             	    break;
             	case 5 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:35: ( '0' .. '9' )
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:35: ( '0' .. '9' )
             	    {
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:35: ( '0' .. '9' )
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:248:36: '0' .. '9'
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:35: ( '0' .. '9' )
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:266:36: '0' .. '9'
             	    {
             	    matchRange('0','9'); if (state.failed) return ;
 
@@ -1253,13 +1328,13 @@ public class Bind9ConfigLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt11 >= 1 ) break loop11;
+            	    if ( cnt12 >= 1 ) break loop12;
             	    if (state.backtracking>0) {state.failed=true; return ;}
                         EarlyExitException eee =
-                            new EarlyExitException(11, input);
+                            new EarlyExitException(12, input);
                         throw eee;
                 }
-                cnt11++;
+                cnt12++;
             } while (true);
 
 
@@ -1276,22 +1351,22 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:252:4: ( ( ' ' | '\\t' | '\\f' )+ )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:252:6: ( ' ' | '\\t' | '\\f' )+
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:270:4: ( ( ' ' | '\\t' | '\\f' )+ )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:270:6: ( ' ' | '\\t' | '\\f' )+
             {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:252:6: ( ' ' | '\\t' | '\\f' )+
-            int cnt12=0;
-            loop12:
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:270:6: ( ' ' | '\\t' | '\\f' )+
+            int cnt13=0;
+            loop13:
             do {
-                int alt12=2;
-                int LA12_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA12_0=='\t'||LA12_0=='\f'||LA12_0==' ') ) {
-                    alt12=1;
+                if ( (LA13_0=='\t'||LA13_0=='\f'||LA13_0==' ') ) {
+                    alt13=1;
                 }
 
 
-                switch (alt12) {
+                switch (alt13) {
             	case 1 :
             	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:
             	    {
@@ -1310,13 +1385,13 @@ public class Bind9ConfigLexer extends Lexer {
             	    break;
 
             	default :
-            	    if ( cnt12 >= 1 ) break loop12;
+            	    if ( cnt13 >= 1 ) break loop13;
             	    if (state.backtracking>0) {state.failed=true; return ;}
                         EarlyExitException eee =
-                            new EarlyExitException(12, input);
+                            new EarlyExitException(13, input);
                         throw eee;
                 }
-                cnt12++;
+                cnt13++;
             } while (true);
 
             if ( state.backtracking==0 ) {
@@ -1336,43 +1411,43 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "NL"
     public final void mNL() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:256:2: ( ( ( '\\r' )? '\\n' )=> ( '\\r' )? '\\n' | '\\r' )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:274:2: ( ( ( '\\r' )? '\\n' )=> ( '\\r' )? '\\n' | '\\r' )
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA14_0=='\r') ) {
-                int LA14_1 = input.LA(2);
+            if ( (LA15_0=='\r') ) {
+                int LA15_1 = input.LA(2);
 
-                if ( (LA14_1=='\n') && (synpred4_Bind9Config())) {
-                    alt14=1;
+                if ( (LA15_1=='\n') && (synpred4_Bind9Config())) {
+                    alt15=1;
                 }
                 else {
-                    alt14=2;}
+                    alt15=2;}
             }
-            else if ( (LA14_0=='\n') && (synpred4_Bind9Config())) {
-                alt14=1;
+            else if ( (LA15_0=='\n') && (synpred4_Bind9Config())) {
+                alt15=1;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return ;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 15, 0, input);
 
                 throw nvae;
             }
-            switch (alt14) {
+            switch (alt15) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:256:4: ( ( '\\r' )? '\\n' )=> ( '\\r' )? '\\n'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:274:4: ( ( '\\r' )? '\\n' )=> ( '\\r' )? '\\n'
                     {
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:256:19: ( '\\r' )?
-                    int alt13=2;
-                    int LA13_0 = input.LA(1);
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:274:19: ( '\\r' )?
+                    int alt14=2;
+                    int LA14_0 = input.LA(1);
 
-                    if ( (LA13_0=='\r') ) {
-                        alt13=1;
+                    if ( (LA14_0=='\r') ) {
+                        alt14=1;
                     }
-                    switch (alt13) {
+                    switch (alt14) {
                         case 1 :
-                            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:256:19: '\\r'
+                            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:274:19: '\\r'
                             {
                             match('\r'); if (state.failed) return ;
 
@@ -1386,7 +1461,7 @@ public class Bind9ConfigLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:257:6: '\\r'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:275:6: '\\r'
                     {
                     match('\r'); if (state.failed) return ;
 
@@ -1403,25 +1478,25 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "NLF"
     public final void mNLF() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:260:2: ( NL | EOF )
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:278:2: ( NL | EOF )
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA15_0=='\n'||LA15_0=='\r') ) {
-                alt15=1;
+            if ( (LA16_0=='\n'||LA16_0=='\r') ) {
+                alt16=1;
             }
             else {
-                alt15=2;}
-            switch (alt15) {
+                alt16=2;}
+            switch (alt16) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:260:4: NL
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:278:4: NL
                     {
                     mNL(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:260:7: EOF
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:278:7: EOF
                     {
                     match(EOF); if (state.failed) return ;
 
@@ -1440,8 +1515,8 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = BAD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:263:6: ( . )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:263:8: .
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:281:6: ( . )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:281:8: .
             {
             matchAny(); if (state.failed) return ;
             if ( state.backtracking==0 ) {
@@ -1459,180 +1534,194 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR end "BAD"
 
     public void mTokens() throws RecognitionException {
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:8: ( T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | COMMENT | TYPE_YES_OR_NO | IP4_ADDR | ALPHANUM_WORD | IP6_ADDR | WS | BAD )
-        int alt16=25;
-        alt16 = dfa16.predict(input);
-        switch (alt16) {
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:8: ( T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | COMMENT | TYPE_YES_OR_NO | IP4_ADDR | NUMBER | ALPHANUM_WORD | IP6_ADDR | WS | BAD )
+        int alt17=27;
+        alt17 = dfa17.predict(input);
+        switch (alt17) {
             case 1 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:10: T__28
-                {
-                mT__28(); if (state.failed) return ;
-
-                }
-                break;
-            case 2 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:16: T__29
-                {
-                mT__29(); if (state.failed) return ;
-
-                }
-                break;
-            case 3 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:22: T__30
-                {
-                mT__30(); if (state.failed) return ;
-
-                }
-                break;
-            case 4 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:28: T__31
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:10: T__31
                 {
                 mT__31(); if (state.failed) return ;
 
                 }
                 break;
-            case 5 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:34: T__32
+            case 2 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:16: T__32
                 {
                 mT__32(); if (state.failed) return ;
 
                 }
                 break;
-            case 6 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:40: T__33
+            case 3 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:22: T__33
                 {
                 mT__33(); if (state.failed) return ;
 
                 }
                 break;
-            case 7 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:46: T__34
+            case 4 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:28: T__34
                 {
                 mT__34(); if (state.failed) return ;
 
                 }
                 break;
-            case 8 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:52: T__35
+            case 5 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:34: T__35
                 {
                 mT__35(); if (state.failed) return ;
 
                 }
                 break;
-            case 9 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:58: T__36
+            case 6 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:40: T__36
                 {
                 mT__36(); if (state.failed) return ;
 
                 }
                 break;
-            case 10 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:64: T__37
+            case 7 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:46: T__37
                 {
                 mT__37(); if (state.failed) return ;
 
                 }
                 break;
-            case 11 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:70: T__38
+            case 8 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:52: T__38
                 {
                 mT__38(); if (state.failed) return ;
 
                 }
                 break;
-            case 12 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:76: T__39
+            case 9 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:58: T__39
                 {
                 mT__39(); if (state.failed) return ;
 
                 }
                 break;
-            case 13 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:82: T__40
+            case 10 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:64: T__40
                 {
                 mT__40(); if (state.failed) return ;
 
                 }
                 break;
-            case 14 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:88: T__41
+            case 11 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:70: T__41
                 {
                 mT__41(); if (state.failed) return ;
 
                 }
                 break;
-            case 15 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:94: T__42
+            case 12 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:76: T__42
                 {
                 mT__42(); if (state.failed) return ;
 
                 }
                 break;
-            case 16 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:100: T__43
+            case 13 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:82: T__43
                 {
                 mT__43(); if (state.failed) return ;
 
                 }
                 break;
-            case 17 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:106: T__44
+            case 14 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:88: T__44
                 {
                 mT__44(); if (state.failed) return ;
 
                 }
                 break;
-            case 18 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:112: T__45
+            case 15 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:94: T__45
                 {
                 mT__45(); if (state.failed) return ;
 
                 }
                 break;
+            case 16 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:100: T__46
+                {
+                mT__46(); if (state.failed) return ;
+
+                }
+                break;
+            case 17 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:106: T__47
+                {
+                mT__47(); if (state.failed) return ;
+
+                }
+                break;
+            case 18 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:112: T__48
+                {
+                mT__48(); if (state.failed) return ;
+
+                }
+                break;
             case 19 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:118: COMMENT
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:118: T__49
+                {
+                mT__49(); if (state.failed) return ;
+
+                }
+                break;
+            case 20 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:124: COMMENT
                 {
                 mCOMMENT(); if (state.failed) return ;
 
                 }
                 break;
-            case 20 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:126: TYPE_YES_OR_NO
+            case 21 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:132: TYPE_YES_OR_NO
                 {
                 mTYPE_YES_OR_NO(); if (state.failed) return ;
 
                 }
                 break;
-            case 21 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:141: IP4_ADDR
+            case 22 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:147: IP4_ADDR
                 {
                 mIP4_ADDR(); if (state.failed) return ;
 
                 }
                 break;
-            case 22 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:150: ALPHANUM_WORD
+            case 23 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:156: NUMBER
+                {
+                mNUMBER(); if (state.failed) return ;
+
+                }
+                break;
+            case 24 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:163: ALPHANUM_WORD
                 {
                 mALPHANUM_WORD(); if (state.failed) return ;
 
                 }
                 break;
-            case 23 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:164: IP6_ADDR
+            case 25 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:177: IP6_ADDR
                 {
                 mIP6_ADDR(); if (state.failed) return ;
 
                 }
                 break;
-            case 24 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:173: WS
+            case 26 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:186: WS
                 {
                 mWS(); if (state.failed) return ;
 
                 }
                 break;
-            case 25 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:176: BAD
+            case 27 :
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:1:189: BAD
                 {
                 mBAD(); if (state.failed) return ;
 
@@ -1645,26 +1734,26 @@ public class Bind9ConfigLexer extends Lexer {
 
     // $ANTLR start synpred1_Bind9Config
     public final void synpred1_Bind9Config_fragment() throws RecognitionException {   
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:29: (~ '*' | '*' ~ '/' )
-        int alt17=2;
-        int LA17_0 = input.LA(1);
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:148:29: (~ '*' | '*' ~ '/' )
+        int alt18=2;
+        int LA18_0 = input.LA(1);
 
-        if ( ((LA17_0>='\u0000' && LA17_0<=')')||(LA17_0>='+' && LA17_0<='\uFFFF')) ) {
-            alt17=1;
+        if ( ((LA18_0>='\u0000' && LA18_0<=')')||(LA18_0>='+' && LA18_0<='\uFFFF')) ) {
+            alt18=1;
         }
-        else if ( (LA17_0=='*') ) {
-            alt17=2;
+        else if ( (LA18_0=='*') ) {
+            alt18=2;
         }
         else {
             if (state.backtracking>0) {state.failed=true; return ;}
             NoViableAltException nvae =
-                new NoViableAltException("", 17, 0, input);
+                new NoViableAltException("", 18, 0, input);
 
             throw nvae;
         }
-        switch (alt17) {
+        switch (alt18) {
             case 1 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:30: ~ '*'
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:148:30: ~ '*'
                 {
                 if ( (input.LA(1)>='\u0000' && input.LA(1)<=')')||(input.LA(1)>='+' && input.LA(1)<='\uFFFF') ) {
                     input.consume();
@@ -1680,7 +1769,7 @@ public class Bind9ConfigLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:37: '*' ~ '/'
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:148:37: '*' ~ '/'
                 {
                 match('*'); if (state.failed) return ;
                 if ( (input.LA(1)>='\u0000' && input.LA(1)<='.')||(input.LA(1)>='0' && input.LA(1)<='\uFFFF') ) {
@@ -1702,7 +1791,7 @@ public class Bind9ConfigLexer extends Lexer {
 
     // $ANTLR start synpred2_Bind9Config
     public final void synpred2_Bind9Config_fragment() throws RecognitionException {   
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:144:10: (~ '\\r' | ~ '\\n' )
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:151:10: (~ '\\r' | ~ '\\n' )
         // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:
         {
         if ( (input.LA(1)>='\u0000' && input.LA(1)<='\uFFFF') ) {
@@ -1722,7 +1811,7 @@ public class Bind9ConfigLexer extends Lexer {
 
     // $ANTLR start synpred3_Bind9Config
     public final void synpred3_Bind9Config_fragment() throws RecognitionException {   
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:147:9: (~ '\\r' | ~ '\\n' )
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:154:9: (~ '\\r' | ~ '\\n' )
         // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:
         {
         if ( (input.LA(1)>='\u0000' && input.LA(1)<='\uFFFF') ) {
@@ -1742,19 +1831,19 @@ public class Bind9ConfigLexer extends Lexer {
 
     // $ANTLR start synpred4_Bind9Config
     public final void synpred4_Bind9Config_fragment() throws RecognitionException {   
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:256:4: ( ( '\\r' )? '\\n' )
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:256:5: ( '\\r' )? '\\n'
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:274:4: ( ( '\\r' )? '\\n' )
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:274:5: ( '\\r' )? '\\n'
         {
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:256:5: ( '\\r' )?
-        int alt18=2;
-        int LA18_0 = input.LA(1);
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:274:5: ( '\\r' )?
+        int alt19=2;
+        int LA19_0 = input.LA(1);
 
-        if ( (LA18_0=='\r') ) {
-            alt18=1;
+        if ( (LA19_0=='\r') ) {
+            alt19=1;
         }
-        switch (alt18) {
+        switch (alt19) {
             case 1 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:256:5: '\\r'
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:274:5: '\\r'
                 {
                 match('\r'); if (state.failed) return ;
 
@@ -1827,358 +1916,369 @@ public class Bind9ConfigLexer extends Lexer {
     }
 
 
-    protected DFA16 dfa16 = new DFA16(this);
-    static final String DFA16_eotS =
-        "\5\30\2\uffff\1\30\1\uffff\6\30\1\uffff\1\36\1\uffff\2\30\2\72"+
-        "\2\30\1\uffff\1\30\5\uffff\4\30\1\uffff\1\77\1\100\1\30\2\uffff"+
-        "\3\30\1\uffff\11\30\2\uffff\1\30\1\72\1\uffff\1\30\2\uffff\1\30"+
-        "\2\uffff\15\30\1\72\1\30\1\137\2\30\1\142\1\72\3\30\1\146\2\30\1"+
-        "\151\1\152\2\30\1\uffff\1\154\1\30\1\uffff\1\30\1\157\1\72\1\uffff"+
-        "\1\30\1\161\2\uffff\1\30\1\uffff\2\30\1\uffff\1\165\1\uffff\2\30"+
-        "\1\170\1\uffff\2\30\1\uffff\1\30\1\174\1\30\1\uffff\1\30\1\uffff";
-    static final String DFA16_eofS =
-        "\177\uffff";
-    static final String DFA16_minS =
-        "\1\0\4\45\2\uffff\1\45\1\uffff\6\45\1\uffff\1\52\1\uffff\6\45\1"+
-        "\uffff\1\45\5\uffff\4\45\1\uffff\3\45\2\uffff\3\45\1\uffff\11\45"+
-        "\2\uffff\2\45\1\uffff\1\45\2\uffff\1\45\2\uffff\36\45\1\uffff\2"+
-        "\45\1\uffff\3\45\1\uffff\2\45\2\uffff\1\45\1\uffff\2\45\1\uffff"+
-        "\1\45\1\uffff\3\45\1\uffff\2\45\1\uffff\3\45\1\uffff\1\45\1\uffff";
-    static final String DFA16_maxS =
-        "\1\uffff\4\172\2\uffff\1\172\1\uffff\6\172\1\uffff\1\57\1\uffff"+
-        "\6\172\1\uffff\1\172\5\uffff\4\172\1\uffff\3\172\2\uffff\3\172\1"+
-        "\uffff\11\172\2\uffff\2\172\1\uffff\1\172\2\uffff\1\172\2\uffff"+
-        "\36\172\1\uffff\2\172\1\uffff\3\172\1\uffff\2\172\2\uffff\1\172"+
-        "\1\uffff\2\172\1\uffff\1\172\1\uffff\3\172\1\uffff\2\172\1\uffff"+
-        "\3\172\1\uffff\1\172\1\uffff";
-    static final String DFA16_acceptS =
-        "\5\uffff\1\5\1\6\1\uffff\1\10\6\uffff\1\22\1\uffff\1\23\6\uffff"+
-        "\1\26\1\uffff\1\26\2\27\1\30\1\31\4\uffff\1\27\3\uffff\1\5\1\6\3"+
-        "\uffff\1\10\11\uffff\1\22\1\23\2\uffff\1\24\1\uffff\1\25\1\30\1"+
-        "\uffff\1\2\1\3\36\uffff\1\1\2\uffff\1\14\3\uffff\1\13\2\uffff\1"+
-        "\17\1\20\1\uffff\1\4\2\uffff\1\12\1\uffff\1\16\3\uffff\1\15\2\uffff"+
-        "\1\11\3\uffff\1\7\1\uffff\1\21";
-    static final String DFA16_specialS =
-        "\1\0\176\uffff}>";
-    static final String[] DFA16_transitionS = {
-            "\11\36\1\35\2\36\1\35\23\36\1\35\2\36\1\21\1\36\1\34\10\36"+
-            "\1\17\1\20\1\24\1\25\10\26\1\33\1\10\5\36\2\31\1\4\4\31\1\3"+
-            "\1\2\21\31\4\36\1\32\1\36\3\27\1\16\1\27\1\11\1\27\1\15\4\27"+
-            "\1\13\1\23\1\12\3\27\1\14\1\7\4\27\1\22\1\1\1\5\1\36\1\6\uff82"+
-            "\36",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\16\40\1\37"+
-            "\13\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\15\41\1\44\14\41\6\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\22\41\1\45\7\41\6\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\7\41\1\46\22\41\6\uffff"+
-            "\32\40",
+    protected DFA17 dfa17 = new DFA17(this);
+    static final String DFA17_eotS =
+        "\5\31\2\uffff\1\31\1\uffff\7\31\1\uffff\1\37\1\uffff\2\31\2\74"+
+        "\1\77\1\31\1\uffff\1\31\5\uffff\3\31\1\uffff\1\31\1\102\1\103\1"+
+        "\31\2\uffff\3\31\1\uffff\12\31\2\uffff\1\31\1\74\1\uffff\1\77\3"+
+        "\uffff\1\31\2\uffff\15\31\1\142\1\74\1\77\1\144\4\31\1\151\1\152"+
+        "\1\31\1\74\2\31\1\156\1\157\1\31\1\uffff\1\77\1\uffff\1\162\1\31"+
+        "\1\164\1\74\2\uffff\2\31\1\167\2\uffff\1\31\1\77\1\uffff\1\31\1"+
+        "\uffff\1\31\1\173\1\uffff\1\31\1\175\1\176\1\uffff\1\31\2\uffff"+
+        "\3\31\1\uffff";
+    static final String DFA17_eofS =
+        "\u0083\uffff";
+    static final String DFA17_minS =
+        "\1\0\4\45\2\uffff\1\45\1\uffff\7\45\1\uffff\1\52\1\uffff\6\45\1"+
+        "\uffff\1\45\5\uffff\3\45\1\uffff\4\45\2\uffff\3\45\1\uffff\12\45"+
+        "\2\uffff\2\45\1\uffff\1\45\3\uffff\1\45\2\uffff\36\45\1\uffff\1"+
+        "\45\1\uffff\4\45\2\uffff\3\45\2\uffff\2\45\1\uffff\1\45\1\uffff"+
+        "\2\45\1\uffff\3\45\1\uffff\1\45\2\uffff\3\45\1\uffff";
+    static final String DFA17_maxS =
+        "\1\uffff\4\172\2\uffff\1\172\1\uffff\7\172\1\uffff\1\57\1\uffff"+
+        "\6\172\1\uffff\1\172\5\uffff\3\172\1\uffff\4\172\2\uffff\3\172\1"+
+        "\uffff\12\172\2\uffff\2\172\1\uffff\1\172\3\uffff\1\172\2\uffff"+
+        "\36\172\1\uffff\1\172\1\uffff\4\172\2\uffff\3\172\2\uffff\2\172"+
+        "\1\uffff\1\172\1\uffff\2\172\1\uffff\3\172\1\uffff\1\172\2\uffff"+
+        "\3\172\1\uffff";
+    static final String DFA17_acceptS =
+        "\5\uffff\1\5\1\6\1\uffff\1\10\7\uffff\1\23\1\uffff\1\24\6\uffff"+
+        "\1\30\1\uffff\1\30\2\31\1\32\1\33\3\uffff\1\31\4\uffff\1\5\1\6\3"+
+        "\uffff\1\10\12\uffff\1\23\1\24\2\uffff\1\25\1\uffff\1\26\1\27\1"+
+        "\32\1\uffff\1\2\1\3\36\uffff\1\22\1\uffff\1\1\4\uffff\1\12\1\13"+
+        "\3\uffff\1\16\1\17\2\uffff\1\4\1\uffff\1\11\2\uffff\1\15\3\uffff"+
+        "\1\14\1\uffff\1\7\1\21\3\uffff\1\20";
+    static final String DFA17_specialS =
+        "\1\0\u0082\uffff}>";
+    static final String[] DFA17_transitionS = {
+            "\11\37\1\36\2\37\1\36\23\37\1\36\2\37\1\22\1\37\1\35\10\37"+
+            "\1\20\1\21\1\25\1\26\10\27\1\34\1\10\5\37\2\32\1\4\4\32\1\3"+
+            "\1\2\21\32\4\37\1\33\1\37\3\30\1\16\1\30\1\7\1\30\1\15\1\17"+
+            "\3\30\1\13\1\24\1\11\3\30\1\14\1\12\4\30\1\23\1\1\1\5\1\37\1"+
+            "\6\uff82\37",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\16\41\1\40"+
+            "\13\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\15\42\1\45\14\42\6\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\22\42\1\46\7\42\6\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\7\42\1\47\22\42\6\uffff"+
+            "\32\41",
             "",
             "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\4\40\1\51"+
-            "\14\40\1\53\6\40\1\52\1\40",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\1\54\7\41"+
+            "\1\53\5\41\1\52\13\41",
             "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\1\57\7\40"+
-            "\1\56\5\40\1\55\13\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\15\40\1\60"+
-            "\14\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\1\61\31\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\13\40\1\62"+
-            "\7\40\1\63\6\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\10\40\1\64"+
-            "\21\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\4\40\1\65"+
-            "\25\40",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\15\41\1\56"+
+            "\14\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\4\41\1\60"+
+            "\14\41\1\61\6\41\1\57\1\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\1\62\31\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\13\41\1\63"+
+            "\7\41\1\64\6\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\10\41\1\65"+
+            "\21\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\4\41\1\66"+
+            "\25\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\17\41\1\67"+
+            "\12\41",
             "",
-            "\1\67\4\uffff\1\67",
+            "\1\71\4\uffff\1\71",
             "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\4\40\1\70"+
-            "\25\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\16\40\1\71"+
-            "\13\40",
-            "\1\43\10\uffff\1\74\1\uffff\12\73\1\43\6\uffff\32\41\4\uffff"+
-            "\1\30\1\uffff\32\40",
-            "\1\43\10\uffff\1\74\1\uffff\12\73\1\43\6\uffff\32\41\4\uffff"+
-            "\1\30\1\uffff\32\40",
-            "\1\43\10\uffff\1\74\1\uffff\12\73\1\43\6\uffff\32\41\6\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\32\40",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\4\41\1\72"+
+            "\25\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\16\41\1\73"+
+            "\13\41",
+            "\1\43\10\uffff\1\76\1\uffff\12\75\1\43\6\uffff\32\42\4\uffff"+
+            "\1\31\1\uffff\32\41",
+            "\1\43\10\uffff\1\76\1\uffff\12\75\1\43\6\uffff\32\42\4\uffff"+
+            "\1\31\1\uffff\32\41",
+            "\1\43\10\uffff\1\76\1\uffff\12\75\1\43\6\uffff\32\42\4\uffff"+
+            "\1\31\1\uffff\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\32\41",
             "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\32\40",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\15\40\1\76"+
-            "\14\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\32\40",
-            "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\1\101\31\41\6\uffff\32\40",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\32\41",
             "",
             "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\22\40\1\102"+
-            "\7\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\17\40\1\103"+
-            "\12\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\24\40\1\104"+
-            "\5\40",
-            "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\21\40\1\105"+
-            "\10\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\21\40\1\106"+
-            "\10\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\13\40\1\107"+
-            "\16\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\13\40\1\110"+
-            "\16\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\22\40\1\111"+
-            "\7\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\1\112\31\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\24\40\1\113"+
-            "\5\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\15\40\1\114"+
-            "\14\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\13\40\1\115"+
-            "\16\40",
             "",
             "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\22\40\1\116"+
-            "\7\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
             "",
-            "\1\43\10\uffff\1\74\1\uffff\12\117\1\43\6\uffff\32\41\6\uffff"+
-            "\32\40",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\15\41\1\101"+
+            "\14\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\32\41",
             "",
-            "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\4\40\1\120"+
-            "\25\40",
-            "",
-            "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\16\41\1\121\13\41\6\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\23\40\1\122"+
-            "\6\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\4\40\1\123"+
-            "\25\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\4\40\1\124"+
-            "\25\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\26\40\1\125"+
-            "\3\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\22\40\1\126"+
-            "\7\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\22\40\1\127"+
-            "\7\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\30\40\1\130"+
-            "\1\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\23\40\1\131"+
-            "\6\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\25\40\1\132"+
-            "\4\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\1\40\1\133"+
-            "\30\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\23\40\1\134"+
-            "\6\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\4\40\1\135"+
-            "\25\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "\1\43\10\uffff\1\74\1\uffff\12\136\1\43\6\uffff\32\41\6\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\22\41\1\140\7\41\6\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\17\40\1\141"+
-            "\12\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\1\143\31\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\23\40\1\144"+
-            "\6\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\4\40\1\145"+
-            "\25\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\4\40\1\147"+
-            "\25\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\4\40\1\150"+
-            "\25\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\6\40\1\153"+
-            "\23\40",
-            "\1\43\10\uffff\1\74\1\uffff\12\42\1\43\6\uffff\32\41\6\uffff"+
-            "\32\40",
-            "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\1\155\31\40",
-            "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\21\40\1\156"+
-            "\10\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\21\40\1\160"+
-            "\10\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\1\104\31\42\6\uffff\32\41",
             "",
             "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\1\162\31\40",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\21\41\1\105"+
+            "\10\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\21\41\1\106"+
+            "\10\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\13\41\1\107"+
+            "\16\41",
             "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\21\40\1\163"+
-            "\10\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\3\40\1\164"+
-            "\26\40",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\13\41\1\110"+
+            "\16\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\17\41\1\111"+
+            "\12\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\22\41\1\112"+
+            "\7\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\24\41\1\113"+
+            "\5\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\22\41\1\114"+
+            "\7\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\1\115\31\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\24\41\1\116"+
+            "\5\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\15\41\1\117"+
+            "\14\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\13\41\1\120"+
+            "\16\41",
+            "\1\43\12\uffff\4\44\1\121\5\44\1\43\6\uffff\32\42\6\uffff"+
+            "\32\41",
             "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
             "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\23\40\1\166"+
-            "\6\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\1\167\31\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\22\41\1\122"+
+            "\7\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
             "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\10\40\1\171"+
-            "\21\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\14\40\1\172"+
-            "\15\40",
+            "\1\43\10\uffff\1\76\1\uffff\12\123\1\43\6\uffff\32\42\4\uffff"+
+            "\1\31\1\uffff\32\41",
             "",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\16\40\1\173"+
-            "\13\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\4\uffff\1\30\1\uffff"+
-            "\32\40",
-            "\1\43\12\uffff\12\42\1\43\6\uffff\32\41\6\uffff\15\40\1\175"+
-            "\14\40",
             "",
-            "\1\43\7\uffff\1\176\2\uffff\12\42\1\43\6\uffff\32\41\6\uffff"+
-            "\32\40",
+            "",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\4\41\1\124"+
+            "\25\41",
+            "",
+            "",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\16\42\1\125\13\42\6\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\26\41\1\126"+
+            "\3\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\22\41\1\127"+
+            "\7\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\22\41\1\130"+
+            "\7\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\30\41\1\131"+
+            "\1\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\4\41\1\132"+
+            "\25\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\23\41\1\133"+
+            "\6\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\4\41\1\134"+
+            "\25\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\23\41\1\135"+
+            "\6\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\25\41\1\136"+
+            "\4\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\1\41\1\137"+
+            "\30\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\23\41\1\140"+
+            "\6\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\4\41\1\141"+
+            "\25\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\10\uffff\1\76\1\uffff\12\143\1\43\6\uffff\32\42\4\uffff"+
+            "\1\31\1\uffff\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\22\42\1\145\7\42\6\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\1\146\31\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\23\41\1\147"+
+            "\6\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\4\41\1\150"+
+            "\25\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\10\41\1\153"+
+            "\21\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\4\41\1\154"+
+            "\25\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\4\41\1\155"+
+            "\25\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\6\41\1\160"+
+            "\23\41",
+            "",
+            "\1\43\10\uffff\1\76\1\uffff\12\161\1\43\6\uffff\32\42\4\uffff"+
+            "\1\31\1\uffff\32\41",
+            "",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\21\41\1\163"+
+            "\10\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "",
+            "",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\15\41\1\165"+
+            "\14\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\21\41\1\166"+
+            "\10\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "",
+            "",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\1\170\31\41",
+            "\1\43\12\uffff\12\161\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\3\41\1\171"+
+            "\26\41",
+            "",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\6\41\1\172"+
+            "\23\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\23\41\1\174"+
+            "\6\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\4\uffff\1\31\1\uffff"+
+            "\32\41",
+            "",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\10\41\1\177"+
+            "\21\41",
+            "",
+            "",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\16\41\1\u0080"+
+            "\13\41",
+            "\1\43\12\uffff\12\44\1\43\6\uffff\32\42\6\uffff\15\41\1\u0081"+
+            "\14\41",
+            "\1\43\7\uffff\1\u0082\2\uffff\12\44\1\43\6\uffff\32\42\6\uffff"+
+            "\32\41",
             ""
     };
 
-    static final short[] DFA16_eot = DFA.unpackEncodedString(DFA16_eotS);
-    static final short[] DFA16_eof = DFA.unpackEncodedString(DFA16_eofS);
-    static final char[] DFA16_min = DFA.unpackEncodedStringToUnsignedChars(DFA16_minS);
-    static final char[] DFA16_max = DFA.unpackEncodedStringToUnsignedChars(DFA16_maxS);
-    static final short[] DFA16_accept = DFA.unpackEncodedString(DFA16_acceptS);
-    static final short[] DFA16_special = DFA.unpackEncodedString(DFA16_specialS);
-    static final short[][] DFA16_transition;
+    static final short[] DFA17_eot = DFA.unpackEncodedString(DFA17_eotS);
+    static final short[] DFA17_eof = DFA.unpackEncodedString(DFA17_eofS);
+    static final char[] DFA17_min = DFA.unpackEncodedStringToUnsignedChars(DFA17_minS);
+    static final char[] DFA17_max = DFA.unpackEncodedStringToUnsignedChars(DFA17_maxS);
+    static final short[] DFA17_accept = DFA.unpackEncodedString(DFA17_acceptS);
+    static final short[] DFA17_special = DFA.unpackEncodedString(DFA17_specialS);
+    static final short[][] DFA17_transition;
 
     static {
-        int numStates = DFA16_transitionS.length;
-        DFA16_transition = new short[numStates][];
+        int numStates = DFA17_transitionS.length;
+        DFA17_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA16_transition[i] = DFA.unpackEncodedString(DFA16_transitionS[i]);
+            DFA17_transition[i] = DFA.unpackEncodedString(DFA17_transitionS[i]);
         }
     }
 
-    class DFA16 extends DFA {
+    class DFA17 extends DFA {
 
-        public DFA16(BaseRecognizer recognizer) {
+        public DFA17(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 16;
-            this.eot = DFA16_eot;
-            this.eof = DFA16_eof;
-            this.min = DFA16_min;
-            this.max = DFA16_max;
-            this.accept = DFA16_accept;
-            this.special = DFA16_special;
-            this.transition = DFA16_transition;
+            this.decisionNumber = 17;
+            this.eot = DFA17_eot;
+            this.eof = DFA17_eof;
+            this.min = DFA17_min;
+            this.max = DFA17_max;
+            this.accept = DFA17_accept;
+            this.special = DFA17_special;
+            this.transition = DFA17_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | COMMENT | TYPE_YES_OR_NO | IP4_ADDR | ALPHANUM_WORD | IP6_ADDR | WS | BAD );";
+            return "1:1: Tokens : ( T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | COMMENT | TYPE_YES_OR_NO | IP4_ADDR | NUMBER | ALPHANUM_WORD | IP6_ADDR | WS | BAD );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA16_0 = input.LA(1);
+                        int LA17_0 = input.LA(1);
 
                         s = -1;
-                        if ( (LA16_0=='z') ) {s = 1;}
+                        if ( (LA17_0=='z') ) {s = 1;}
 
-                        else if ( (LA16_0=='I') ) {s = 2;}
+                        else if ( (LA17_0=='I') ) {s = 2;}
 
-                        else if ( (LA16_0=='H') ) {s = 3;}
+                        else if ( (LA17_0=='H') ) {s = 3;}
 
-                        else if ( (LA16_0=='C') ) {s = 4;}
+                        else if ( (LA17_0=='C') ) {s = 4;}
 
-                        else if ( (LA16_0=='{') ) {s = 5;}
+                        else if ( (LA17_0=='{') ) {s = 5;}
 
-                        else if ( (LA16_0=='}') ) {s = 6;}
+                        else if ( (LA17_0=='}') ) {s = 6;}
 
-                        else if ( (LA16_0=='t') ) {s = 7;}
+                        else if ( (LA17_0=='f') ) {s = 7;}
 
-                        else if ( (LA16_0==';') ) {s = 8;}
+                        else if ( (LA17_0==';') ) {s = 8;}
 
-                        else if ( (LA16_0=='f') ) {s = 9;}
+                        else if ( (LA17_0=='o') ) {s = 9;}
 
-                        else if ( (LA16_0=='o') ) {s = 10;}
+                        else if ( (LA17_0=='t') ) {s = 10;}
 
-                        else if ( (LA16_0=='m') ) {s = 11;}
+                        else if ( (LA17_0=='m') ) {s = 11;}
 
-                        else if ( (LA16_0=='s') ) {s = 12;}
+                        else if ( (LA17_0=='s') ) {s = 12;}
 
-                        else if ( (LA16_0=='h') ) {s = 13;}
+                        else if ( (LA17_0=='h') ) {s = 13;}
 
-                        else if ( (LA16_0=='d') ) {s = 14;}
+                        else if ( (LA17_0=='d') ) {s = 14;}
 
-                        else if ( (LA16_0=='.') ) {s = 15;}
+                        else if ( (LA17_0=='i') ) {s = 15;}
 
-                        else if ( (LA16_0=='/') ) {s = 16;}
+                        else if ( (LA17_0=='.') ) {s = 16;}
 
-                        else if ( (LA16_0=='#') ) {s = 17;}
+                        else if ( (LA17_0=='/') ) {s = 17;}
 
-                        else if ( (LA16_0=='y') ) {s = 18;}
+                        else if ( (LA17_0=='#') ) {s = 18;}
 
-                        else if ( (LA16_0=='n') ) {s = 19;}
+                        else if ( (LA17_0=='y') ) {s = 19;}
 
-                        else if ( (LA16_0=='0') ) {s = 20;}
+                        else if ( (LA17_0=='n') ) {s = 20;}
 
-                        else if ( (LA16_0=='1') ) {s = 21;}
+                        else if ( (LA17_0=='0') ) {s = 21;}
 
-                        else if ( ((LA16_0>='2' && LA16_0<='9')) ) {s = 22;}
+                        else if ( (LA17_0=='1') ) {s = 22;}
 
-                        else if ( ((LA16_0>='a' && LA16_0<='c')||LA16_0=='e'||LA16_0=='g'||(LA16_0>='i' && LA16_0<='l')||(LA16_0>='p' && LA16_0<='r')||(LA16_0>='u' && LA16_0<='x')) ) {s = 23;}
+                        else if ( ((LA17_0>='2' && LA17_0<='9')) ) {s = 23;}
 
-                        else if ( ((LA16_0>='A' && LA16_0<='B')||(LA16_0>='D' && LA16_0<='G')||(LA16_0>='J' && LA16_0<='Z')) ) {s = 25;}
+                        else if ( ((LA17_0>='a' && LA17_0<='c')||LA17_0=='e'||LA17_0=='g'||(LA17_0>='j' && LA17_0<='l')||(LA17_0>='p' && LA17_0<='r')||(LA17_0>='u' && LA17_0<='x')) ) {s = 24;}
 
-                        else if ( (LA16_0=='_') ) {s = 26;}
+                        else if ( ((LA17_0>='A' && LA17_0<='B')||(LA17_0>='D' && LA17_0<='G')||(LA17_0>='J' && LA17_0<='Z')) ) {s = 26;}
 
-                        else if ( (LA16_0==':') ) {s = 27;}
+                        else if ( (LA17_0=='_') ) {s = 27;}
 
-                        else if ( (LA16_0=='%') ) {s = 28;}
+                        else if ( (LA17_0==':') ) {s = 28;}
 
-                        else if ( (LA16_0=='\t'||LA16_0=='\f'||LA16_0==' ') ) {s = 29;}
+                        else if ( (LA17_0=='%') ) {s = 29;}
 
-                        else if ( ((LA16_0>='\u0000' && LA16_0<='\b')||(LA16_0>='\n' && LA16_0<='\u000B')||(LA16_0>='\r' && LA16_0<='\u001F')||(LA16_0>='!' && LA16_0<='\"')||LA16_0=='$'||(LA16_0>='&' && LA16_0<='-')||(LA16_0>='<' && LA16_0<='@')||(LA16_0>='[' && LA16_0<='^')||LA16_0=='`'||LA16_0=='|'||(LA16_0>='~' && LA16_0<='\uFFFF')) ) {s = 30;}
+                        else if ( (LA17_0=='\t'||LA17_0=='\f'||LA17_0==' ') ) {s = 30;}
 
-                        else s = 24;
+                        else if ( ((LA17_0>='\u0000' && LA17_0<='\b')||(LA17_0>='\n' && LA17_0<='\u000B')||(LA17_0>='\r' && LA17_0<='\u001F')||(LA17_0>='!' && LA17_0<='\"')||LA17_0=='$'||(LA17_0>='&' && LA17_0<='-')||(LA17_0>='<' && LA17_0<='@')||(LA17_0>='[' && LA17_0<='^')||LA17_0=='`'||LA17_0=='|'||(LA17_0>='~' && LA17_0<='\uFFFF')) ) {s = 31;}
+
+                        else s = 25;
 
                         if ( s>=0 ) return s;
                         break;
             }
             if (state.backtracking>0) {state.failed=true; return -1;}
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 16, _s, input);
+                new NoViableAltException(getDescription(), 17, _s, input);
             error(nvae);
             throw nvae;
         }
