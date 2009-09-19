@@ -63,7 +63,7 @@ public class ZoneStatementTest extends ParserTestTemplate {
     public void test_CPPStyleCommentGrammar() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "//CPP-Style comment";
+        cmd = "//CPP-Style comment\r\n";
 
         testNormal();
     }

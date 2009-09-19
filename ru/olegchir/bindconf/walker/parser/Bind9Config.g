@@ -177,10 +177,8 @@ catch (RecognitionException re) {
 list	:	entity*
 	|	BAD+
 	;
-entity	:	COMMENT!
-	|	zone
+entity	:	zone
 	|	testing
-	|	NL!
 	;
 
 //Statements
@@ -269,14 +267,14 @@ COMMENT	:	(C_COMMENT | CPP_COMMENT | PERL_COMMENT){ $channel=HIDDEN; }
 fragment C_COMMENT	: '/*' ( (~'*' | '*' ~'/') => .)* '*/'
      	;
 fragment CPP_COMMENT
-	:	'//' (~('\r'|'\n'| '\uFFFF') )* NLF
+	:	'//' (~('\r'|'\n') )* NL
 	;
 fragment PERL_COMMENT
-	:	'#' (~('\r'|'\n'| '\uFFFF') )* NLF 	
+	:	'#' (~('\r'|'\n') )* NL 	
 	;
 	
 //Whitespace forms		
-WS	: (' '|'\t'|'\f'|NLF)+
+WS	: (' '|'\t'|'\f'|NL)+
 		{ $channel=HIDDEN; }
 	;
 fragment NL	
@@ -313,10 +311,6 @@ IP6_ADDR:	(IP6_VALID_CHAR)+
 	
 fragment IP6_VALID_CHAR
 	: (('a'..'z')|('A'..'Z')|':'|'%'|('0'..'9'))+
-	;
-	
-fragment NLF
-	:	NL|'\uFFFF'
 	;
 	
 BAD 	: . { overrider.registerLexicalError("The character '" + $text + "' mismatched."); } 

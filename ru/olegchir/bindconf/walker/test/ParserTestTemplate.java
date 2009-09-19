@@ -91,9 +91,9 @@ public class ParserTestTemplate {
         assertTrue("Must be lexical-valid on (Parser/stage1)",
                 parser.getOverrider().getLexicalErrorCount() == 0);
         assertTrue("Must be semantic-valid on (Lexer/stage1)",
-                parser.getOverrider().getSemanticErrorCount() == 0);
+                lexer.getOverrider().getSemanticErrorCount() == 0);
         assertTrue("Must be lexical-valid on (Lexer/stage1)",
-                parser.getOverrider().getLexicalErrorCount() == 0);
+                lexer.getOverrider().getLexicalErrorCount() == 0);
     }
 
     public void overrideAndParse() throws Exception {
