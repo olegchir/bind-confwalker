@@ -142,18 +142,6 @@ entity	:	COMMENT!
 	|	NL!
 	;
 
-//Comments
-COMMENT	:	C_COMMENT | CPP_COMMENT | PERL_COMMENT
-	;	
-fragment C_COMMENT	: '/*' ( (~'*' | '*' ~'/') => .)* '*/'
-     	;
-fragment CPP_COMMENT
-	:	'//' ((~'\r'|~'\n') => . )* (NL)? 
-	;
-fragment PERL_COMMENT
-	:	'#' ((~'\r'|~'\n') => . )* (NL)? 	
-	;
-
 //Statements
 zone	
 	: 'zone' zone_name zone_class? zone_forward_block  -> ^(ST_ZONE_FORWARD zone_name zone_class? zone_forward_block)	
@@ -233,7 +221,27 @@ ip_addr : ip4_addr | ip6_addr;
 ip4_addr:	IP4_ADDR;
 ip6_addr:	IP6_ADDR | ALPHANUM_WORD; //It's very rough hack: I don't know if we able to create ID-like IP6 addr ("asd") 
 ip_port	:	NUMBER;	
-		
+
+//Comments
+COMMENT	:	(C_COMMENT | CPP_COMMENT | PERL_COMMENT){ $channel=HIDDEN; }
+	;	
+fragment C_COMMENT	: '/*' ( (~'*' | '*' ~'/') => .)* '*/'
+     	;
+fragment CPP_COMMENT
+	:	'//' (~('\r'|'\n') )* NL
+	;
+fragment PERL_COMMENT
+	:	'#' (~('\r'|'\n') )* NL 	
+	;
+	
+//Whitespace forms		
+WS	: (' '|'\t'|'\f'|NL)+
+		{ $channel=HIDDEN; }
+	;
+fragment NL	
+	: ('\r'? '\n')=> '\r'? '\n'
+  	| '\r'
+  	;		
 //Pure lexical part
 TYPE_YES_OR_NO
 	:	'yes'|'no'|'true'|'false'|'0'|'1'
@@ -266,14 +274,6 @@ fragment IP6_VALID_CHAR
 	: (('a'..'z')|('A'..'Z')|':'|'%'|('0'..'9'))+
 	;
 	
-//Whitespace forms		
-WS	: (' '|'\t'|'\f')+
-		{ $channel=HIDDEN; }
-	;
-fragment NL	
-	: ('\r'? '\n')=> '\r'? '\n'
-  	| '\r'
-  	;
 fragment NLF
 	:	NL|EOF
 	;

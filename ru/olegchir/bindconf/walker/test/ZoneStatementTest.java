@@ -41,7 +41,7 @@ public class ZoneStatementTest extends ParserTestTemplate {
     public void test_invalidGrammarInZoneDef() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "zone 1test- IN {type delegation-only; }";
+        cmd = "zone 1test- IN {type delegation-only;}";
 
         testSilent();
 
@@ -63,7 +63,7 @@ public class ZoneStatementTest extends ParserTestTemplate {
     public void test_CPPStyleCommentGrammar() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "//CPP-Style comment";
+        cmd = "//CPP-Style comment\r";
 
         testNormal();
     }
@@ -72,7 +72,7 @@ public class ZoneStatementTest extends ParserTestTemplate {
     public void test_PerlStyleCommentGrammar() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "#Perl-Style comment";
+        cmd = "#Perl-Style comment\r\n";
 
         testNormal();
     }
