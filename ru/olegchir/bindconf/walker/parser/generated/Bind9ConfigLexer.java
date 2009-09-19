@@ -1,4 +1,4 @@
-// $ANTLR 3.1.2 O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g 2009-09-18 18:25:50
+// $ANTLR 3.1.2 O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g 2009-09-19 12:17:16
 
 package ru.olegchir.bindconf.walker.parser.generated;
 import ru.olegchir.bindconf.walker.parser.override.Bind9LexerOverrider;
@@ -411,7 +411,7 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:155:9: ( C_COMMENT | CPP_COMMENT | PERL_COMMENT )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:133:9: ( C_COMMENT | CPP_COMMENT | PERL_COMMENT )
             int alt1=3;
             int LA1_0 = input.LA(1);
 
@@ -444,21 +444,21 @@ public class Bind9ConfigLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:155:11: C_COMMENT
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:133:11: C_COMMENT
                     {
                     mC_COMMENT(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:155:23: CPP_COMMENT
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:133:23: CPP_COMMENT
                     {
                     mCPP_COMMENT(); if (state.failed) return ;
 
                     }
                     break;
                 case 3 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:155:37: PERL_COMMENT
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:133:37: PERL_COMMENT
                     {
                     mPERL_COMMENT(); if (state.failed) return ;
 
@@ -477,12 +477,12 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "C_COMMENT"
     public final void mC_COMMENT() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:157:20: ( '/*' ( (~ '*' | '*' ~ '/' )=> . )* '*/' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:157:22: '/*' ( (~ '*' | '*' ~ '/' )=> . )* '*/'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:135:20: ( '/*' ( (~ '*' | '*' ~ '/' )=> . )* '*/' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:135:22: '/*' ( (~ '*' | '*' ~ '/' )=> . )* '*/'
             {
             match("/*"); if (state.failed) return ;
 
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:157:27: ( (~ '*' | '*' ~ '/' )=> . )*
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:135:27: ( (~ '*' | '*' ~ '/' )=> . )*
             loop2:
             do {
                 int alt2=2;
@@ -519,7 +519,7 @@ public class Bind9ConfigLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:157:29: (~ '*' | '*' ~ '/' )=> .
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:135:29: (~ '*' | '*' ~ '/' )=> .
             	    {
             	    matchAny(); if (state.failed) return ;
 
@@ -545,12 +545,12 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "CPP_COMMENT"
     public final void mCPP_COMMENT() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:160:2: ( '//' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )? )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:160:4: '//' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )?
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:138:2: ( '//' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )? )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:138:4: '//' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )?
             {
             match("//"); if (state.failed) return ;
 
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:160:9: ( (~ '\\r' | ~ '\\n' )=> . )*
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:138:9: ( (~ '\\r' | ~ '\\n' )=> . )*
             loop3:
             do {
                 int alt3=2;
@@ -581,7 +581,7 @@ public class Bind9ConfigLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:160:10: (~ '\\r' | ~ '\\n' )=> .
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:138:10: (~ '\\r' | ~ '\\n' )=> .
             	    {
             	    matchAny(); if (state.failed) return ;
 
@@ -593,7 +593,7 @@ public class Bind9ConfigLexer extends Lexer {
                 }
             } while (true);
 
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:160:32: ( NL )?
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:138:32: ( NL )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -602,7 +602,7 @@ public class Bind9ConfigLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:160:33: NL
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:138:33: NL
                     {
                     mNL(); if (state.failed) return ;
 
@@ -623,11 +623,11 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "PERL_COMMENT"
     public final void mPERL_COMMENT() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:163:2: ( '#' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )? )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:163:4: '#' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )?
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:2: ( '#' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )? )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:4: '#' ( (~ '\\r' | ~ '\\n' )=> . )* ( NL )?
             {
             match('#'); if (state.failed) return ;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:163:8: ( (~ '\\r' | ~ '\\n' )=> . )*
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:8: ( (~ '\\r' | ~ '\\n' )=> . )*
             loop5:
             do {
                 int alt5=2;
@@ -658,7 +658,7 @@ public class Bind9ConfigLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:163:9: (~ '\\r' | ~ '\\n' )=> .
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:9: (~ '\\r' | ~ '\\n' )=> .
             	    {
             	    matchAny(); if (state.failed) return ;
 
@@ -670,7 +670,7 @@ public class Bind9ConfigLexer extends Lexer {
                 }
             } while (true);
 
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:163:31: ( NL )?
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:31: ( NL )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -679,7 +679,7 @@ public class Bind9ConfigLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:163:32: NL
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:32: NL
                     {
                     mNL(); if (state.failed) return ;
 
@@ -700,7 +700,7 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "TYPE_YES_OR_NO"
     public final void mTYPE_YES_OR_NO() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:203:2: ( 'yes' | 'no' | 'true' | 'false' | '0' | '1' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:182:2: ( 'yes' | 'no' | 'true' | 'false' | '0' | '1' )
             int alt7=6;
             switch ( input.LA(1) ) {
             case 'y':
@@ -743,7 +743,7 @@ public class Bind9ConfigLexer extends Lexer {
 
             switch (alt7) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:203:4: 'yes'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:182:4: 'yes'
                     {
                     match("yes"); if (state.failed) return ;
 
@@ -751,7 +751,7 @@ public class Bind9ConfigLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:203:10: 'no'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:182:10: 'no'
                     {
                     match("no"); if (state.failed) return ;
 
@@ -759,7 +759,7 @@ public class Bind9ConfigLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:203:15: 'true'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:182:15: 'true'
                     {
                     match("true"); if (state.failed) return ;
 
@@ -767,7 +767,7 @@ public class Bind9ConfigLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:203:22: 'false'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:182:22: 'false'
                     {
                     match("false"); if (state.failed) return ;
 
@@ -775,14 +775,14 @@ public class Bind9ConfigLexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:203:30: '0'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:182:30: '0'
                     {
                     match('0'); if (state.failed) return ;
 
                     }
                     break;
                 case 6 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:203:34: '1'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:182:34: '1'
                     {
                     match('1'); if (state.failed) return ;
 
@@ -801,8 +801,8 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:208:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:208:12: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:187:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:187:12: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -814,7 +814,7 @@ public class Bind9ConfigLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:208:36: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:187:36: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop8:
             do {
                 int alt8=2;
@@ -862,11 +862,11 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "ANY_ASCII_ALPHANUM"
     public final void mANY_ASCII_ALPHANUM() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:211:2: ( ( '\\u0020' .. '\\u007F' ) )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:211:4: ( '\\u0020' .. '\\u007F' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:190:2: ( ( '\\u0020' .. '\\u007F' ) )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:190:4: ( '\\u0020' .. '\\u007F' )
             {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:211:4: ( '\\u0020' .. '\\u007F' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:211:5: '\\u0020' .. '\\u007F'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:190:4: ( '\\u0020' .. '\\u007F' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:190:5: '\\u0020' .. '\\u007F'
             {
             matchRange(' ','\u007F'); if (state.failed) return ;
 
@@ -886,10 +886,10 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:215:4: ( ( ' ' | '\\t' | '\\f' )+ )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:215:6: ( ' ' | '\\t' | '\\f' )+
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:194:4: ( ( ' ' | '\\t' | '\\f' )+ )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:194:6: ( ' ' | '\\t' | '\\f' )+
             {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:215:6: ( ' ' | '\\t' | '\\f' )+
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:194:6: ( ' ' | '\\t' | '\\f' )+
             int cnt9=0;
             loop9:
             do {
@@ -946,7 +946,7 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "NL"
     public final void mNL() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:219:2: ( ( ( '\\r' )? '\\n' )=> ( '\\r' )? '\\n' | '\\r' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:198:2: ( ( ( '\\r' )? '\\n' )=> ( '\\r' )? '\\n' | '\\r' )
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -971,9 +971,9 @@ public class Bind9ConfigLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:219:4: ( ( '\\r' )? '\\n' )=> ( '\\r' )? '\\n'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:198:4: ( ( '\\r' )? '\\n' )=> ( '\\r' )? '\\n'
                     {
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:219:19: ( '\\r' )?
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:198:19: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -982,7 +982,7 @@ public class Bind9ConfigLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:219:19: '\\r'
+                            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:198:19: '\\r'
                             {
                             match('\r'); if (state.failed) return ;
 
@@ -996,7 +996,7 @@ public class Bind9ConfigLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:220:6: '\\r'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:199:6: '\\r'
                     {
                     match('\r'); if (state.failed) return ;
 
@@ -1013,7 +1013,7 @@ public class Bind9ConfigLexer extends Lexer {
     // $ANTLR start "NLF"
     public final void mNLF() throws RecognitionException {
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:223:2: ( NL | EOF )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:202:2: ( NL | EOF )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1024,14 +1024,14 @@ public class Bind9ConfigLexer extends Lexer {
                 alt12=2;}
             switch (alt12) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:223:4: NL
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:202:4: NL
                     {
                     mNL(); if (state.failed) return ;
 
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:223:7: EOF
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:202:7: EOF
                     {
                     match(EOF); if (state.failed) return ;
 
@@ -1050,8 +1050,8 @@ public class Bind9ConfigLexer extends Lexer {
         try {
             int _type = BAD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:226:6: ( . )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:226:8: .
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:205:6: ( . )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:205:8: .
             {
             matchAny(); if (state.failed) return ;
             if ( state.backtracking==0 ) {
@@ -1220,7 +1220,7 @@ public class Bind9ConfigLexer extends Lexer {
 
     // $ANTLR start synpred1_Bind9Config
     public final void synpred1_Bind9Config_fragment() throws RecognitionException {   
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:157:29: (~ '*' | '*' ~ '/' )
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:135:29: (~ '*' | '*' ~ '/' )
         int alt14=2;
         int LA14_0 = input.LA(1);
 
@@ -1239,7 +1239,7 @@ public class Bind9ConfigLexer extends Lexer {
         }
         switch (alt14) {
             case 1 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:157:30: ~ '*'
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:135:30: ~ '*'
                 {
                 if ( (input.LA(1)>='\u0000' && input.LA(1)<=')')||(input.LA(1)>='+' && input.LA(1)<='\uFFFF') ) {
                     input.consume();
@@ -1255,7 +1255,7 @@ public class Bind9ConfigLexer extends Lexer {
                 }
                 break;
             case 2 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:157:37: '*' ~ '/'
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:135:37: '*' ~ '/'
                 {
                 match('*'); if (state.failed) return ;
                 if ( (input.LA(1)>='\u0000' && input.LA(1)<='.')||(input.LA(1)>='0' && input.LA(1)<='\uFFFF') ) {
@@ -1277,7 +1277,7 @@ public class Bind9ConfigLexer extends Lexer {
 
     // $ANTLR start synpred2_Bind9Config
     public final void synpred2_Bind9Config_fragment() throws RecognitionException {   
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:160:10: (~ '\\r' | ~ '\\n' )
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:138:10: (~ '\\r' | ~ '\\n' )
         // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:
         {
         if ( (input.LA(1)>='\u0000' && input.LA(1)<='\uFFFF') ) {
@@ -1297,7 +1297,7 @@ public class Bind9ConfigLexer extends Lexer {
 
     // $ANTLR start synpred3_Bind9Config
     public final void synpred3_Bind9Config_fragment() throws RecognitionException {   
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:163:9: (~ '\\r' | ~ '\\n' )
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:141:9: (~ '\\r' | ~ '\\n' )
         // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:
         {
         if ( (input.LA(1)>='\u0000' && input.LA(1)<='\uFFFF') ) {
@@ -1317,10 +1317,10 @@ public class Bind9ConfigLexer extends Lexer {
 
     // $ANTLR start synpred4_Bind9Config
     public final void synpred4_Bind9Config_fragment() throws RecognitionException {   
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:219:4: ( ( '\\r' )? '\\n' )
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:219:5: ( '\\r' )? '\\n'
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:198:4: ( ( '\\r' )? '\\n' )
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:198:5: ( '\\r' )? '\\n'
         {
-        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:219:5: ( '\\r' )?
+        // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:198:5: ( '\\r' )?
         int alt15=2;
         int LA15_0 = input.LA(1);
 
@@ -1329,7 +1329,7 @@ public class Bind9ConfigLexer extends Lexer {
         }
         switch (alt15) {
             case 1 :
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:219:5: '\\r'
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:198:5: '\\r'
                 {
                 match('\r'); if (state.failed) return ;
 

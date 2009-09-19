@@ -164,9 +164,13 @@ public class ParserTest {
                 parser.getOverrider().getLexicalErrorCount() == 0);
     }
 
-    public void testNormal() throws Exception {
+    public void overrideAndParse() throws Exception {
         override();
         parse();
+    }
+
+    public void testNormal() throws Exception {
+        overrideAndParse();
         testValid();
     }
 
@@ -174,5 +178,9 @@ public class ParserTest {
         override();
         silent();
         parse();
+    }
+
+    public void testVerbose() throws Exception {
+        overrideAndParse();
     }
 }

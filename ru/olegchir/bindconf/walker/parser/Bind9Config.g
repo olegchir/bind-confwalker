@@ -12,28 +12,6 @@ import ru.olegchir.bindconf.walker.parser.override.Bind9ParserOverrider;
 import ru.olegchir.bindconf.walker.parser.override.Bind9RecognizerOverrider;
 }
 @members {
-private String currentZoneType = null;
-
-public String resetCurrentZoneType() {
-	String returnValue = this.currentZoneType;
-	currentZoneType = null;
-	return returnValue;
-}
-
-public String setCurrentZoneType(String newZoneType) {
-	String returnValue = this.currentZoneType;
-	this.currentZoneType = newZoneType;
-	return returnValue;
-}
-
-public String getCurrentZoneType() {
-	return this.currentZoneType;
-}
-
-public boolean currentZoneTypeSet() {
-	return this.currentZoneType!=null;
-}
-
 private Bind9ParserOverrider overrider;
 
 public Bind9ParserOverrider getOverrider() {
@@ -166,7 +144,7 @@ fragment PERL_COMMENT
 //Statements
 zone	
 	:
-	'zone' zone_name zone_class? zone_block {resetCurrentZoneType();} -> ^(ST_ZONE zone_name zone_class zone_block)
+	'zone' zone_name zone_class? zone_block {this.overrider.resetCurrentZoneType();} -> ^(ST_ZONE zone_name zone_class zone_block)
 	;
 zone_name 
 	:	ID
@@ -178,7 +156,7 @@ zone_block
 	:	pl = '{' zone_type_def zone_param*'}' -> ^(ST_ZONE_PLIST[$pl,"ST_ZONE_PLIST"] zone_type_def zone_param*)
 	;
 zone_param
-	:	{"forward".equals(getCurrentZoneType())}? zone_forward_switch_def
+	:	{"forward".equals(this.overrider.getCurrentZoneType())}? zone_forward_switch_def
 	;
 zone_forward_switch_def
 	:	'forward' zone_forward_switch ';' -> ^(PLIST_PARAM 'forward' zone_forward_switch)
@@ -188,7 +166,7 @@ zone_forward_switch
 	|	'only'	
 	;
 zone_type_def
-	:	'type' zone_type ';' {setCurrentZoneType($zone_type.text);} -> zone_type
+	:	'type' zone_type ';' {this.overrider.setCurrentZoneType($zone_type.text);} -> zone_type
 	;
 zone_type
 	:	'master'
@@ -198,6 +176,7 @@ zone_type
 	|	'hint'
 	|	'delegation-only'
 	;
+	
 //System types	
 fragment TYPE_YES_OR_NO
 	:	'yes'|'no'|'true'|'false'|'0'|'1'
