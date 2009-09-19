@@ -92,7 +92,7 @@ public class ParserTest {
     public void test_validForwardZone() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "zone validForwardZone IN {type forward; forward first;}";
+        cmd = "zone validForwardZone {type forward; forward first;}";
 
         testNormal();
     }

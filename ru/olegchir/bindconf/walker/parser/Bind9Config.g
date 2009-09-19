@@ -1,7 +1,13 @@
 grammar Bind9Config;
 options {output=AST;} // build trees
 tokens {
-	ST_ZONE;
+	ST_ZONE_MASTER;
+	ST_ZONE_SLAVE;
+	ST_ZONE_HINT;
+	ST_ZONE_STUB;
+	ST_ZONE_FORWARD;
+	ST_ZONE_DELEGATION;
+	
 	ST_ZONE_PLIST;
 	PLIST_PARAM;
 }
@@ -143,8 +149,8 @@ fragment PERL_COMMENT
 
 //Statements
 zone	
-	:
-	'zone' zone_name zone_class? zone_block {this.overrider.resetCurrentZoneType();} -> ^(ST_ZONE zone_name zone_class zone_block)
+	: 'zone' zone_name zone_class? zone_forward_block  -> ^(ST_ZONE_FORWARD zone_name zone_class? zone_forward_block)	
+	| 'zone' zone_name zone_class? zone_delegation_block  -> ^(ST_ZONE_DELEGATION zone_name zone_class?)
 	;
 zone_name 
 	:	ID
@@ -152,12 +158,19 @@ zone_name
 zone_class
 	:	'IN'|'HS'|'CHAOS'
 	;
-zone_block
-	:	pl = '{' zone_type_def zone_param*'}' -> ^(ST_ZONE_PLIST[$pl,"ST_ZONE_PLIST"] zone_type_def zone_param*)
+	
+//Zone block definitions
+zone_forward_block
+	:	pl = '{' (zone_type_forward zone_forward_param*)'}' -> ^(ST_ZONE_PLIST[$pl,"ST_ZONE_PLIST"] zone_type_forward zone_forward_param*)
 	;
-zone_param
-	:	{"forward".equals(this.overrider.getCurrentZoneType())}? zone_forward_switch_def
+zone_forward_param
+	:	zone_forward_switch_def
 	;
+zone_delegation_block
+	:	'{' zone_type_delegation '}'
+	;
+
+//Parameter definitions
 zone_forward_switch_def
 	:	'forward' zone_forward_switch ';' -> ^(PLIST_PARAM 'forward' zone_forward_switch)
 	;
@@ -165,16 +178,25 @@ zone_forward_switch
 	:	'first'
 	|	'only'	
 	;
-zone_type_def
-	:	'type' zone_type ';' {this.overrider.setCurrentZoneType($zone_type.text);} -> zone_type
+
+//Zone type definitions
+zone_type_master
+	:	'type' 'master' ';' -> 'master'
 	;
-zone_type
-	:	'master'
-	|	'slave'
-	|	'stub'
-	|	'forward'
-	|	'hint'
-	|	'delegation-only'
+zone_type_slave
+	:	'type' 'slave' ';' -> 'slave'
+	;
+zone_type_stub
+	:	'type' 'stub' ';' -> 'stub'
+	;
+zone_type_forward
+	:	'type' 'forward' ';' -> 'forward'
+	;
+zone_type_hint
+	:	'type' 'hint' ';' -> 'hint'
+	;
+zone_type_delegation
+	:	'type' 'delegation-only' ';' -> 'delegation-only'
 	;
 	
 //System types	
