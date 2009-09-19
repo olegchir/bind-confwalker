@@ -75,6 +75,13 @@ public abstract class Bind9RecognizerOverrider {
         System.out.println(msg);
     }
 
+public void registerLexicalError(String comment, RecognitionException e){
+        String hdr = getOwner().getErrorHeader(e);
+        String msg = getOwner().getErrorMessage(e, getOwner().getTokenNames());
+        String errorText = '('+comment+") "+(new StringBuilder()).append(hdr).append(" ").append(msg).toString();
+        registerLexicalError(errorText);
+    }
+
     public void registerLexicalError(String text) {
         lexicalErrorCount++;
         stackTrace.add(text);

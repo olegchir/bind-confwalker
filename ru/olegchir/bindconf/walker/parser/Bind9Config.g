@@ -105,6 +105,7 @@ public void emitErrorMessage(String msg) {
 @lexer::header {
 package ru.olegchir.bindconf.walker.parser.generated;
 import ru.olegchir.bindconf.walker.parser.override.Bind9LexerOverrider;
+import ru.olegchir.bindconf.walker.parser.override.Bind9RecognizerOverrider;
 }
 @lexer::members{
 private Bind9LexerOverrider overrider;
@@ -121,7 +122,47 @@ public Bind9ConfigLexer(CharStream input, RecognizerSharedState state, Bind9Lexe
 
 public Bind9ConfigLexer(CharStream input, Bind9LexerOverrider overrider) {
 	this(input, new RecognizerSharedState(), overrider);
-}   
+} 
+
+	public Token nextToken() {
+		while (true) {
+			state.token = null;
+			state.channel = Token.DEFAULT_CHANNEL;
+			state.tokenStartCharIndex = input.index();
+			state.tokenStartCharPositionInLine = input.getCharPositionInLine();
+			state.tokenStartLine = input.getLine();
+			state.text = null;
+			if ( input.LA(1)==CharStream.EOF ) {
+				return Token.EOF_TOKEN;
+			}
+			try {
+				mTokens();
+				if ( state.token==null ) {
+					emit();
+				}
+				else if ( state.token==Token.SKIP_TOKEN ) {
+					continue;
+				}
+				return state.token;
+			}
+			catch (NoViableAltException nva) {
+				reportError(nva);
+				this.overrider.registerLexicalError("on parse next token / no viable alt",nva);
+				recover(nva); // throw out current char and try again
+			}
+			catch (RecognitionException re) {
+				reportError(re);
+				this.overrider.registerLexicalError("on parse next token / generic",re);
+				// match() routine has already called recover()
+			}
+		}
+	} 
+public void emitErrorMessage(String msg) {
+	this.getOverrider().getSystemStackTrace().add(msg);
+	if (this.getOverrider().getErrorReportingVisibility() == Bind9RecognizerOverrider.ERROR_REPORTING_VERBOSE) {
+            System.err.println(msg);
+        }
+} 
 }
 
 @rulecatch {
@@ -228,14 +269,14 @@ COMMENT	:	(C_COMMENT | CPP_COMMENT | PERL_COMMENT){ $channel=HIDDEN; }
 fragment C_COMMENT	: '/*' ( (~'*' | '*' ~'/') => .)* '*/'
      	;
 fragment CPP_COMMENT
-	:	'//' (~('\r'|'\n') )* NL
+	:	'//' (~('\r'|'\n'| '\uFFFF') )* NLF
 	;
 fragment PERL_COMMENT
-	:	'#' (~('\r'|'\n') )* NL 	
+	:	'#' (~('\r'|'\n'| '\uFFFF') )* NLF 	
 	;
 	
 //Whitespace forms		
-WS	: (' '|'\t'|'\f'|NL)+
+WS	: (' '|'\t'|'\f'|NLF)+
 		{ $channel=HIDDEN; }
 	;
 fragment NL	
@@ -275,7 +316,7 @@ fragment IP6_VALID_CHAR
 	;
 	
 fragment NLF
-	:	NL|EOF
+	:	NL|'\uFFFF'
 	;
 	
 BAD 	: . { overrider.registerLexicalError("The character '" + $text + "' mismatched."); } 
