@@ -299,13 +299,17 @@ testing_element_size_spec
 	;
 testing_element_yes_or_no
 	:	'yes_or_no' el_yes_or_no ';' -> ^(PLIST_PARAM 'yes_or_no' el_yes_or_no)
-	;		
-//Semantic support for Configfile elements
-lex_identifier	:	ALPHANUM_NONSTD | NUMBER | KMG_NUMBER | YES_OR_NO_WORD | YES_OR_NO_NUM
+	;
+			
+//Semantic support for Configfile elements. 
+//We need this because some token types are too ambigous to detect it in stage1 lexer.
+lex_identifier	:	ALPHANUM_NONSTD | NUMBER | KMG_NUMBER | lex_yes_or_no
 		|	RANGE_WORD | UNLIMITED_WORD | DEFAULT_WORD
 		;
-lex_number	:	NUMBER | YES_OR_NO_NUM;
-	
+lex_number	:	NUMBER | ZERO_OR_ONE_WORD;
+lex_yes_or_no	:	 YES_OR_NO_WORD | TRUE_OR_FALSE_WORD | ZERO_OR_ONE_WORD;
+
+//Configfile elements	
 el_acl_name	: 	lex_identifier;
 el_domain_name 	: 	(lex_identifier'.')+lex_identifier;	
 el_ip_addr 	: 	el_ip4_addr | el_ip6_addr;
@@ -320,7 +324,7 @@ el_path_name	:	DOUBLE_QUOTE! (~(CR|LF|DOUBLE_QUOTE))* DOUBLE_QUOTE!;
 el_port_list	:	el_port_list_item (SEMICOLON el_port_list_item)* SEMICOLON; 
 el_port_list_item :	NUMBER | (RANGE_WORD NUMBER NUMBER);
 el_size_spec	:	(KMG_NUMBER)|UNLIMITED_WORD|DEFAULT_WORD;
-el_yes_or_no	:	YES_OR_NO_WORD | YES_OR_NO_NUM;	
+el_yes_or_no	:	lex_yes_or_no;	
 
 //Comments
 COMMENT	:	(C_COMMENT | CPP_COMMENT | PERL_COMMENT){ $channel=HIDDEN; }
@@ -347,7 +351,8 @@ fragment NL
 	: ('\r'? '\n')=> '\r'? '\n'
   	| '\r'
   	;
-  	
+
+//Special symbols that will never appear in identifiers  	
 ASTERISK 
 	:	'*'
 	;
@@ -361,14 +366,19 @@ SEMICOLON
 DOUBLE_QUOTE
 	:	'"'
 	;	
-  	
+
+//Words, that must be recognized on stage1, but also can match identifiers
 YES_OR_NO_WORD
-	:	('yes'|'no'|'true'|'false')
+	:	('yes'|'no')
 	;
 	
-YES_OR_NO_NUM
-	:	('0'|'1')
+TRUE_OR_FALSE_WORD
+	:	('true'|'false')
 	;
+	
+ZERO_OR_ONE_WORD
+	:	('0'|'1')
+	;	
 	
 RANGE_WORD
 	:	'range'
@@ -379,7 +389,8 @@ UNLIMITED_WORD
 DEFAULT_WORD
 	:	'default'
 	;	
-	
+
+//IP addresses. All IPs contain dot ('.'), so can be recognized lexically	
 IP4_ADDR:	THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER
 	;
 IP4_SHORT_3
@@ -388,13 +399,13 @@ IP4_SHORT_3
 IP4_SHORT_2
 	:	THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER
 	;
-//Sprcial types
 fragment THREE_DIGIT_NUMBER 
 	:	DIGIT
 	|	DIGIT DIGIT
 	|	DIGIT DIGIT DIGIT
 	;
-	
+
+//Numbers and Alphanumeric words. Many of Alphanumerics catched by prefedined Words.
 NUMBER	:	DIGIT+;
 
 fragment DIGIT	: '0'..'9';
