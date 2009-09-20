@@ -188,7 +188,7 @@ zone
 	;
 
 zone_name
-	:	ALPHANUM_WORD | NUMBER
+	:	identifier
 	;
 
 zone_class
@@ -255,6 +255,7 @@ testing_param
 	|	testing_element_number
 	|	testing_element_path_name
 	|	testing_element_port_list
+	|	testing_element_size_spec
 	;
 testing_element_acl
 	:	'acl_name' el_acl_name ';' -> ^(PLIST_PARAM 'acl_name' el_acl_name)
@@ -291,13 +292,18 @@ testing_element_path_name
 	;
 testing_element_port_list
 	:	'port_list' '"' el_port_list '"' ';' -> ^(PLIST_PARAM 'port_list' el_port_list)
+	;
+testing_element_size_spec
+	:	'size_spec' el_size_spec ';' -> ^(PLIST_PARAM 'size_spec' el_size_spec)
 	;		
 //Semantic support for Configfile elements
-el_acl_name	: 	ALPHANUM_WORD | NUMBER;
+identifier	:	ALPHANUM_WORD | NUMBER | KMG_NUMBER;
+	
+el_acl_name	: 	identifier;
 el_domain_name 	: 	(ALPHANUM_WORD'.')+ALPHANUM_WORD;	
 el_ip_addr 	: 	el_ip4_addr | el_ip6_addr;
 el_ip4_addr	:	IP4_ADDR;
-el_ip6_addr	:	IP6_ADDR | ALPHANUM_WORD; //It's very rough hack: I don't know if we able to create ID-like IP6 addr ("asd") 
+el_ip6_addr	:	IP6_ADDR | identifier;
 el_ip_port	:	NUMBER|'*';
 el_ip_prefix	: 	(NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR)'/'NUMBER;
 el_key_id	: 	el_domain_name;
@@ -305,7 +311,8 @@ el_key_list	:	el_key_id (';' el_key_id)* ';';
 el_number	:	NUMBER;	
 el_path_name	:	'"'! (~('\r'|'\n'|'"'))* '"'!;
 el_port_list	:	el_port_list_item (';' el_port_list_item)* ';'; 
-el_port_list_item :	NUMBER | ('range' NUMBER NUMBER);	
+el_port_list_item :	NUMBER | ('range' NUMBER NUMBER);
+el_size_spec	:	(KMG_NUMBER)|'unlimited'|'default';	
 
 //Comments
 COMMENT	:	(C_COMMENT | CPP_COMMENT | PERL_COMMENT){ $channel=HIDDEN; }
@@ -350,6 +357,9 @@ fragment THREE_DIGIT_NUMBER
 NUMBER	:	DIGIT+;
 
 fragment DIGIT	: '0'..'9';
+
+KMG_NUMBER
+	:	NUMBER ('K'|'k'|'M'|'m'|'G'|'g');
 
 ALPHANUM_WORD 	:	('a'..'z'|'A'..'Z'|'_'|'0'..'9')* ;
 

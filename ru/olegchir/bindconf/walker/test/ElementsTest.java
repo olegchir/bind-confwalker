@@ -306,4 +306,87 @@ public class ElementsTest extends ParserTestTemplate {
 
         failStage1Silent("port_list must be finished with semicolon");
     }
+
+    @Test
+    public void test_validSizeSpecType1() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { size_spec unlimited; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validSizeSpecType2() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { size_spec default; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validSizeSpecType3() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { size_spec 13k; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validSizeSpecType4() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { size_spec 13K; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validSizeSpecType5() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { size_spec 13m; } ";
+
+        successStage1();
+    }
+
+
+    @Test
+    public void test_validSizeSpecType6() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { size_spec 13M; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validSizeSpecType7() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { size_spec 13g; } ";
+
+        successStage1();
+    }
+
+
+    @Test
+    public void test_validSizeSpecType8() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { size_spec 13G; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_invalidSizeSpec() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { testing { size_spec asd; }  } ";
+
+        failStage1Silent("size_spec must be [number followed by K,k,M,m] or word 'unlimited' or word 'default'");
+    }
 }
