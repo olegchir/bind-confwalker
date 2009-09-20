@@ -194,7 +194,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_validKeyListType1() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { key_list \"yandex.ru;\"; } ";
+        cmd = "testing { key_list yandex.ru; ; } ";
 
         successStage1();
     }
@@ -203,7 +203,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_validKeyListype2() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { key_list \"yandex.ru ; google.com;\"; } ";
+        cmd = "testing { key_list yandex.ru ; google.com; ; } ";
 
         successStage1();
     }
@@ -212,7 +212,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_invalidKeyListType1() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { key_list \"yandex.ru ; google.com\"; } ";
+        cmd = "testing { key_list yandex.ru ; google.com; } ";
 
         failStage1Silent("key_list must end with semicolon");
     }
@@ -221,7 +221,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_invalidKeyListType2() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { key_list \"yandex.ru ; hahaha;\"; } ";
+        cmd = "testing { key_list yandex.ru ; hahaha;; } ";
 
         failStage1Silent("only domain_names allowed in key_list");
     }
@@ -266,7 +266,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_validPortListType1() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { port_list \"40000;\"; } ";
+        cmd = "testing { port_list 40000;; } ";
 
         successStage1();
     }
@@ -275,7 +275,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_validPortListType2() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { port_list \"range 50000 60000;\"; } ";
+        cmd = "testing { port_list range 50000 60000;; } ";
 
         successStage1();
     }
@@ -284,7 +284,16 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_validPortListType3() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { port_list \"40000; range 50000 60000;\"; } ";
+        cmd = "testing { port_list 40000; range 50000 60000;; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validPortListType4() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { port_list 40000; 50000; 60000;; } ";
 
         successStage1();
     }
@@ -293,7 +302,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_invalidPortListType1() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { testing { port_list \"*;\"; }  } ";
+        cmd = "testing { testing { port_list *;; }  } ";
 
         failStage1Silent("can't use asterisk as a valid wildcard in port_list");
     }
@@ -302,7 +311,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_invalidPortListType2() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { testing { port_list \"123\"; }  } ";
+        cmd = "testing { testing { port_list 123; }  } ";
 
         failStage1Silent("port_list must be finished with semicolon");
     }

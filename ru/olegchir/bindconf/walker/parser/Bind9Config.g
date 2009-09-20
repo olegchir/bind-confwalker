@@ -285,7 +285,7 @@ testing_element_key_id
 	:	'key_id' el_key_id ';' -> ^(PLIST_PARAM 'key_id' el_key_id)
 	;
 testing_element_key_list
-	:	'key_list' '"' el_key_list '"' ';' -> ^(PLIST_PARAM 'key_list' el_key_list)
+	:	'key_list' el_key_list ';' -> ^(PLIST_PARAM 'key_list' el_key_list)
 	;
 testing_element_number
 	:	'number' el_number ';' -> ^(PLIST_PARAM 'number' el_number)
@@ -294,7 +294,7 @@ testing_element_path_name
 	:	'path_name' el_path_name ';' -> ^(PLIST_PARAM 'path_name' el_path_name)
 	;
 testing_element_port_list
-	:	'port_list' '"' el_port_list '"' ';' -> ^(PLIST_PARAM 'port_list' el_port_list)
+	:	'port_list' el_port_list ';' -> ^(PLIST_PARAM 'port_list' el_port_list)
 	;
 testing_element_size_spec
 	:	'size_spec' el_size_spec ';' -> ^(PLIST_PARAM 'size_spec' el_size_spec)
@@ -313,6 +313,7 @@ testing_element_dialup_option_slavestub
 //We need this because some token types are too ambigous to detect it in stage1 lexer.
 lex_identifier	:	ALPHANUM_NONSTD | NUMBER | KMG_NUMBER | lex_yes_or_no
 		|	RANGE_WORD | UNLIMITED_WORD | DEFAULT_WORD
+		|	NOTIFY_WORD | NOTIFYPASSIVE_OR_REFRESH_OR_PASSIVE_WORD
 		;
 lex_number	:	NUMBER | ZERO_OR_ONE_WORD;
 lex_yes_or_no	:	 YES_OR_NO_WORD | TRUE_OR_FALSE_WORD | ZERO_OR_ONE_WORD;
@@ -328,7 +329,7 @@ el_ip_prefix	: 	(NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR)FORWARD_SLASH NUM
 el_key_id	: 	el_domain_name;
 el_key_list	:	el_key_id (SEMICOLON el_key_id)* SEMICOLON;
 el_number	:	lex_number;	
-el_path_name	:	DOUBLE_QUOTE! (~(CR|LF|DOUBLE_QUOTE))* DOUBLE_QUOTE!;
+el_path_name	:	ONE_LINE_DOUBLE_QUOTED_STRING;
 el_port_list	:	el_port_list_item (SEMICOLON el_port_list_item)* SEMICOLON; 
 el_port_list_item :	NUMBER | (RANGE_WORD NUMBER NUMBER);
 el_size_spec	:	(KMG_NUMBER)|UNLIMITED_WORD|DEFAULT_WORD;
@@ -378,6 +379,10 @@ DOUBLE_QUOTE
 	;	
 
 //Words, that must be recognized on stage1, but also can match identifiers
+
+ONE_LINE_DOUBLE_QUOTED_STRING
+	:	DOUBLE_QUOTE (~(CR|LF|DOUBLE_QUOTE))* DOUBLE_QUOTE
+	;
 
 //For YES_OR_NO element:
 YES_OR_NO_WORD
