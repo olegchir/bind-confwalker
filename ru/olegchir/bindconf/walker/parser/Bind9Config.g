@@ -188,7 +188,7 @@ zone
 	;
 
 zone_name
-	:	identifier
+	:	lex_identifier
 	;
 
 zone_class
@@ -301,23 +301,26 @@ testing_element_yes_or_no
 	:	'yes_or_no' el_yes_or_no ';' -> ^(PLIST_PARAM 'yes_or_no' el_yes_or_no)
 	;		
 //Semantic support for Configfile elements
-identifier	:	ALPHANUM_WORD | NUMBER | KMG_NUMBER;
+lex_identifier	:	ALPHANUM_NONSTD | NUMBER | KMG_NUMBER | YES_OR_NO_WORD | YES_OR_NO_NUM
+		|	RANGE_WORD | UNLIMITED_WORD | DEFAULT_WORD
+		;
+lex_number	:	NUMBER | YES_OR_NO_NUM;
 	
-el_acl_name	: 	identifier;
-el_domain_name 	: 	(ALPHANUM_WORD'.')+ALPHANUM_WORD;	
+el_acl_name	: 	lex_identifier;
+el_domain_name 	: 	(lex_identifier'.')+lex_identifier;	
 el_ip_addr 	: 	el_ip4_addr | el_ip6_addr;
 el_ip4_addr	:	IP4_ADDR;
-el_ip6_addr	:	IP6_ADDR | identifier;
-el_ip_port	:	NUMBER|'*';
-el_ip_prefix	: 	(NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR)'/'NUMBER;
+el_ip6_addr	:	IP6_ADDR | lex_identifier;
+el_ip_port	:	NUMBER|ASTERISK;
+el_ip_prefix	: 	(NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR)FORWARD_SLASH NUMBER;
 el_key_id	: 	el_domain_name;
-el_key_list	:	el_key_id (';' el_key_id)* ';';
-el_number	:	NUMBER;	
-el_path_name	:	'"'! (~('\r'|'\n'|'"'))* '"'!;
-el_port_list	:	el_port_list_item (';' el_port_list_item)* ';'; 
-el_port_list_item :	NUMBER | ('range' NUMBER NUMBER);
-el_size_spec	:	(KMG_NUMBER)|'unlimited'|'default';
-el_yes_or_no	:	'yes'|'no'|'true'|'false'|'0'|'1';	
+el_key_list	:	el_key_id (SEMICOLON el_key_id)* SEMICOLON;
+el_number	:	lex_number;	
+el_path_name	:	DOUBLE_QUOTE! (~(CR|LF|DOUBLE_QUOTE))* DOUBLE_QUOTE!;
+el_port_list	:	el_port_list_item (SEMICOLON el_port_list_item)* SEMICOLON; 
+el_port_list_item :	NUMBER | (RANGE_WORD NUMBER NUMBER);
+el_size_spec	:	(KMG_NUMBER)|UNLIMITED_WORD|DEFAULT_WORD;
+el_yes_or_no	:	YES_OR_NO_WORD | YES_OR_NO_NUM;	
 
 //Comments
 COMMENT	:	(C_COMMENT | CPP_COMMENT | PERL_COMMENT){ $channel=HIDDEN; }
@@ -331,14 +334,51 @@ fragment PERL_COMMENT
 	:	'#' (~('\r'|'\n') )* NL 	
 	;
 	
-//Whitespace forms		
+//Whitespace forms
+CR	:	'\r'
+	;
+LF	:	'\n'
+	;
+			
 WS	: (' '|'\t'|'\f'|NL)+
 		{ $channel=HIDDEN; }
 	;
 fragment NL	
 	: ('\r'? '\n')=> '\r'? '\n'
   	| '\r'
-  	;		
+  	;
+  	
+ASTERISK 
+	:	'*'
+	;
+	
+FORWARD_SLASH
+	:	'/'
+	;
+SEMICOLON
+	:	';'
+	;
+DOUBLE_QUOTE
+	:	'"'
+	;	
+  	
+YES_OR_NO_WORD
+	:	('yes'|'no'|'true'|'false')
+	;
+	
+YES_OR_NO_NUM
+	:	('0'|'1')
+	;
+	
+RANGE_WORD
+	:	'range'
+	;
+UNLIMITED_WORD
+	:	'unlimited'
+	;
+DEFAULT_WORD
+	:	'default'
+	;	
 	
 IP4_ADDR:	THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER
 	;
@@ -361,9 +401,11 @@ fragment DIGIT	: '0'..'9';
 
 KMG_NUMBER
 	:	NUMBER ('K'|'k'|'M'|'m'|'G'|'g');
-
-ALPHANUM_WORD 	:	('a'..'z'|'A'..'Z'|'_'|'0'..'9')* ;
-
+	
+ALPHANUM_NONSTD	
+	:	('a'..'z'|'A'..'Z'|'_'|'0'..'9')* 
+	;
+	
 fragment ANY_ASCII_ALPHANUM
 	:	('\u0020'..'\u007F')
 	;

@@ -1,4 +1,4 @@
-// $ANTLR 3.1.2 O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g 2009-09-20 10:18:06
+// $ANTLR 3.1.2 O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g 2009-09-20 12:42:32
 
 package ru.olegchir.bindconf.walker.parser.generated;
 import ru.olegchir.bindconf.walker.parser.override.Bind9ParserOverrider;
@@ -15,83 +15,79 @@ import org.antlr.runtime.tree.*;
 
 public class Bind9ConfigParser extends Parser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ST_ZONE_MASTER", "ST_ZONE_SLAVE", "ST_ZONE_HINT", "ST_ZONE_STUB", "ST_ZONE_FORWARD", "ST_ZONE_DELEGATION", "ST_ZONE_PLIST", "ST_TESTING", "ST_TESTING_PLIST", "PLIST_PARAM", "BAD", "ALPHANUM_WORD", "NUMBER", "KMG_NUMBER", "IP4_ADDR", "IP6_ADDR", "IP4_SHORT_2", "IP4_SHORT_3", "C_COMMENT", "CPP_COMMENT", "PERL_COMMENT", "COMMENT", "NL", "WS", "THREE_DIGIT_NUMBER", "DIGIT", "ANY_ASCII_ALPHANUM", "IP6_VALID_CHAR", "'zone'", "'IN'", "'HS'", "'CHAOS'", "'{'", "'}'", "'forward'", "';'", "'first'", "'only'", "'type'", "'master'", "'slave'", "'stub'", "'hint'", "'delegation-only'", "'testing'", "'acl_name'", "'domain_name'", "'ip4'", "'ip6'", "'ip'", "'ip_port'", "'ip_prefix'", "'key_id'", "'key_list'", "'\"'", "'number'", "'path_name'", "'port_list'", "'size_spec'", "'yes_or_no'", "'.'", "'*'", "'/'", "'\\r'", "'\\n'", "'range'", "'unlimited'", "'default'", "'yes'", "'no'", "'true'", "'false'", "'0'", "'1'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "ST_ZONE_MASTER", "ST_ZONE_SLAVE", "ST_ZONE_HINT", "ST_ZONE_STUB", "ST_ZONE_FORWARD", "ST_ZONE_DELEGATION", "ST_ZONE_PLIST", "ST_TESTING", "ST_TESTING_PLIST", "PLIST_PARAM", "BAD", "ALPHANUM_NONSTD", "NUMBER", "KMG_NUMBER", "YES_OR_NO_WORD", "YES_OR_NO_NUM", "RANGE_WORD", "UNLIMITED_WORD", "DEFAULT_WORD", "IP4_ADDR", "IP6_ADDR", "ASTERISK", "IP4_SHORT_2", "IP4_SHORT_3", "FORWARD_SLASH", "SEMICOLON", "DOUBLE_QUOTE", "CR", "LF", "C_COMMENT", "CPP_COMMENT", "PERL_COMMENT", "COMMENT", "NL", "WS", "THREE_DIGIT_NUMBER", "DIGIT", "ANY_ASCII_ALPHANUM", "IP6_VALID_CHAR", "'zone'", "'IN'", "'HS'", "'CHAOS'", "'{'", "'}'", "'forward'", "'first'", "'only'", "'type'", "'master'", "'slave'", "'stub'", "'hint'", "'delegation-only'", "'testing'", "'acl_name'", "'domain_name'", "'ip4'", "'ip6'", "'ip'", "'ip_port'", "'ip_prefix'", "'key_id'", "'key_list'", "'number'", "'path_name'", "'port_list'", "'size_spec'", "'yes_or_no'", "'.'"
     };
     public static final int T__68=68;
     public static final int T__69=69;
-    public static final int IP6_VALID_CHAR=31;
-    public static final int ST_ZONE_PLIST=10;
+    public static final int IP6_VALID_CHAR=42;
     public static final int T__66=66;
+    public static final int ST_ZONE_PLIST=10;
     public static final int T__67=67;
     public static final int T__64=64;
     public static final int T__65=65;
     public static final int T__62=62;
+    public static final int YES_OR_NO_WORD=18;
     public static final int T__63=63;
+    public static final int DOUBLE_QUOTE=30;
     public static final int ST_ZONE_MASTER=4;
     public static final int ST_ZONE_FORWARD=8;
+    public static final int UNLIMITED_WORD=21;
     public static final int T__61=61;
     public static final int EOF=-1;
     public static final int T__60=60;
+    public static final int ALPHANUM_NONSTD=15;
     public static final int ST_ZONE_SLAVE=5;
+    public static final int ASTERISK=25;
     public static final int ST_ZONE_DELEGATION=9;
     public static final int ST_ZONE_STUB=7;
-    public static final int PERL_COMMENT=24;
+    public static final int PERL_COMMENT=35;
     public static final int T__55=55;
     public static final int T__56=56;
     public static final int T__57=57;
     public static final int T__58=58;
     public static final int T__51=51;
     public static final int T__52=52;
-    public static final int ANY_ASCII_ALPHANUM=30;
+    public static final int ANY_ASCII_ALPHANUM=41;
     public static final int T__53=53;
     public static final int T__54=54;
     public static final int T__59=59;
-    public static final int CPP_COMMENT=23;
-    public static final int DIGIT=29;
-    public static final int NL=26;
-    public static final int COMMENT=25;
+    public static final int CPP_COMMENT=34;
+    public static final int YES_OR_NO_NUM=19;
+    public static final int DIGIT=40;
+    public static final int NL=37;
+    public static final int COMMENT=36;
     public static final int T__50=50;
-    public static final int T__42=42;
     public static final int T__43=43;
-    public static final int T__40=40;
-    public static final int T__41=41;
     public static final int T__46=46;
     public static final int T__47=47;
     public static final int T__44=44;
     public static final int T__45=45;
-    public static final int ST_TESTING_PLIST=12;
     public static final int T__48=48;
+    public static final int ST_TESTING_PLIST=12;
     public static final int T__49=49;
     public static final int NUMBER=16;
     public static final int ST_TESTING=11;
-    public static final int THREE_DIGIT_NUMBER=28;
+    public static final int SEMICOLON=29;
+    public static final int THREE_DIGIT_NUMBER=39;
     public static final int PLIST_PARAM=13;
+    public static final int DEFAULT_WORD=22;
     public static final int ST_ZONE_HINT=6;
-    public static final int T__32=32;
-    public static final int WS=27;
-    public static final int T__33=33;
+    public static final int WS=38;
     public static final int T__71=71;
     public static final int KMG_NUMBER=17;
     public static final int T__72=72;
-    public static final int T__34=34;
-    public static final int T__35=35;
-    public static final int T__36=36;
     public static final int T__70=70;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
     public static final int BAD=14;
-    public static final int IP4_ADDR=18;
-    public static final int IP6_ADDR=19;
-    public static final int T__76=76;
-    public static final int ALPHANUM_WORD=15;
-    public static final int T__75=75;
-    public static final int C_COMMENT=22;
-    public static final int T__74=74;
+    public static final int IP4_ADDR=23;
+    public static final int IP6_ADDR=24;
+    public static final int RANGE_WORD=20;
+    public static final int CR=31;
+    public static final int C_COMMENT=33;
     public static final int T__73=73;
-    public static final int IP4_SHORT_3=21;
-    public static final int IP4_SHORT_2=20;
-    public static final int T__77=77;
+    public static final int IP4_SHORT_3=27;
+    public static final int FORWARD_SLASH=28;
+    public static final int LF=32;
+    public static final int IP4_SHORT_2=26;
 
     // delegates
     // delegators
@@ -221,7 +217,7 @@ public class Bind9ConfigParser extends Parser {
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==EOF||LA3_0==32||LA3_0==48) ) {
+            if ( (LA3_0==EOF||LA3_0==43||LA3_0==58) ) {
                 alt3=1;
             }
             else if ( (LA3_0==BAD) ) {
@@ -245,7 +241,7 @@ public class Bind9ConfigParser extends Parser {
                         int alt1=2;
                         int LA1_0 = input.LA(1);
 
-                        if ( (LA1_0==32||LA1_0==48) ) {
+                        if ( (LA1_0==43||LA1_0==58) ) {
                             alt1=1;
                         }
 
@@ -357,10 +353,10 @@ public class Bind9ConfigParser extends Parser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==32) ) {
+            if ( (LA4_0==43) ) {
                 alt4=1;
             }
-            else if ( (LA4_0==48) ) {
+            else if ( (LA4_0==58) ) {
                 alt4=2;
             }
             else {
@@ -448,7 +444,7 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal5_tree=null;
         Object string_literal9_tree=null;
-        RewriteRuleTokenStream stream_32=new RewriteRuleTokenStream(adaptor,"token 32");
+        RewriteRuleTokenStream stream_43=new RewriteRuleTokenStream(adaptor,"token 43");
         RewriteRuleSubtreeStream stream_zone_forward_block=new RewriteRuleSubtreeStream(adaptor,"rule zone_forward_block");
         RewriteRuleSubtreeStream stream_zone_class=new RewriteRuleSubtreeStream(adaptor,"rule zone_class");
         RewriteRuleSubtreeStream stream_zone_name=new RewriteRuleSubtreeStream(adaptor,"rule zone_name");
@@ -458,25 +454,25 @@ public class Bind9ConfigParser extends Parser {
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==32) ) {
+            if ( (LA7_0==43) ) {
                 int LA7_1 = input.LA(2);
 
-                if ( ((LA7_1>=ALPHANUM_WORD && LA7_1<=KMG_NUMBER)) ) {
+                if ( ((LA7_1>=ALPHANUM_NONSTD && LA7_1<=DEFAULT_WORD)) ) {
                     int LA7_2 = input.LA(3);
 
-                    if ( ((LA7_2>=33 && LA7_2<=35)) ) {
+                    if ( ((LA7_2>=44 && LA7_2<=46)) ) {
                         int LA7_3 = input.LA(4);
 
-                        if ( (LA7_3==36) ) {
+                        if ( (LA7_3==47) ) {
                             int LA7_4 = input.LA(5);
 
-                            if ( (LA7_4==42) ) {
+                            if ( (LA7_4==52) ) {
                                 int LA7_5 = input.LA(6);
 
-                                if ( (LA7_5==47) ) {
+                                if ( (LA7_5==57) ) {
                                     alt7=2;
                                 }
-                                else if ( (LA7_5==38) ) {
+                                else if ( (LA7_5==49) ) {
                                     alt7=1;
                                 }
                                 else {
@@ -500,16 +496,16 @@ public class Bind9ConfigParser extends Parser {
                             throw nvae;
                         }
                     }
-                    else if ( (LA7_2==36) ) {
+                    else if ( (LA7_2==47) ) {
                         int LA7_4 = input.LA(4);
 
-                        if ( (LA7_4==42) ) {
+                        if ( (LA7_4==52) ) {
                             int LA7_5 = input.LA(5);
 
-                            if ( (LA7_5==47) ) {
+                            if ( (LA7_5==57) ) {
                                 alt7=2;
                             }
-                            else if ( (LA7_5==38) ) {
+                            else if ( (LA7_5==49) ) {
                                 alt7=1;
                             }
                             else {
@@ -550,8 +546,8 @@ public class Bind9ConfigParser extends Parser {
                 case 1 :
                     // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:186:4: 'zone' zone_name ( zone_class )? zone_forward_block
                     {
-                    string_literal5=(Token)match(input,32,FOLLOW_32_in_zone139);  
-                    stream_32.add(string_literal5);
+                    string_literal5=(Token)match(input,43,FOLLOW_43_in_zone139);  
+                    stream_43.add(string_literal5);
 
                     pushFollow(FOLLOW_zone_name_in_zone141);
                     zone_name6=zone_name();
@@ -563,7 +559,7 @@ public class Bind9ConfigParser extends Parser {
                     int alt5=2;
                     int LA5_0 = input.LA(1);
 
-                    if ( ((LA5_0>=33 && LA5_0<=35)) ) {
+                    if ( ((LA5_0>=44 && LA5_0<=46)) ) {
                         alt5=1;
                     }
                     switch (alt5) {
@@ -591,7 +587,7 @@ public class Bind9ConfigParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: zone_name, zone_class, zone_forward_block
+                    // elements: zone_forward_block, zone_class, zone_name
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -628,8 +624,8 @@ public class Bind9ConfigParser extends Parser {
                 case 2 :
                     // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:187:4: 'zone' zone_name ( zone_class )? zone_delegation_block
                     {
-                    string_literal9=(Token)match(input,32,FOLLOW_32_in_zone166);  
-                    stream_32.add(string_literal9);
+                    string_literal9=(Token)match(input,43,FOLLOW_43_in_zone166);  
+                    stream_43.add(string_literal9);
 
                     pushFollow(FOLLOW_zone_name_in_zone168);
                     zone_name10=zone_name();
@@ -641,7 +637,7 @@ public class Bind9ConfigParser extends Parser {
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
-                    if ( ((LA6_0>=33 && LA6_0<=35)) ) {
+                    if ( ((LA6_0>=44 && LA6_0<=46)) ) {
                         alt6=1;
                     }
                     switch (alt6) {
@@ -728,29 +724,29 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "zone_name"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:190:1: zone_name : identifier ;
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:190:1: zone_name : lex_identifier ;
     public final Bind9ConfigParser.zone_name_return zone_name() throws RecognitionException {
         Bind9ConfigParser.zone_name_return retval = new Bind9ConfigParser.zone_name_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Bind9ConfigParser.identifier_return identifier13 = null;
+        Bind9ConfigParser.lex_identifier_return lex_identifier13 = null;
 
 
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:191:2: ( identifier )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:191:4: identifier
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:191:2: ( lex_identifier )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:191:4: lex_identifier
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_identifier_in_zone_name196);
-            identifier13=identifier();
+            pushFollow(FOLLOW_lex_identifier_in_zone_name196);
+            lex_identifier13=lex_identifier();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, identifier13.getTree());
+            adaptor.addChild(root_0, lex_identifier13.getTree());
 
             }
 
@@ -796,7 +792,7 @@ public class Bind9ConfigParser extends Parser {
             root_0 = (Object)adaptor.nil();
 
             set14=(Token)input.LT(1);
-            if ( (input.LA(1)>=33 && input.LA(1)<=35) ) {
+            if ( (input.LA(1)>=44 && input.LA(1)<=46) ) {
                 input.consume();
                 adaptor.addChild(root_0, (Object)adaptor.create(set14));
                 state.errorRecovery=false;
@@ -849,16 +845,16 @@ public class Bind9ConfigParser extends Parser {
 
         Object pl_tree=null;
         Object char_literal17_tree=null;
-        RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
-        RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
+        RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
+        RewriteRuleTokenStream stream_47=new RewriteRuleTokenStream(adaptor,"token 47");
         RewriteRuleSubtreeStream stream_zone_type_forward=new RewriteRuleSubtreeStream(adaptor,"rule zone_type_forward");
         RewriteRuleSubtreeStream stream_zone_forward_param=new RewriteRuleSubtreeStream(adaptor,"rule zone_forward_param");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:200:2: (pl= '{' ( zone_type_forward ( zone_forward_param )* ) '}' -> ^( ST_ZONE_PLIST[$pl,\"ST_ZONE_PLIST\"] zone_type_forward ( zone_forward_param )* ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:200:4: pl= '{' ( zone_type_forward ( zone_forward_param )* ) '}'
             {
-            pl=(Token)match(input,36,FOLLOW_36_in_zone_forward_block228);  
-            stream_36.add(pl);
+            pl=(Token)match(input,47,FOLLOW_47_in_zone_forward_block228);  
+            stream_47.add(pl);
 
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:200:13: ( zone_type_forward ( zone_forward_param )* )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:200:14: zone_type_forward ( zone_forward_param )*
@@ -875,7 +871,7 @@ public class Bind9ConfigParser extends Parser {
                 int alt8=2;
                 int LA8_0 = input.LA(1);
 
-                if ( (LA8_0==38) ) {
+                if ( (LA8_0==49) ) {
                     alt8=1;
                 }
 
@@ -902,8 +898,8 @@ public class Bind9ConfigParser extends Parser {
 
             }
 
-            char_literal17=(Token)match(input,37,FOLLOW_37_in_zone_forward_block236);  
-            stream_37.add(char_literal17);
+            char_literal17=(Token)match(input,48,FOLLOW_48_in_zone_forward_block236);  
+            stream_48.add(char_literal17);
 
 
 
@@ -1036,7 +1032,7 @@ public class Bind9ConfigParser extends Parser {
             {
             root_0 = (Object)adaptor.nil();
 
-            char_literal19=(Token)match(input,36,FOLLOW_36_in_zone_delegation_block268); 
+            char_literal19=(Token)match(input,47,FOLLOW_47_in_zone_delegation_block268); 
             char_literal19_tree = (Object)adaptor.create(char_literal19);
             adaptor.addChild(root_0, char_literal19_tree);
 
@@ -1046,7 +1042,7 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             adaptor.addChild(root_0, zone_type_delegation20.getTree());
-            char_literal21=(Token)match(input,37,FOLLOW_37_in_zone_delegation_block272); 
+            char_literal21=(Token)match(input,48,FOLLOW_48_in_zone_delegation_block272); 
             char_literal21_tree = (Object)adaptor.create(char_literal21);
             adaptor.addChild(root_0, char_literal21_tree);
 
@@ -1091,15 +1087,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal22_tree=null;
         Object char_literal24_tree=null;
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
-        RewriteRuleTokenStream stream_38=new RewriteRuleTokenStream(adaptor,"token 38");
+        RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
         RewriteRuleSubtreeStream stream_zone_forward_switch=new RewriteRuleSubtreeStream(adaptor,"rule zone_forward_switch");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:212:2: ( 'forward' zone_forward_switch ';' -> ^( PLIST_PARAM 'forward' zone_forward_switch ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:212:4: 'forward' zone_forward_switch ';'
             {
-            string_literal22=(Token)match(input,38,FOLLOW_38_in_zone_forward_switch_def285);  
-            stream_38.add(string_literal22);
+            string_literal22=(Token)match(input,49,FOLLOW_49_in_zone_forward_switch_def285);  
+            stream_49.add(string_literal22);
 
             pushFollow(FOLLOW_zone_forward_switch_in_zone_forward_switch_def287);
             zone_forward_switch23=zone_forward_switch();
@@ -1107,13 +1103,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_zone_forward_switch.add(zone_forward_switch23.getTree());
-            char_literal24=(Token)match(input,39,FOLLOW_39_in_zone_forward_switch_def289);  
-            stream_39.add(char_literal24);
+            char_literal24=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_zone_forward_switch_def289);  
+            stream_SEMICOLON.add(char_literal24);
 
 
 
             // AST REWRITE
-            // elements: zone_forward_switch, 38
+            // elements: 49, zone_forward_switch
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1130,7 +1126,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_38.nextNode());
+                adaptor.addChild(root_1, stream_49.nextNode());
                 adaptor.addChild(root_1, stream_zone_forward_switch.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -1183,7 +1179,7 @@ public class Bind9ConfigParser extends Parser {
             root_0 = (Object)adaptor.nil();
 
             set25=(Token)input.LT(1);
-            if ( (input.LA(1)>=40 && input.LA(1)<=41) ) {
+            if ( (input.LA(1)>=50 && input.LA(1)<=51) ) {
                 input.consume();
                 adaptor.addChild(root_0, (Object)adaptor.create(set25));
                 state.errorRecovery=false;
@@ -1234,27 +1230,27 @@ public class Bind9ConfigParser extends Parser {
         Object string_literal26_tree=null;
         Object string_literal27_tree=null;
         Object char_literal28_tree=null;
-        RewriteRuleTokenStream stream_43=new RewriteRuleTokenStream(adaptor,"token 43");
-        RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
+        RewriteRuleTokenStream stream_53=new RewriteRuleTokenStream(adaptor,"token 53");
 
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:221:2: ( 'type' 'master' ';' -> 'master' )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:221:4: 'type' 'master' ';'
             {
-            string_literal26=(Token)match(input,42,FOLLOW_42_in_zone_type_master327);  
-            stream_42.add(string_literal26);
+            string_literal26=(Token)match(input,52,FOLLOW_52_in_zone_type_master327);  
+            stream_52.add(string_literal26);
 
-            string_literal27=(Token)match(input,43,FOLLOW_43_in_zone_type_master329);  
-            stream_43.add(string_literal27);
+            string_literal27=(Token)match(input,53,FOLLOW_53_in_zone_type_master329);  
+            stream_53.add(string_literal27);
 
-            char_literal28=(Token)match(input,39,FOLLOW_39_in_zone_type_master331);  
-            stream_39.add(char_literal28);
+            char_literal28=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_zone_type_master331);  
+            stream_SEMICOLON.add(char_literal28);
 
 
 
             // AST REWRITE
-            // elements: 43
+            // elements: 53
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1266,7 +1262,7 @@ public class Bind9ConfigParser extends Parser {
             root_0 = (Object)adaptor.nil();
             // 221:24: -> 'master'
             {
-                adaptor.addChild(root_0, stream_43.nextNode());
+                adaptor.addChild(root_0, stream_53.nextNode());
 
             }
 
@@ -1311,27 +1307,27 @@ public class Bind9ConfigParser extends Parser {
         Object string_literal29_tree=null;
         Object string_literal30_tree=null;
         Object char_literal31_tree=null;
-        RewriteRuleTokenStream stream_44=new RewriteRuleTokenStream(adaptor,"token 44");
-        RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
+        RewriteRuleTokenStream stream_54=new RewriteRuleTokenStream(adaptor,"token 54");
 
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:224:2: ( 'type' 'slave' ';' -> 'slave' )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:224:4: 'type' 'slave' ';'
             {
-            string_literal29=(Token)match(input,42,FOLLOW_42_in_zone_type_slave345);  
-            stream_42.add(string_literal29);
+            string_literal29=(Token)match(input,52,FOLLOW_52_in_zone_type_slave345);  
+            stream_52.add(string_literal29);
 
-            string_literal30=(Token)match(input,44,FOLLOW_44_in_zone_type_slave347);  
-            stream_44.add(string_literal30);
+            string_literal30=(Token)match(input,54,FOLLOW_54_in_zone_type_slave347);  
+            stream_54.add(string_literal30);
 
-            char_literal31=(Token)match(input,39,FOLLOW_39_in_zone_type_slave349);  
-            stream_39.add(char_literal31);
+            char_literal31=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_zone_type_slave349);  
+            stream_SEMICOLON.add(char_literal31);
 
 
 
             // AST REWRITE
-            // elements: 44
+            // elements: 54
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1343,7 +1339,7 @@ public class Bind9ConfigParser extends Parser {
             root_0 = (Object)adaptor.nil();
             // 224:23: -> 'slave'
             {
-                adaptor.addChild(root_0, stream_44.nextNode());
+                adaptor.addChild(root_0, stream_54.nextNode());
 
             }
 
@@ -1388,27 +1384,27 @@ public class Bind9ConfigParser extends Parser {
         Object string_literal32_tree=null;
         Object string_literal33_tree=null;
         Object char_literal34_tree=null;
-        RewriteRuleTokenStream stream_45=new RewriteRuleTokenStream(adaptor,"token 45");
-        RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_55=new RewriteRuleTokenStream(adaptor,"token 55");
+        RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
 
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:227:2: ( 'type' 'stub' ';' -> 'stub' )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:227:4: 'type' 'stub' ';'
             {
-            string_literal32=(Token)match(input,42,FOLLOW_42_in_zone_type_stub363);  
-            stream_42.add(string_literal32);
+            string_literal32=(Token)match(input,52,FOLLOW_52_in_zone_type_stub363);  
+            stream_52.add(string_literal32);
 
-            string_literal33=(Token)match(input,45,FOLLOW_45_in_zone_type_stub365);  
-            stream_45.add(string_literal33);
+            string_literal33=(Token)match(input,55,FOLLOW_55_in_zone_type_stub365);  
+            stream_55.add(string_literal33);
 
-            char_literal34=(Token)match(input,39,FOLLOW_39_in_zone_type_stub367);  
-            stream_39.add(char_literal34);
+            char_literal34=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_zone_type_stub367);  
+            stream_SEMICOLON.add(char_literal34);
 
 
 
             // AST REWRITE
-            // elements: 45
+            // elements: 55
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1420,7 +1416,7 @@ public class Bind9ConfigParser extends Parser {
             root_0 = (Object)adaptor.nil();
             // 227:22: -> 'stub'
             {
-                adaptor.addChild(root_0, stream_45.nextNode());
+                adaptor.addChild(root_0, stream_55.nextNode());
 
             }
 
@@ -1465,27 +1461,27 @@ public class Bind9ConfigParser extends Parser {
         Object string_literal35_tree=null;
         Object string_literal36_tree=null;
         Object char_literal37_tree=null;
-        RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
-        RewriteRuleTokenStream stream_38=new RewriteRuleTokenStream(adaptor,"token 38");
+        RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
 
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:230:2: ( 'type' 'forward' ';' -> 'forward' )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:230:4: 'type' 'forward' ';'
             {
-            string_literal35=(Token)match(input,42,FOLLOW_42_in_zone_type_forward381);  
-            stream_42.add(string_literal35);
+            string_literal35=(Token)match(input,52,FOLLOW_52_in_zone_type_forward381);  
+            stream_52.add(string_literal35);
 
-            string_literal36=(Token)match(input,38,FOLLOW_38_in_zone_type_forward383);  
-            stream_38.add(string_literal36);
+            string_literal36=(Token)match(input,49,FOLLOW_49_in_zone_type_forward383);  
+            stream_49.add(string_literal36);
 
-            char_literal37=(Token)match(input,39,FOLLOW_39_in_zone_type_forward385);  
-            stream_39.add(char_literal37);
+            char_literal37=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_zone_type_forward385);  
+            stream_SEMICOLON.add(char_literal37);
 
 
 
             // AST REWRITE
-            // elements: 38
+            // elements: 49
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1497,7 +1493,7 @@ public class Bind9ConfigParser extends Parser {
             root_0 = (Object)adaptor.nil();
             // 230:25: -> 'forward'
             {
-                adaptor.addChild(root_0, stream_38.nextNode());
+                adaptor.addChild(root_0, stream_49.nextNode());
 
             }
 
@@ -1542,27 +1538,27 @@ public class Bind9ConfigParser extends Parser {
         Object string_literal38_tree=null;
         Object string_literal39_tree=null;
         Object char_literal40_tree=null;
-        RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
-        RewriteRuleTokenStream stream_46=new RewriteRuleTokenStream(adaptor,"token 46");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_56=new RewriteRuleTokenStream(adaptor,"token 56");
+        RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
 
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:233:2: ( 'type' 'hint' ';' -> 'hint' )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:233:4: 'type' 'hint' ';'
             {
-            string_literal38=(Token)match(input,42,FOLLOW_42_in_zone_type_hint399);  
-            stream_42.add(string_literal38);
+            string_literal38=(Token)match(input,52,FOLLOW_52_in_zone_type_hint399);  
+            stream_52.add(string_literal38);
 
-            string_literal39=(Token)match(input,46,FOLLOW_46_in_zone_type_hint401);  
-            stream_46.add(string_literal39);
+            string_literal39=(Token)match(input,56,FOLLOW_56_in_zone_type_hint401);  
+            stream_56.add(string_literal39);
 
-            char_literal40=(Token)match(input,39,FOLLOW_39_in_zone_type_hint403);  
-            stream_39.add(char_literal40);
+            char_literal40=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_zone_type_hint403);  
+            stream_SEMICOLON.add(char_literal40);
 
 
 
             // AST REWRITE
-            // elements: 46
+            // elements: 56
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1574,7 +1570,7 @@ public class Bind9ConfigParser extends Parser {
             root_0 = (Object)adaptor.nil();
             // 233:22: -> 'hint'
             {
-                adaptor.addChild(root_0, stream_46.nextNode());
+                adaptor.addChild(root_0, stream_56.nextNode());
 
             }
 
@@ -1619,27 +1615,27 @@ public class Bind9ConfigParser extends Parser {
         Object string_literal41_tree=null;
         Object string_literal42_tree=null;
         Object char_literal43_tree=null;
-        RewriteRuleTokenStream stream_42=new RewriteRuleTokenStream(adaptor,"token 42");
-        RewriteRuleTokenStream stream_47=new RewriteRuleTokenStream(adaptor,"token 47");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_57=new RewriteRuleTokenStream(adaptor,"token 57");
+        RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
 
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:236:2: ( 'type' 'delegation-only' ';' -> 'delegation-only' )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:236:4: 'type' 'delegation-only' ';'
             {
-            string_literal41=(Token)match(input,42,FOLLOW_42_in_zone_type_delegation417);  
-            stream_42.add(string_literal41);
+            string_literal41=(Token)match(input,52,FOLLOW_52_in_zone_type_delegation417);  
+            stream_52.add(string_literal41);
 
-            string_literal42=(Token)match(input,47,FOLLOW_47_in_zone_type_delegation419);  
-            stream_47.add(string_literal42);
+            string_literal42=(Token)match(input,57,FOLLOW_57_in_zone_type_delegation419);  
+            stream_57.add(string_literal42);
 
-            char_literal43=(Token)match(input,39,FOLLOW_39_in_zone_type_delegation421);  
-            stream_39.add(char_literal43);
+            char_literal43=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_zone_type_delegation421);  
+            stream_SEMICOLON.add(char_literal43);
 
 
 
             // AST REWRITE
-            // elements: 47
+            // elements: 57
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -1651,7 +1647,7 @@ public class Bind9ConfigParser extends Parser {
             root_0 = (Object)adaptor.nil();
             // 236:33: -> 'delegation-only'
             {
-                adaptor.addChild(root_0, stream_47.nextNode());
+                adaptor.addChild(root_0, stream_57.nextNode());
 
             }
 
@@ -1694,14 +1690,14 @@ public class Bind9ConfigParser extends Parser {
 
 
         Object string_literal44_tree=null;
-        RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
+        RewriteRuleTokenStream stream_58=new RewriteRuleTokenStream(adaptor,"token 58");
         RewriteRuleSubtreeStream stream_testing_block=new RewriteRuleSubtreeStream(adaptor,"rule testing_block");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:240:9: ( 'testing' testing_block -> ^( ST_TESTING testing_block ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:240:11: 'testing' testing_block
             {
-            string_literal44=(Token)match(input,48,FOLLOW_48_in_testing437);  
-            stream_48.add(string_literal44);
+            string_literal44=(Token)match(input,58,FOLLOW_58_in_testing437);  
+            stream_58.add(string_literal44);
 
             pushFollow(FOLLOW_testing_block_in_testing439);
             testing_block45=testing_block();
@@ -1777,15 +1773,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object pl_tree=null;
         Object char_literal47_tree=null;
-        RewriteRuleTokenStream stream_36=new RewriteRuleTokenStream(adaptor,"token 36");
-        RewriteRuleTokenStream stream_37=new RewriteRuleTokenStream(adaptor,"token 37");
+        RewriteRuleTokenStream stream_48=new RewriteRuleTokenStream(adaptor,"token 48");
+        RewriteRuleTokenStream stream_47=new RewriteRuleTokenStream(adaptor,"token 47");
         RewriteRuleSubtreeStream stream_testing_param=new RewriteRuleSubtreeStream(adaptor,"rule testing_param");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:243:2: (pl= '{' ( ( testing_param )* ) '}' -> ^( ST_TESTING_PLIST[$pl,\"ST_TESTING_PLIST\"] ( testing_param )* ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:243:4: pl= '{' ( ( testing_param )* ) '}'
             {
-            pl=(Token)match(input,36,FOLLOW_36_in_testing_block461);  
-            stream_36.add(pl);
+            pl=(Token)match(input,47,FOLLOW_47_in_testing_block461);  
+            stream_47.add(pl);
 
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:243:13: ( ( testing_param )* )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:243:14: ( testing_param )*
@@ -1796,7 +1792,7 @@ public class Bind9ConfigParser extends Parser {
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( ((LA9_0>=49 && LA9_0<=57)||(LA9_0>=59 && LA9_0<=63)) ) {
+                if ( ((LA9_0>=59 && LA9_0<=72)) ) {
                     alt9=1;
                 }
 
@@ -1823,8 +1819,8 @@ public class Bind9ConfigParser extends Parser {
 
             }
 
-            char_literal47=(Token)match(input,37,FOLLOW_37_in_testing_block467);  
-            stream_37.add(char_literal47);
+            char_literal47=(Token)match(input,48,FOLLOW_48_in_testing_block467);  
+            stream_48.add(char_literal47);
 
 
 
@@ -1926,72 +1922,72 @@ public class Bind9ConfigParser extends Parser {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:246:2: ( testing_element_domain_name | testing_element_acl | testing_element_ip4 | testing_element_ip6 | testing_element_ip | testing_element_ip_port | testing_element_ip_prefix | testing_element_key_id | testing_element_key_list | testing_element_number | testing_element_path_name | testing_element_port_list | testing_element_size_spec | testing_element_yes_or_no )
             int alt10=14;
             switch ( input.LA(1) ) {
-            case 50:
+            case 60:
                 {
                 alt10=1;
                 }
                 break;
-            case 49:
+            case 59:
                 {
                 alt10=2;
                 }
                 break;
-            case 51:
+            case 61:
                 {
                 alt10=3;
                 }
                 break;
-            case 52:
+            case 62:
                 {
                 alt10=4;
                 }
                 break;
-            case 53:
+            case 63:
                 {
                 alt10=5;
                 }
                 break;
-            case 54:
+            case 64:
                 {
                 alt10=6;
                 }
                 break;
-            case 55:
+            case 65:
                 {
                 alt10=7;
                 }
                 break;
-            case 56:
+            case 66:
                 {
                 alt10=8;
                 }
                 break;
-            case 57:
+            case 67:
                 {
                 alt10=9;
                 }
                 break;
-            case 59:
+            case 68:
                 {
                 alt10=10;
                 }
                 break;
-            case 60:
+            case 69:
                 {
                 alt10=11;
                 }
                 break;
-            case 61:
+            case 70:
                 {
                 alt10=12;
                 }
                 break;
-            case 62:
+            case 71:
                 {
                 alt10=13;
                 }
                 break;
-            case 63:
+            case 72:
                 {
                 alt10=14;
                 }
@@ -2240,15 +2236,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal62_tree=null;
         Object char_literal64_tree=null;
-        RewriteRuleTokenStream stream_49=new RewriteRuleTokenStream(adaptor,"token 49");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
         RewriteRuleSubtreeStream stream_el_acl_name=new RewriteRuleSubtreeStream(adaptor,"rule el_acl_name");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:262:2: ( 'acl_name' el_acl_name ';' -> ^( PLIST_PARAM 'acl_name' el_acl_name ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:262:4: 'acl_name' el_acl_name ';'
             {
-            string_literal62=(Token)match(input,49,FOLLOW_49_in_testing_element_acl562);  
-            stream_49.add(string_literal62);
+            string_literal62=(Token)match(input,59,FOLLOW_59_in_testing_element_acl562);  
+            stream_59.add(string_literal62);
 
             pushFollow(FOLLOW_el_acl_name_in_testing_element_acl564);
             el_acl_name63=el_acl_name();
@@ -2256,13 +2252,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_acl_name.add(el_acl_name63.getTree());
-            char_literal64=(Token)match(input,39,FOLLOW_39_in_testing_element_acl566);  
-            stream_39.add(char_literal64);
+            char_literal64=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_acl566);  
+            stream_SEMICOLON.add(char_literal64);
 
 
 
             // AST REWRITE
-            // elements: el_acl_name, 49
+            // elements: el_acl_name, 59
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2279,7 +2275,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_49.nextNode());
+                adaptor.addChild(root_1, stream_59.nextNode());
                 adaptor.addChild(root_1, stream_el_acl_name.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -2328,15 +2324,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal65_tree=null;
         Object char_literal67_tree=null;
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
-        RewriteRuleTokenStream stream_50=new RewriteRuleTokenStream(adaptor,"token 50");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_60=new RewriteRuleTokenStream(adaptor,"token 60");
         RewriteRuleSubtreeStream stream_el_domain_name=new RewriteRuleSubtreeStream(adaptor,"rule el_domain_name");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:265:2: ( 'domain_name' el_domain_name ';' -> ^( PLIST_PARAM 'domain_name' el_domain_name ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:265:4: 'domain_name' el_domain_name ';'
             {
-            string_literal65=(Token)match(input,50,FOLLOW_50_in_testing_element_domain_name586);  
-            stream_50.add(string_literal65);
+            string_literal65=(Token)match(input,60,FOLLOW_60_in_testing_element_domain_name586);  
+            stream_60.add(string_literal65);
 
             pushFollow(FOLLOW_el_domain_name_in_testing_element_domain_name588);
             el_domain_name66=el_domain_name();
@@ -2344,13 +2340,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_domain_name.add(el_domain_name66.getTree());
-            char_literal67=(Token)match(input,39,FOLLOW_39_in_testing_element_domain_name590);  
-            stream_39.add(char_literal67);
+            char_literal67=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_domain_name590);  
+            stream_SEMICOLON.add(char_literal67);
 
 
 
             // AST REWRITE
-            // elements: 50, el_domain_name
+            // elements: el_domain_name, 60
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2367,7 +2363,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_50.nextNode());
+                adaptor.addChild(root_1, stream_60.nextNode());
                 adaptor.addChild(root_1, stream_el_domain_name.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -2416,15 +2412,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal68_tree=null;
         Object char_literal70_tree=null;
-        RewriteRuleTokenStream stream_51=new RewriteRuleTokenStream(adaptor,"token 51");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_61=new RewriteRuleTokenStream(adaptor,"token 61");
         RewriteRuleSubtreeStream stream_el_ip4_addr=new RewriteRuleSubtreeStream(adaptor,"rule el_ip4_addr");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:268:2: ( 'ip4' el_ip4_addr ';' -> ^( PLIST_PARAM 'ip4' el_ip4_addr ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:268:4: 'ip4' el_ip4_addr ';'
             {
-            string_literal68=(Token)match(input,51,FOLLOW_51_in_testing_element_ip4610);  
-            stream_51.add(string_literal68);
+            string_literal68=(Token)match(input,61,FOLLOW_61_in_testing_element_ip4610);  
+            stream_61.add(string_literal68);
 
             pushFollow(FOLLOW_el_ip4_addr_in_testing_element_ip4612);
             el_ip4_addr69=el_ip4_addr();
@@ -2432,13 +2428,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_ip4_addr.add(el_ip4_addr69.getTree());
-            char_literal70=(Token)match(input,39,FOLLOW_39_in_testing_element_ip4614);  
-            stream_39.add(char_literal70);
+            char_literal70=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_ip4614);  
+            stream_SEMICOLON.add(char_literal70);
 
 
 
             // AST REWRITE
-            // elements: el_ip4_addr, 51
+            // elements: 61, el_ip4_addr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2455,7 +2451,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_51.nextNode());
+                adaptor.addChild(root_1, stream_61.nextNode());
                 adaptor.addChild(root_1, stream_el_ip4_addr.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -2504,15 +2500,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal71_tree=null;
         Object char_literal73_tree=null;
-        RewriteRuleTokenStream stream_52=new RewriteRuleTokenStream(adaptor,"token 52");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
         RewriteRuleSubtreeStream stream_el_ip6_addr=new RewriteRuleSubtreeStream(adaptor,"rule el_ip6_addr");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:271:2: ( 'ip6' el_ip6_addr ';' -> ^( PLIST_PARAM 'ip6' el_ip6_addr ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:271:4: 'ip6' el_ip6_addr ';'
             {
-            string_literal71=(Token)match(input,52,FOLLOW_52_in_testing_element_ip6634);  
-            stream_52.add(string_literal71);
+            string_literal71=(Token)match(input,62,FOLLOW_62_in_testing_element_ip6634);  
+            stream_62.add(string_literal71);
 
             pushFollow(FOLLOW_el_ip6_addr_in_testing_element_ip6636);
             el_ip6_addr72=el_ip6_addr();
@@ -2520,13 +2516,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_ip6_addr.add(el_ip6_addr72.getTree());
-            char_literal73=(Token)match(input,39,FOLLOW_39_in_testing_element_ip6638);  
-            stream_39.add(char_literal73);
+            char_literal73=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_ip6638);  
+            stream_SEMICOLON.add(char_literal73);
 
 
 
             // AST REWRITE
-            // elements: el_ip6_addr, 52
+            // elements: 62, el_ip6_addr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2543,7 +2539,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_52.nextNode());
+                adaptor.addChild(root_1, stream_62.nextNode());
                 adaptor.addChild(root_1, stream_el_ip6_addr.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -2592,15 +2588,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal74_tree=null;
         Object char_literal76_tree=null;
-        RewriteRuleTokenStream stream_53=new RewriteRuleTokenStream(adaptor,"token 53");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_63=new RewriteRuleTokenStream(adaptor,"token 63");
         RewriteRuleSubtreeStream stream_el_ip_addr=new RewriteRuleSubtreeStream(adaptor,"rule el_ip_addr");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:274:2: ( 'ip' el_ip_addr ';' -> ^( PLIST_PARAM 'ip' el_ip_addr ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:274:4: 'ip' el_ip_addr ';'
             {
-            string_literal74=(Token)match(input,53,FOLLOW_53_in_testing_element_ip658);  
-            stream_53.add(string_literal74);
+            string_literal74=(Token)match(input,63,FOLLOW_63_in_testing_element_ip658);  
+            stream_63.add(string_literal74);
 
             pushFollow(FOLLOW_el_ip_addr_in_testing_element_ip660);
             el_ip_addr75=el_ip_addr();
@@ -2608,13 +2604,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_ip_addr.add(el_ip_addr75.getTree());
-            char_literal76=(Token)match(input,39,FOLLOW_39_in_testing_element_ip662);  
-            stream_39.add(char_literal76);
+            char_literal76=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_ip662);  
+            stream_SEMICOLON.add(char_literal76);
 
 
 
             // AST REWRITE
-            // elements: 53, el_ip_addr
+            // elements: 63, el_ip_addr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2631,7 +2627,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_53.nextNode());
+                adaptor.addChild(root_1, stream_63.nextNode());
                 adaptor.addChild(root_1, stream_el_ip_addr.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -2680,15 +2676,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal77_tree=null;
         Object char_literal79_tree=null;
-        RewriteRuleTokenStream stream_54=new RewriteRuleTokenStream(adaptor,"token 54");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_64=new RewriteRuleTokenStream(adaptor,"token 64");
         RewriteRuleSubtreeStream stream_el_ip_port=new RewriteRuleSubtreeStream(adaptor,"rule el_ip_port");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:277:2: ( 'ip_port' el_ip_port ';' -> ^( PLIST_PARAM 'ip_port' el_ip_port ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:277:4: 'ip_port' el_ip_port ';'
             {
-            string_literal77=(Token)match(input,54,FOLLOW_54_in_testing_element_ip_port682);  
-            stream_54.add(string_literal77);
+            string_literal77=(Token)match(input,64,FOLLOW_64_in_testing_element_ip_port682);  
+            stream_64.add(string_literal77);
 
             pushFollow(FOLLOW_el_ip_port_in_testing_element_ip_port684);
             el_ip_port78=el_ip_port();
@@ -2696,13 +2692,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_ip_port.add(el_ip_port78.getTree());
-            char_literal79=(Token)match(input,39,FOLLOW_39_in_testing_element_ip_port686);  
-            stream_39.add(char_literal79);
+            char_literal79=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_ip_port686);  
+            stream_SEMICOLON.add(char_literal79);
 
 
 
             // AST REWRITE
-            // elements: el_ip_port, 54
+            // elements: el_ip_port, 64
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2719,7 +2715,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_54.nextNode());
+                adaptor.addChild(root_1, stream_64.nextNode());
                 adaptor.addChild(root_1, stream_el_ip_port.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -2768,15 +2764,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal80_tree=null;
         Object char_literal82_tree=null;
-        RewriteRuleTokenStream stream_55=new RewriteRuleTokenStream(adaptor,"token 55");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_65=new RewriteRuleTokenStream(adaptor,"token 65");
         RewriteRuleSubtreeStream stream_el_ip_prefix=new RewriteRuleSubtreeStream(adaptor,"rule el_ip_prefix");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:280:2: ( 'ip_prefix' el_ip_prefix ';' -> ^( PLIST_PARAM 'ip_prefix' el_ip_prefix ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:280:4: 'ip_prefix' el_ip_prefix ';'
             {
-            string_literal80=(Token)match(input,55,FOLLOW_55_in_testing_element_ip_prefix706);  
-            stream_55.add(string_literal80);
+            string_literal80=(Token)match(input,65,FOLLOW_65_in_testing_element_ip_prefix706);  
+            stream_65.add(string_literal80);
 
             pushFollow(FOLLOW_el_ip_prefix_in_testing_element_ip_prefix708);
             el_ip_prefix81=el_ip_prefix();
@@ -2784,13 +2780,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_ip_prefix.add(el_ip_prefix81.getTree());
-            char_literal82=(Token)match(input,39,FOLLOW_39_in_testing_element_ip_prefix710);  
-            stream_39.add(char_literal82);
+            char_literal82=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_ip_prefix710);  
+            stream_SEMICOLON.add(char_literal82);
 
 
 
             // AST REWRITE
-            // elements: 55, el_ip_prefix
+            // elements: 65, el_ip_prefix
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2807,7 +2803,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_55.nextNode());
+                adaptor.addChild(root_1, stream_65.nextNode());
                 adaptor.addChild(root_1, stream_el_ip_prefix.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -2856,15 +2852,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal83_tree=null;
         Object char_literal85_tree=null;
-        RewriteRuleTokenStream stream_56=new RewriteRuleTokenStream(adaptor,"token 56");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_66=new RewriteRuleTokenStream(adaptor,"token 66");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
         RewriteRuleSubtreeStream stream_el_key_id=new RewriteRuleSubtreeStream(adaptor,"rule el_key_id");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:283:2: ( 'key_id' el_key_id ';' -> ^( PLIST_PARAM 'key_id' el_key_id ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:283:4: 'key_id' el_key_id ';'
             {
-            string_literal83=(Token)match(input,56,FOLLOW_56_in_testing_element_key_id730);  
-            stream_56.add(string_literal83);
+            string_literal83=(Token)match(input,66,FOLLOW_66_in_testing_element_key_id730);  
+            stream_66.add(string_literal83);
 
             pushFollow(FOLLOW_el_key_id_in_testing_element_key_id732);
             el_key_id84=el_key_id();
@@ -2872,13 +2868,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_key_id.add(el_key_id84.getTree());
-            char_literal85=(Token)match(input,39,FOLLOW_39_in_testing_element_key_id734);  
-            stream_39.add(char_literal85);
+            char_literal85=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_key_id734);  
+            stream_SEMICOLON.add(char_literal85);
 
 
 
             // AST REWRITE
-            // elements: el_key_id, 56
+            // elements: el_key_id, 66
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2895,7 +2891,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_56.nextNode());
+                adaptor.addChild(root_1, stream_66.nextNode());
                 adaptor.addChild(root_1, stream_el_key_id.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -2948,19 +2944,19 @@ public class Bind9ConfigParser extends Parser {
         Object char_literal87_tree=null;
         Object char_literal89_tree=null;
         Object char_literal90_tree=null;
-        RewriteRuleTokenStream stream_58=new RewriteRuleTokenStream(adaptor,"token 58");
-        RewriteRuleTokenStream stream_57=new RewriteRuleTokenStream(adaptor,"token 57");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_67=new RewriteRuleTokenStream(adaptor,"token 67");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_DOUBLE_QUOTE=new RewriteRuleTokenStream(adaptor,"token DOUBLE_QUOTE");
         RewriteRuleSubtreeStream stream_el_key_list=new RewriteRuleSubtreeStream(adaptor,"rule el_key_list");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:286:2: ( 'key_list' '\"' el_key_list '\"' ';' -> ^( PLIST_PARAM 'key_list' el_key_list ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:286:4: 'key_list' '\"' el_key_list '\"' ';'
             {
-            string_literal86=(Token)match(input,57,FOLLOW_57_in_testing_element_key_list754);  
-            stream_57.add(string_literal86);
+            string_literal86=(Token)match(input,67,FOLLOW_67_in_testing_element_key_list754);  
+            stream_67.add(string_literal86);
 
-            char_literal87=(Token)match(input,58,FOLLOW_58_in_testing_element_key_list756);  
-            stream_58.add(char_literal87);
+            char_literal87=(Token)match(input,DOUBLE_QUOTE,FOLLOW_DOUBLE_QUOTE_in_testing_element_key_list756);  
+            stream_DOUBLE_QUOTE.add(char_literal87);
 
             pushFollow(FOLLOW_el_key_list_in_testing_element_key_list758);
             el_key_list88=el_key_list();
@@ -2968,16 +2964,16 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_key_list.add(el_key_list88.getTree());
-            char_literal89=(Token)match(input,58,FOLLOW_58_in_testing_element_key_list760);  
-            stream_58.add(char_literal89);
+            char_literal89=(Token)match(input,DOUBLE_QUOTE,FOLLOW_DOUBLE_QUOTE_in_testing_element_key_list760);  
+            stream_DOUBLE_QUOTE.add(char_literal89);
 
-            char_literal90=(Token)match(input,39,FOLLOW_39_in_testing_element_key_list762);  
-            stream_39.add(char_literal90);
+            char_literal90=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_key_list762);  
+            stream_SEMICOLON.add(char_literal90);
 
 
 
             // AST REWRITE
-            // elements: el_key_list, 57
+            // elements: el_key_list, 67
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2994,7 +2990,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_57.nextNode());
+                adaptor.addChild(root_1, stream_67.nextNode());
                 adaptor.addChild(root_1, stream_el_key_list.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -3043,15 +3039,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal91_tree=null;
         Object char_literal93_tree=null;
-        RewriteRuleTokenStream stream_59=new RewriteRuleTokenStream(adaptor,"token 59");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_68=new RewriteRuleTokenStream(adaptor,"token 68");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
         RewriteRuleSubtreeStream stream_el_number=new RewriteRuleSubtreeStream(adaptor,"rule el_number");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:289:2: ( 'number' el_number ';' -> ^( PLIST_PARAM 'number' el_number ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:289:4: 'number' el_number ';'
             {
-            string_literal91=(Token)match(input,59,FOLLOW_59_in_testing_element_number782);  
-            stream_59.add(string_literal91);
+            string_literal91=(Token)match(input,68,FOLLOW_68_in_testing_element_number782);  
+            stream_68.add(string_literal91);
 
             pushFollow(FOLLOW_el_number_in_testing_element_number784);
             el_number92=el_number();
@@ -3059,13 +3055,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_number.add(el_number92.getTree());
-            char_literal93=(Token)match(input,39,FOLLOW_39_in_testing_element_number786);  
-            stream_39.add(char_literal93);
+            char_literal93=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_number786);  
+            stream_SEMICOLON.add(char_literal93);
 
 
 
             // AST REWRITE
-            // elements: 59, el_number
+            // elements: el_number, 68
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3082,7 +3078,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_59.nextNode());
+                adaptor.addChild(root_1, stream_68.nextNode());
                 adaptor.addChild(root_1, stream_el_number.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -3131,15 +3127,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal94_tree=null;
         Object char_literal96_tree=null;
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
-        RewriteRuleTokenStream stream_60=new RewriteRuleTokenStream(adaptor,"token 60");
+        RewriteRuleTokenStream stream_69=new RewriteRuleTokenStream(adaptor,"token 69");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
         RewriteRuleSubtreeStream stream_el_path_name=new RewriteRuleSubtreeStream(adaptor,"rule el_path_name");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:292:2: ( 'path_name' el_path_name ';' -> ^( PLIST_PARAM 'path_name' el_path_name ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:292:4: 'path_name' el_path_name ';'
             {
-            string_literal94=(Token)match(input,60,FOLLOW_60_in_testing_element_path_name806);  
-            stream_60.add(string_literal94);
+            string_literal94=(Token)match(input,69,FOLLOW_69_in_testing_element_path_name806);  
+            stream_69.add(string_literal94);
 
             pushFollow(FOLLOW_el_path_name_in_testing_element_path_name808);
             el_path_name95=el_path_name();
@@ -3147,13 +3143,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_path_name.add(el_path_name95.getTree());
-            char_literal96=(Token)match(input,39,FOLLOW_39_in_testing_element_path_name810);  
-            stream_39.add(char_literal96);
+            char_literal96=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_path_name810);  
+            stream_SEMICOLON.add(char_literal96);
 
 
 
             // AST REWRITE
-            // elements: 60, el_path_name
+            // elements: el_path_name, 69
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3170,7 +3166,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_60.nextNode());
+                adaptor.addChild(root_1, stream_69.nextNode());
                 adaptor.addChild(root_1, stream_el_path_name.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -3223,19 +3219,19 @@ public class Bind9ConfigParser extends Parser {
         Object char_literal98_tree=null;
         Object char_literal100_tree=null;
         Object char_literal101_tree=null;
-        RewriteRuleTokenStream stream_58=new RewriteRuleTokenStream(adaptor,"token 58");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
-        RewriteRuleTokenStream stream_61=new RewriteRuleTokenStream(adaptor,"token 61");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_70=new RewriteRuleTokenStream(adaptor,"token 70");
+        RewriteRuleTokenStream stream_DOUBLE_QUOTE=new RewriteRuleTokenStream(adaptor,"token DOUBLE_QUOTE");
         RewriteRuleSubtreeStream stream_el_port_list=new RewriteRuleSubtreeStream(adaptor,"rule el_port_list");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:295:2: ( 'port_list' '\"' el_port_list '\"' ';' -> ^( PLIST_PARAM 'port_list' el_port_list ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:295:4: 'port_list' '\"' el_port_list '\"' ';'
             {
-            string_literal97=(Token)match(input,61,FOLLOW_61_in_testing_element_port_list830);  
-            stream_61.add(string_literal97);
+            string_literal97=(Token)match(input,70,FOLLOW_70_in_testing_element_port_list830);  
+            stream_70.add(string_literal97);
 
-            char_literal98=(Token)match(input,58,FOLLOW_58_in_testing_element_port_list832);  
-            stream_58.add(char_literal98);
+            char_literal98=(Token)match(input,DOUBLE_QUOTE,FOLLOW_DOUBLE_QUOTE_in_testing_element_port_list832);  
+            stream_DOUBLE_QUOTE.add(char_literal98);
 
             pushFollow(FOLLOW_el_port_list_in_testing_element_port_list834);
             el_port_list99=el_port_list();
@@ -3243,16 +3239,16 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_port_list.add(el_port_list99.getTree());
-            char_literal100=(Token)match(input,58,FOLLOW_58_in_testing_element_port_list836);  
-            stream_58.add(char_literal100);
+            char_literal100=(Token)match(input,DOUBLE_QUOTE,FOLLOW_DOUBLE_QUOTE_in_testing_element_port_list836);  
+            stream_DOUBLE_QUOTE.add(char_literal100);
 
-            char_literal101=(Token)match(input,39,FOLLOW_39_in_testing_element_port_list838);  
-            stream_39.add(char_literal101);
+            char_literal101=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_port_list838);  
+            stream_SEMICOLON.add(char_literal101);
 
 
 
             // AST REWRITE
-            // elements: el_port_list, 61
+            // elements: 70, el_port_list
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3269,7 +3265,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_61.nextNode());
+                adaptor.addChild(root_1, stream_70.nextNode());
                 adaptor.addChild(root_1, stream_el_port_list.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -3318,15 +3314,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal102_tree=null;
         Object char_literal104_tree=null;
-        RewriteRuleTokenStream stream_62=new RewriteRuleTokenStream(adaptor,"token 62");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_71=new RewriteRuleTokenStream(adaptor,"token 71");
         RewriteRuleSubtreeStream stream_el_size_spec=new RewriteRuleSubtreeStream(adaptor,"rule el_size_spec");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:298:2: ( 'size_spec' el_size_spec ';' -> ^( PLIST_PARAM 'size_spec' el_size_spec ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:298:4: 'size_spec' el_size_spec ';'
             {
-            string_literal102=(Token)match(input,62,FOLLOW_62_in_testing_element_size_spec858);  
-            stream_62.add(string_literal102);
+            string_literal102=(Token)match(input,71,FOLLOW_71_in_testing_element_size_spec858);  
+            stream_71.add(string_literal102);
 
             pushFollow(FOLLOW_el_size_spec_in_testing_element_size_spec860);
             el_size_spec103=el_size_spec();
@@ -3334,13 +3330,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_size_spec.add(el_size_spec103.getTree());
-            char_literal104=(Token)match(input,39,FOLLOW_39_in_testing_element_size_spec862);  
-            stream_39.add(char_literal104);
+            char_literal104=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_size_spec862);  
+            stream_SEMICOLON.add(char_literal104);
 
 
 
             // AST REWRITE
-            // elements: 62, el_size_spec
+            // elements: el_size_spec, 71
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3357,7 +3353,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_62.nextNode());
+                adaptor.addChild(root_1, stream_71.nextNode());
                 adaptor.addChild(root_1, stream_el_size_spec.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -3406,15 +3402,15 @@ public class Bind9ConfigParser extends Parser {
 
         Object string_literal105_tree=null;
         Object char_literal107_tree=null;
-        RewriteRuleTokenStream stream_63=new RewriteRuleTokenStream(adaptor,"token 63");
-        RewriteRuleTokenStream stream_39=new RewriteRuleTokenStream(adaptor,"token 39");
+        RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
+        RewriteRuleTokenStream stream_72=new RewriteRuleTokenStream(adaptor,"token 72");
         RewriteRuleSubtreeStream stream_el_yes_or_no=new RewriteRuleSubtreeStream(adaptor,"rule el_yes_or_no");
         try {
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:301:2: ( 'yes_or_no' el_yes_or_no ';' -> ^( PLIST_PARAM 'yes_or_no' el_yes_or_no ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:301:4: 'yes_or_no' el_yes_or_no ';'
             {
-            string_literal105=(Token)match(input,63,FOLLOW_63_in_testing_element_yes_or_no882);  
-            stream_63.add(string_literal105);
+            string_literal105=(Token)match(input,72,FOLLOW_72_in_testing_element_yes_or_no882);  
+            stream_72.add(string_literal105);
 
             pushFollow(FOLLOW_el_yes_or_no_in_testing_element_yes_or_no884);
             el_yes_or_no106=el_yes_or_no();
@@ -3422,13 +3418,13 @@ public class Bind9ConfigParser extends Parser {
             state._fsp--;
 
             stream_el_yes_or_no.add(el_yes_or_no106.getTree());
-            char_literal107=(Token)match(input,39,FOLLOW_39_in_testing_element_yes_or_no886);  
-            stream_39.add(char_literal107);
+            char_literal107=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_testing_element_yes_or_no886);  
+            stream_SEMICOLON.add(char_literal107);
 
 
 
             // AST REWRITE
-            // elements: el_yes_or_no, 63
+            // elements: el_yes_or_no, 72
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3445,7 +3441,7 @@ public class Bind9ConfigParser extends Parser {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, stream_63.nextNode());
+                adaptor.addChild(root_1, stream_72.nextNode());
                 adaptor.addChild(root_1, stream_el_yes_or_no.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -3474,15 +3470,15 @@ public class Bind9ConfigParser extends Parser {
     }
     // $ANTLR end "testing_element_yes_or_no"
 
-    public static class identifier_return extends ParserRuleReturnScope {
+    public static class lex_identifier_return extends ParserRuleReturnScope {
         Object tree;
         public Object getTree() { return tree; }
     };
 
-    // $ANTLR start "identifier"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:304:1: identifier : ( ALPHANUM_WORD | NUMBER | KMG_NUMBER );
-    public final Bind9ConfigParser.identifier_return identifier() throws RecognitionException {
-        Bind9ConfigParser.identifier_return retval = new Bind9ConfigParser.identifier_return();
+    // $ANTLR start "lex_identifier"
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:304:1: lex_identifier : ( ALPHANUM_NONSTD | NUMBER | KMG_NUMBER | YES_OR_NO_WORD | YES_OR_NO_NUM | RANGE_WORD | UNLIMITED_WORD | DEFAULT_WORD );
+    public final Bind9ConfigParser.lex_identifier_return lex_identifier() throws RecognitionException {
+        Bind9ConfigParser.lex_identifier_return retval = new Bind9ConfigParser.lex_identifier_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -3492,13 +3488,13 @@ public class Bind9ConfigParser extends Parser {
         Object set108_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:304:12: ( ALPHANUM_WORD | NUMBER | KMG_NUMBER )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:304:16: ( ALPHANUM_NONSTD | NUMBER | KMG_NUMBER | YES_OR_NO_WORD | YES_OR_NO_NUM | RANGE_WORD | UNLIMITED_WORD | DEFAULT_WORD )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:
             {
             root_0 = (Object)adaptor.nil();
 
             set108=(Token)input.LT(1);
-            if ( (input.LA(1)>=ALPHANUM_WORD && input.LA(1)<=KMG_NUMBER) ) {
+            if ( (input.LA(1)>=ALPHANUM_NONSTD && input.LA(1)<=DEFAULT_WORD) ) {
                 input.consume();
                 adaptor.addChild(root_0, (Object)adaptor.create(set108));
                 state.errorRecovery=false;
@@ -3527,17 +3523,17 @@ public class Bind9ConfigParser extends Parser {
         }
         return retval;
     }
-    // $ANTLR end "identifier"
+    // $ANTLR end "lex_identifier"
 
-    public static class el_acl_name_return extends ParserRuleReturnScope {
+    public static class lex_number_return extends ParserRuleReturnScope {
         Object tree;
         public Object getTree() { return tree; }
     };
 
-    // $ANTLR start "el_acl_name"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:306:1: el_acl_name : ( ALPHANUM_WORD | NUMBER );
-    public final Bind9ConfigParser.el_acl_name_return el_acl_name() throws RecognitionException {
-        Bind9ConfigParser.el_acl_name_return retval = new Bind9ConfigParser.el_acl_name_return();
+    // $ANTLR start "lex_number"
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:307:1: lex_number : ( NUMBER | YES_OR_NO_NUM );
+    public final Bind9ConfigParser.lex_number_return lex_number() throws RecognitionException {
+        Bind9ConfigParser.lex_number_return retval = new Bind9ConfigParser.lex_number_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
@@ -3547,13 +3543,13 @@ public class Bind9ConfigParser extends Parser {
         Object set109_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:306:13: ( ALPHANUM_WORD | NUMBER )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:307:12: ( NUMBER | YES_OR_NO_NUM )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:
             {
             root_0 = (Object)adaptor.nil();
 
             set109=(Token)input.LT(1);
-            if ( (input.LA(1)>=ALPHANUM_WORD && input.LA(1)<=NUMBER) ) {
+            if ( input.LA(1)==NUMBER||input.LA(1)==YES_OR_NO_NUM ) {
                 input.consume();
                 adaptor.addChild(root_0, (Object)adaptor.create(set109));
                 state.errorRecovery=false;
@@ -3582,6 +3578,56 @@ public class Bind9ConfigParser extends Parser {
         }
         return retval;
     }
+    // $ANTLR end "lex_number"
+
+    public static class el_acl_name_return extends ParserRuleReturnScope {
+        Object tree;
+        public Object getTree() { return tree; }
+    };
+
+    // $ANTLR start "el_acl_name"
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:309:1: el_acl_name : lex_identifier ;
+    public final Bind9ConfigParser.el_acl_name_return el_acl_name() throws RecognitionException {
+        Bind9ConfigParser.el_acl_name_return retval = new Bind9ConfigParser.el_acl_name_return();
+        retval.start = input.LT(1);
+
+        Object root_0 = null;
+
+        Bind9ConfigParser.lex_identifier_return lex_identifier110 = null;
+
+
+
+        try {
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:309:13: ( lex_identifier )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:309:16: lex_identifier
+            {
+            root_0 = (Object)adaptor.nil();
+
+            pushFollow(FOLLOW_lex_identifier_in_el_acl_name962);
+            lex_identifier110=lex_identifier();
+
+            state._fsp--;
+
+            adaptor.addChild(root_0, lex_identifier110.getTree());
+
+            }
+
+            retval.stop = input.LT(-1);
+
+            retval.tree = (Object)adaptor.rulePostProcessing(root_0);
+            adaptor.setTokenBoundaries(retval.tree, retval.start, retval.stop);
+
+        }
+
+        catch (RecognitionException re) {
+        	reportError(re);
+                recover(input,re);
+                this.overrider.registerSemanticError("generic", re);
+        }
+        finally {
+        }
+        return retval;
+    }
     // $ANTLR end "el_acl_name"
 
     public static class el_domain_name_return extends ParserRuleReturnScope {
@@ -3590,38 +3636,38 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_domain_name"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:307:1: el_domain_name : ( ALPHANUM_WORD '.' )+ ALPHANUM_WORD ;
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:310:1: el_domain_name : ( lex_identifier '.' )+ lex_identifier ;
     public final Bind9ConfigParser.el_domain_name_return el_domain_name() throws RecognitionException {
         Bind9ConfigParser.el_domain_name_return retval = new Bind9ConfigParser.el_domain_name_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token ALPHANUM_WORD110=null;
-        Token char_literal111=null;
-        Token ALPHANUM_WORD112=null;
+        Token char_literal112=null;
+        Bind9ConfigParser.lex_identifier_return lex_identifier111 = null;
 
-        Object ALPHANUM_WORD110_tree=null;
-        Object char_literal111_tree=null;
-        Object ALPHANUM_WORD112_tree=null;
+        Bind9ConfigParser.lex_identifier_return lex_identifier113 = null;
+
+
+        Object char_literal112_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:307:17: ( ( ALPHANUM_WORD '.' )+ ALPHANUM_WORD )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:307:20: ( ALPHANUM_WORD '.' )+ ALPHANUM_WORD
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:310:17: ( ( lex_identifier '.' )+ lex_identifier )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:310:20: ( lex_identifier '.' )+ lex_identifier
             {
             root_0 = (Object)adaptor.nil();
 
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:307:20: ( ALPHANUM_WORD '.' )+
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:310:20: ( lex_identifier '.' )+
             int cnt11=0;
             loop11:
             do {
                 int alt11=2;
                 int LA11_0 = input.LA(1);
 
-                if ( (LA11_0==ALPHANUM_WORD) ) {
+                if ( ((LA11_0>=ALPHANUM_NONSTD && LA11_0<=DEFAULT_WORD)) ) {
                     int LA11_1 = input.LA(2);
 
-                    if ( (LA11_1==64) ) {
+                    if ( (LA11_1==73) ) {
                         alt11=1;
                     }
 
@@ -3631,15 +3677,17 @@ public class Bind9ConfigParser extends Parser {
 
                 switch (alt11) {
             	case 1 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:307:21: ALPHANUM_WORD '.'
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:310:21: lex_identifier '.'
             	    {
-            	    ALPHANUM_WORD110=(Token)match(input,ALPHANUM_WORD,FOLLOW_ALPHANUM_WORD_in_el_domain_name940); 
-            	    ALPHANUM_WORD110_tree = (Object)adaptor.create(ALPHANUM_WORD110);
-            	    adaptor.addChild(root_0, ALPHANUM_WORD110_tree);
+            	    pushFollow(FOLLOW_lex_identifier_in_el_domain_name972);
+            	    lex_identifier111=lex_identifier();
 
-            	    char_literal111=(Token)match(input,64,FOLLOW_64_in_el_domain_name941); 
-            	    char_literal111_tree = (Object)adaptor.create(char_literal111);
-            	    adaptor.addChild(root_0, char_literal111_tree);
+            	    state._fsp--;
+
+            	    adaptor.addChild(root_0, lex_identifier111.getTree());
+            	    char_literal112=(Token)match(input,73,FOLLOW_73_in_el_domain_name973); 
+            	    char_literal112_tree = (Object)adaptor.create(char_literal112);
+            	    adaptor.addChild(root_0, char_literal112_tree);
 
 
             	    }
@@ -3654,10 +3702,12 @@ public class Bind9ConfigParser extends Parser {
                 cnt11++;
             } while (true);
 
-            ALPHANUM_WORD112=(Token)match(input,ALPHANUM_WORD,FOLLOW_ALPHANUM_WORD_in_el_domain_name944); 
-            ALPHANUM_WORD112_tree = (Object)adaptor.create(ALPHANUM_WORD112);
-            adaptor.addChild(root_0, ALPHANUM_WORD112_tree);
+            pushFollow(FOLLOW_lex_identifier_in_el_domain_name976);
+            lex_identifier113=lex_identifier();
 
+            state._fsp--;
+
+            adaptor.addChild(root_0, lex_identifier113.getTree());
 
             }
 
@@ -3685,28 +3735,28 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_ip_addr"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:308:1: el_ip_addr : ( el_ip4_addr | el_ip6_addr );
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:311:1: el_ip_addr : ( el_ip4_addr | el_ip6_addr );
     public final Bind9ConfigParser.el_ip_addr_return el_ip_addr() throws RecognitionException {
         Bind9ConfigParser.el_ip_addr_return retval = new Bind9ConfigParser.el_ip_addr_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Bind9ConfigParser.el_ip4_addr_return el_ip4_addr113 = null;
+        Bind9ConfigParser.el_ip4_addr_return el_ip4_addr114 = null;
 
-        Bind9ConfigParser.el_ip6_addr_return el_ip6_addr114 = null;
+        Bind9ConfigParser.el_ip6_addr_return el_ip6_addr115 = null;
 
 
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:308:13: ( el_ip4_addr | el_ip6_addr )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:311:13: ( el_ip4_addr | el_ip6_addr )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
             if ( (LA12_0==IP4_ADDR) ) {
                 alt12=1;
             }
-            else if ( ((LA12_0>=ALPHANUM_WORD && LA12_0<=KMG_NUMBER)||LA12_0==IP6_ADDR) ) {
+            else if ( ((LA12_0>=ALPHANUM_NONSTD && LA12_0<=DEFAULT_WORD)||LA12_0==IP6_ADDR) ) {
                 alt12=2;
             }
             else {
@@ -3717,30 +3767,30 @@ public class Bind9ConfigParser extends Parser {
             }
             switch (alt12) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:308:16: el_ip4_addr
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:311:16: el_ip4_addr
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_el_ip4_addr_in_el_ip_addr954);
-                    el_ip4_addr113=el_ip4_addr();
+                    pushFollow(FOLLOW_el_ip4_addr_in_el_ip_addr986);
+                    el_ip4_addr114=el_ip4_addr();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, el_ip4_addr113.getTree());
+                    adaptor.addChild(root_0, el_ip4_addr114.getTree());
 
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:308:30: el_ip6_addr
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:311:30: el_ip6_addr
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_el_ip6_addr_in_el_ip_addr958);
-                    el_ip6_addr114=el_ip6_addr();
+                    pushFollow(FOLLOW_el_ip6_addr_in_el_ip_addr990);
+                    el_ip6_addr115=el_ip6_addr();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, el_ip6_addr114.getTree());
+                    adaptor.addChild(root_0, el_ip6_addr115.getTree());
 
                     }
                     break;
@@ -3770,26 +3820,26 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_ip4_addr"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:309:1: el_ip4_addr : IP4_ADDR ;
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:312:1: el_ip4_addr : IP4_ADDR ;
     public final Bind9ConfigParser.el_ip4_addr_return el_ip4_addr() throws RecognitionException {
         Bind9ConfigParser.el_ip4_addr_return retval = new Bind9ConfigParser.el_ip4_addr_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token IP4_ADDR115=null;
+        Token IP4_ADDR116=null;
 
-        Object IP4_ADDR115_tree=null;
+        Object IP4_ADDR116_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:309:13: ( IP4_ADDR )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:309:15: IP4_ADDR
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:312:13: ( IP4_ADDR )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:312:15: IP4_ADDR
             {
             root_0 = (Object)adaptor.nil();
 
-            IP4_ADDR115=(Token)match(input,IP4_ADDR,FOLLOW_IP4_ADDR_in_el_ip4_addr965); 
-            IP4_ADDR115_tree = (Object)adaptor.create(IP4_ADDR115);
-            adaptor.addChild(root_0, IP4_ADDR115_tree);
+            IP4_ADDR116=(Token)match(input,IP4_ADDR,FOLLOW_IP4_ADDR_in_el_ip4_addr997); 
+            IP4_ADDR116_tree = (Object)adaptor.create(IP4_ADDR116);
+            adaptor.addChild(root_0, IP4_ADDR116_tree);
 
 
             }
@@ -3818,28 +3868,28 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_ip6_addr"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:310:1: el_ip6_addr : ( IP6_ADDR | identifier );
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:313:1: el_ip6_addr : ( IP6_ADDR | lex_identifier );
     public final Bind9ConfigParser.el_ip6_addr_return el_ip6_addr() throws RecognitionException {
         Bind9ConfigParser.el_ip6_addr_return retval = new Bind9ConfigParser.el_ip6_addr_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token IP6_ADDR116=null;
-        Bind9ConfigParser.identifier_return identifier117 = null;
+        Token IP6_ADDR117=null;
+        Bind9ConfigParser.lex_identifier_return lex_identifier118 = null;
 
 
-        Object IP6_ADDR116_tree=null;
+        Object IP6_ADDR117_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:310:13: ( IP6_ADDR | identifier )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:313:13: ( IP6_ADDR | lex_identifier )
             int alt13=2;
             int LA13_0 = input.LA(1);
 
             if ( (LA13_0==IP6_ADDR) ) {
                 alt13=1;
             }
-            else if ( ((LA13_0>=ALPHANUM_WORD && LA13_0<=KMG_NUMBER)) ) {
+            else if ( ((LA13_0>=ALPHANUM_NONSTD && LA13_0<=DEFAULT_WORD)) ) {
                 alt13=2;
             }
             else {
@@ -3850,28 +3900,28 @@ public class Bind9ConfigParser extends Parser {
             }
             switch (alt13) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:310:15: IP6_ADDR
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:313:15: IP6_ADDR
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    IP6_ADDR116=(Token)match(input,IP6_ADDR,FOLLOW_IP6_ADDR_in_el_ip6_addr972); 
-                    IP6_ADDR116_tree = (Object)adaptor.create(IP6_ADDR116);
-                    adaptor.addChild(root_0, IP6_ADDR116_tree);
+                    IP6_ADDR117=(Token)match(input,IP6_ADDR,FOLLOW_IP6_ADDR_in_el_ip6_addr1004); 
+                    IP6_ADDR117_tree = (Object)adaptor.create(IP6_ADDR117);
+                    adaptor.addChild(root_0, IP6_ADDR117_tree);
 
 
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:310:26: identifier
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:313:26: lex_identifier
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    pushFollow(FOLLOW_identifier_in_el_ip6_addr976);
-                    identifier117=identifier();
+                    pushFollow(FOLLOW_lex_identifier_in_el_ip6_addr1008);
+                    lex_identifier118=lex_identifier();
 
                     state._fsp--;
 
-                    adaptor.addChild(root_0, identifier117.getTree());
+                    adaptor.addChild(root_0, lex_identifier118.getTree());
 
                     }
                     break;
@@ -3901,27 +3951,27 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_ip_port"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:311:1: el_ip_port : ( NUMBER | '*' );
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:314:1: el_ip_port : ( NUMBER | ASTERISK );
     public final Bind9ConfigParser.el_ip_port_return el_ip_port() throws RecognitionException {
         Bind9ConfigParser.el_ip_port_return retval = new Bind9ConfigParser.el_ip_port_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token set118=null;
+        Token set119=null;
 
-        Object set118_tree=null;
+        Object set119_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:311:12: ( NUMBER | '*' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:314:12: ( NUMBER | ASTERISK )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:
             {
             root_0 = (Object)adaptor.nil();
 
-            set118=(Token)input.LT(1);
-            if ( input.LA(1)==NUMBER||input.LA(1)==65 ) {
+            set119=(Token)input.LT(1);
+            if ( input.LA(1)==NUMBER||input.LA(1)==ASTERISK ) {
                 input.consume();
-                adaptor.addChild(root_0, (Object)adaptor.create(set118));
+                adaptor.addChild(root_0, (Object)adaptor.create(set119));
                 state.errorRecovery=false;
             }
             else {
@@ -3956,31 +4006,31 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_ip_prefix"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:312:1: el_ip_prefix : ( NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR ) '/' NUMBER ;
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:315:1: el_ip_prefix : ( NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR ) FORWARD_SLASH NUMBER ;
     public final Bind9ConfigParser.el_ip_prefix_return el_ip_prefix() throws RecognitionException {
         Bind9ConfigParser.el_ip_prefix_return retval = new Bind9ConfigParser.el_ip_prefix_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token set119=null;
-        Token char_literal120=null;
-        Token NUMBER121=null;
+        Token set120=null;
+        Token FORWARD_SLASH121=null;
+        Token NUMBER122=null;
 
-        Object set119_tree=null;
-        Object char_literal120_tree=null;
-        Object NUMBER121_tree=null;
+        Object set120_tree=null;
+        Object FORWARD_SLASH121_tree=null;
+        Object NUMBER122_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:312:14: ( ( NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR ) '/' NUMBER )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:312:17: ( NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR ) '/' NUMBER
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:315:14: ( ( NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR ) FORWARD_SLASH NUMBER )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:315:17: ( NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR ) FORWARD_SLASH NUMBER
             {
             root_0 = (Object)adaptor.nil();
 
-            set119=(Token)input.LT(1);
+            set120=(Token)input.LT(1);
             if ( input.LA(1)==NUMBER||input.LA(1)==IP4_ADDR||(input.LA(1)>=IP4_SHORT_2 && input.LA(1)<=IP4_SHORT_3) ) {
                 input.consume();
-                adaptor.addChild(root_0, (Object)adaptor.create(set119));
+                adaptor.addChild(root_0, (Object)adaptor.create(set120));
                 state.errorRecovery=false;
             }
             else {
@@ -3988,13 +4038,13 @@ public class Bind9ConfigParser extends Parser {
                 throw mse;
             }
 
-            char_literal120=(Token)match(input,66,FOLLOW_66_in_el_ip_prefix1008); 
-            char_literal120_tree = (Object)adaptor.create(char_literal120);
-            adaptor.addChild(root_0, char_literal120_tree);
+            FORWARD_SLASH121=(Token)match(input,FORWARD_SLASH,FOLLOW_FORWARD_SLASH_in_el_ip_prefix1040); 
+            FORWARD_SLASH121_tree = (Object)adaptor.create(FORWARD_SLASH121);
+            adaptor.addChild(root_0, FORWARD_SLASH121_tree);
 
-            NUMBER121=(Token)match(input,NUMBER,FOLLOW_NUMBER_in_el_ip_prefix1009); 
-            NUMBER121_tree = (Object)adaptor.create(NUMBER121);
-            adaptor.addChild(root_0, NUMBER121_tree);
+            NUMBER122=(Token)match(input,NUMBER,FOLLOW_NUMBER_in_el_ip_prefix1042); 
+            NUMBER122_tree = (Object)adaptor.create(NUMBER122);
+            adaptor.addChild(root_0, NUMBER122_tree);
 
 
             }
@@ -4023,29 +4073,29 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_key_id"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:313:1: el_key_id : el_domain_name ;
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:316:1: el_key_id : el_domain_name ;
     public final Bind9ConfigParser.el_key_id_return el_key_id() throws RecognitionException {
         Bind9ConfigParser.el_key_id_return retval = new Bind9ConfigParser.el_key_id_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Bind9ConfigParser.el_domain_name_return el_domain_name122 = null;
+        Bind9ConfigParser.el_domain_name_return el_domain_name123 = null;
 
 
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:313:11: ( el_domain_name )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:313:14: el_domain_name
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:316:11: ( el_domain_name )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:316:14: el_domain_name
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_el_domain_name_in_el_key_id1017);
-            el_domain_name122=el_domain_name();
+            pushFollow(FOLLOW_el_domain_name_in_el_key_id1050);
+            el_domain_name123=el_domain_name();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, el_domain_name122.getTree());
+            adaptor.addChild(root_0, el_domain_name123.getTree());
 
             }
 
@@ -4073,45 +4123,45 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_key_list"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:314:1: el_key_list : el_key_id ( ';' el_key_id )* ';' ;
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:317:1: el_key_list : el_key_id ( SEMICOLON el_key_id )* SEMICOLON ;
     public final Bind9ConfigParser.el_key_list_return el_key_list() throws RecognitionException {
         Bind9ConfigParser.el_key_list_return retval = new Bind9ConfigParser.el_key_list_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token char_literal124=null;
-        Token char_literal126=null;
-        Bind9ConfigParser.el_key_id_return el_key_id123 = null;
+        Token SEMICOLON125=null;
+        Token SEMICOLON127=null;
+        Bind9ConfigParser.el_key_id_return el_key_id124 = null;
 
-        Bind9ConfigParser.el_key_id_return el_key_id125 = null;
+        Bind9ConfigParser.el_key_id_return el_key_id126 = null;
 
 
-        Object char_literal124_tree=null;
-        Object char_literal126_tree=null;
+        Object SEMICOLON125_tree=null;
+        Object SEMICOLON127_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:314:13: ( el_key_id ( ';' el_key_id )* ';' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:314:15: el_key_id ( ';' el_key_id )* ';'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:317:13: ( el_key_id ( SEMICOLON el_key_id )* SEMICOLON )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:317:15: el_key_id ( SEMICOLON el_key_id )* SEMICOLON
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_el_key_id_in_el_key_list1024);
-            el_key_id123=el_key_id();
+            pushFollow(FOLLOW_el_key_id_in_el_key_list1057);
+            el_key_id124=el_key_id();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, el_key_id123.getTree());
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:314:25: ( ';' el_key_id )*
+            adaptor.addChild(root_0, el_key_id124.getTree());
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:317:25: ( SEMICOLON el_key_id )*
             loop14:
             do {
                 int alt14=2;
                 int LA14_0 = input.LA(1);
 
-                if ( (LA14_0==39) ) {
+                if ( (LA14_0==SEMICOLON) ) {
                     int LA14_1 = input.LA(2);
 
-                    if ( (LA14_1==ALPHANUM_WORD) ) {
+                    if ( ((LA14_1>=ALPHANUM_NONSTD && LA14_1<=DEFAULT_WORD)) ) {
                         alt14=1;
                     }
 
@@ -4121,18 +4171,18 @@ public class Bind9ConfigParser extends Parser {
 
                 switch (alt14) {
             	case 1 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:314:26: ';' el_key_id
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:317:26: SEMICOLON el_key_id
             	    {
-            	    char_literal124=(Token)match(input,39,FOLLOW_39_in_el_key_list1027); 
-            	    char_literal124_tree = (Object)adaptor.create(char_literal124);
-            	    adaptor.addChild(root_0, char_literal124_tree);
+            	    SEMICOLON125=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_el_key_list1060); 
+            	    SEMICOLON125_tree = (Object)adaptor.create(SEMICOLON125);
+            	    adaptor.addChild(root_0, SEMICOLON125_tree);
 
-            	    pushFollow(FOLLOW_el_key_id_in_el_key_list1029);
-            	    el_key_id125=el_key_id();
+            	    pushFollow(FOLLOW_el_key_id_in_el_key_list1062);
+            	    el_key_id126=el_key_id();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, el_key_id125.getTree());
+            	    adaptor.addChild(root_0, el_key_id126.getTree());
 
             	    }
             	    break;
@@ -4142,9 +4192,9 @@ public class Bind9ConfigParser extends Parser {
                 }
             } while (true);
 
-            char_literal126=(Token)match(input,39,FOLLOW_39_in_el_key_list1033); 
-            char_literal126_tree = (Object)adaptor.create(char_literal126);
-            adaptor.addChild(root_0, char_literal126_tree);
+            SEMICOLON127=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_el_key_list1066); 
+            SEMICOLON127_tree = (Object)adaptor.create(SEMICOLON127);
+            adaptor.addChild(root_0, SEMICOLON127_tree);
 
 
             }
@@ -4173,27 +4223,29 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_number"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:315:1: el_number : NUMBER ;
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:318:1: el_number : lex_number ;
     public final Bind9ConfigParser.el_number_return el_number() throws RecognitionException {
         Bind9ConfigParser.el_number_return retval = new Bind9ConfigParser.el_number_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token NUMBER127=null;
+        Bind9ConfigParser.lex_number_return lex_number128 = null;
 
-        Object NUMBER127_tree=null;
+
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:315:11: ( NUMBER )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:315:13: NUMBER
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:318:11: ( lex_number )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:318:13: lex_number
             {
             root_0 = (Object)adaptor.nil();
 
-            NUMBER127=(Token)match(input,NUMBER,FOLLOW_NUMBER_in_el_number1040); 
-            NUMBER127_tree = (Object)adaptor.create(NUMBER127);
-            adaptor.addChild(root_0, NUMBER127_tree);
+            pushFollow(FOLLOW_lex_number_in_el_number1073);
+            lex_number128=lex_number();
 
+            state._fsp--;
+
+            adaptor.addChild(root_0, lex_number128.getTree());
 
             }
 
@@ -4221,47 +4273,47 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_path_name"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:316:1: el_path_name : '\"' (~ ( '\\r' | '\\n' | '\"' ) )* '\"' ;
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:319:1: el_path_name : DOUBLE_QUOTE (~ ( CR | LF | DOUBLE_QUOTE ) )* DOUBLE_QUOTE ;
     public final Bind9ConfigParser.el_path_name_return el_path_name() throws RecognitionException {
         Bind9ConfigParser.el_path_name_return retval = new Bind9ConfigParser.el_path_name_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token char_literal128=null;
-        Token set129=null;
-        Token char_literal130=null;
+        Token DOUBLE_QUOTE129=null;
+        Token set130=null;
+        Token DOUBLE_QUOTE131=null;
 
-        Object char_literal128_tree=null;
-        Object set129_tree=null;
-        Object char_literal130_tree=null;
+        Object DOUBLE_QUOTE129_tree=null;
+        Object set130_tree=null;
+        Object DOUBLE_QUOTE131_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:316:14: ( '\"' (~ ( '\\r' | '\\n' | '\"' ) )* '\"' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:316:16: '\"' (~ ( '\\r' | '\\n' | '\"' ) )* '\"'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:319:14: ( DOUBLE_QUOTE (~ ( CR | LF | DOUBLE_QUOTE ) )* DOUBLE_QUOTE )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:319:16: DOUBLE_QUOTE (~ ( CR | LF | DOUBLE_QUOTE ) )* DOUBLE_QUOTE
             {
             root_0 = (Object)adaptor.nil();
 
-            char_literal128=(Token)match(input,58,FOLLOW_58_in_el_path_name1048); 
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:316:21: (~ ( '\\r' | '\\n' | '\"' ) )*
+            DOUBLE_QUOTE129=(Token)match(input,DOUBLE_QUOTE,FOLLOW_DOUBLE_QUOTE_in_el_path_name1081); 
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:319:30: (~ ( CR | LF | DOUBLE_QUOTE ) )*
             loop15:
             do {
                 int alt15=2;
                 int LA15_0 = input.LA(1);
 
-                if ( ((LA15_0>=ST_ZONE_MASTER && LA15_0<=57)||(LA15_0>=59 && LA15_0<=66)||(LA15_0>=69 && LA15_0<=77)) ) {
+                if ( ((LA15_0>=ST_ZONE_MASTER && LA15_0<=SEMICOLON)||(LA15_0>=C_COMMENT && LA15_0<=73)) ) {
                     alt15=1;
                 }
 
 
                 switch (alt15) {
             	case 1 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:316:22: ~ ( '\\r' | '\\n' | '\"' )
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:319:31: ~ ( CR | LF | DOUBLE_QUOTE )
             	    {
-            	    set129=(Token)input.LT(1);
-            	    if ( (input.LA(1)>=ST_ZONE_MASTER && input.LA(1)<=57)||(input.LA(1)>=59 && input.LA(1)<=66)||(input.LA(1)>=69 && input.LA(1)<=77) ) {
+            	    set130=(Token)input.LT(1);
+            	    if ( (input.LA(1)>=ST_ZONE_MASTER && input.LA(1)<=SEMICOLON)||(input.LA(1)>=C_COMMENT && input.LA(1)<=73) ) {
             	        input.consume();
-            	        adaptor.addChild(root_0, (Object)adaptor.create(set129));
+            	        adaptor.addChild(root_0, (Object)adaptor.create(set130));
             	        state.errorRecovery=false;
             	    }
             	    else {
@@ -4278,7 +4330,7 @@ public class Bind9ConfigParser extends Parser {
                 }
             } while (true);
 
-            char_literal130=(Token)match(input,58,FOLLOW_58_in_el_path_name1063); 
+            DOUBLE_QUOTE131=(Token)match(input,DOUBLE_QUOTE,FOLLOW_DOUBLE_QUOTE_in_el_path_name1096); 
 
             }
 
@@ -4306,45 +4358,45 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_port_list"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:317:1: el_port_list : el_port_list_item ( ';' el_port_list_item )* ';' ;
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:320:1: el_port_list : el_port_list_item ( SEMICOLON el_port_list_item )* SEMICOLON ;
     public final Bind9ConfigParser.el_port_list_return el_port_list() throws RecognitionException {
         Bind9ConfigParser.el_port_list_return retval = new Bind9ConfigParser.el_port_list_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token char_literal132=null;
-        Token char_literal134=null;
-        Bind9ConfigParser.el_port_list_item_return el_port_list_item131 = null;
+        Token SEMICOLON133=null;
+        Token SEMICOLON135=null;
+        Bind9ConfigParser.el_port_list_item_return el_port_list_item132 = null;
 
-        Bind9ConfigParser.el_port_list_item_return el_port_list_item133 = null;
+        Bind9ConfigParser.el_port_list_item_return el_port_list_item134 = null;
 
 
-        Object char_literal132_tree=null;
-        Object char_literal134_tree=null;
+        Object SEMICOLON133_tree=null;
+        Object SEMICOLON135_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:317:14: ( el_port_list_item ( ';' el_port_list_item )* ';' )
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:317:16: el_port_list_item ( ';' el_port_list_item )* ';'
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:320:14: ( el_port_list_item ( SEMICOLON el_port_list_item )* SEMICOLON )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:320:16: el_port_list_item ( SEMICOLON el_port_list_item )* SEMICOLON
             {
             root_0 = (Object)adaptor.nil();
 
-            pushFollow(FOLLOW_el_port_list_item_in_el_port_list1071);
-            el_port_list_item131=el_port_list_item();
+            pushFollow(FOLLOW_el_port_list_item_in_el_port_list1104);
+            el_port_list_item132=el_port_list_item();
 
             state._fsp--;
 
-            adaptor.addChild(root_0, el_port_list_item131.getTree());
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:317:34: ( ';' el_port_list_item )*
+            adaptor.addChild(root_0, el_port_list_item132.getTree());
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:320:34: ( SEMICOLON el_port_list_item )*
             loop16:
             do {
                 int alt16=2;
                 int LA16_0 = input.LA(1);
 
-                if ( (LA16_0==39) ) {
+                if ( (LA16_0==SEMICOLON) ) {
                     int LA16_1 = input.LA(2);
 
-                    if ( (LA16_1==NUMBER||LA16_1==69) ) {
+                    if ( (LA16_1==NUMBER||LA16_1==RANGE_WORD) ) {
                         alt16=1;
                     }
 
@@ -4354,18 +4406,18 @@ public class Bind9ConfigParser extends Parser {
 
                 switch (alt16) {
             	case 1 :
-            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:317:35: ';' el_port_list_item
+            	    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:320:35: SEMICOLON el_port_list_item
             	    {
-            	    char_literal132=(Token)match(input,39,FOLLOW_39_in_el_port_list1074); 
-            	    char_literal132_tree = (Object)adaptor.create(char_literal132);
-            	    adaptor.addChild(root_0, char_literal132_tree);
+            	    SEMICOLON133=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_el_port_list1107); 
+            	    SEMICOLON133_tree = (Object)adaptor.create(SEMICOLON133);
+            	    adaptor.addChild(root_0, SEMICOLON133_tree);
 
-            	    pushFollow(FOLLOW_el_port_list_item_in_el_port_list1076);
-            	    el_port_list_item133=el_port_list_item();
+            	    pushFollow(FOLLOW_el_port_list_item_in_el_port_list1109);
+            	    el_port_list_item134=el_port_list_item();
 
             	    state._fsp--;
 
-            	    adaptor.addChild(root_0, el_port_list_item133.getTree());
+            	    adaptor.addChild(root_0, el_port_list_item134.getTree());
 
             	    }
             	    break;
@@ -4375,9 +4427,9 @@ public class Bind9ConfigParser extends Parser {
                 }
             } while (true);
 
-            char_literal134=(Token)match(input,39,FOLLOW_39_in_el_port_list1080); 
-            char_literal134_tree = (Object)adaptor.create(char_literal134);
-            adaptor.addChild(root_0, char_literal134_tree);
+            SEMICOLON135=(Token)match(input,SEMICOLON,FOLLOW_SEMICOLON_in_el_port_list1113); 
+            SEMICOLON135_tree = (Object)adaptor.create(SEMICOLON135);
+            adaptor.addChild(root_0, SEMICOLON135_tree);
 
 
             }
@@ -4406,32 +4458,32 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_port_list_item"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:318:1: el_port_list_item : ( NUMBER | ( 'range' NUMBER NUMBER ) );
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:321:1: el_port_list_item : ( NUMBER | ( RANGE_WORD NUMBER NUMBER ) );
     public final Bind9ConfigParser.el_port_list_item_return el_port_list_item() throws RecognitionException {
         Bind9ConfigParser.el_port_list_item_return retval = new Bind9ConfigParser.el_port_list_item_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token NUMBER135=null;
-        Token string_literal136=null;
-        Token NUMBER137=null;
+        Token NUMBER136=null;
+        Token RANGE_WORD137=null;
         Token NUMBER138=null;
+        Token NUMBER139=null;
 
-        Object NUMBER135_tree=null;
-        Object string_literal136_tree=null;
-        Object NUMBER137_tree=null;
+        Object NUMBER136_tree=null;
+        Object RANGE_WORD137_tree=null;
         Object NUMBER138_tree=null;
+        Object NUMBER139_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:318:19: ( NUMBER | ( 'range' NUMBER NUMBER ) )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:321:19: ( NUMBER | ( RANGE_WORD NUMBER NUMBER ) )
             int alt17=2;
             int LA17_0 = input.LA(1);
 
             if ( (LA17_0==NUMBER) ) {
                 alt17=1;
             }
-            else if ( (LA17_0==69) ) {
+            else if ( (LA17_0==RANGE_WORD) ) {
                 alt17=2;
             }
             else {
@@ -4442,36 +4494,36 @@ public class Bind9ConfigParser extends Parser {
             }
             switch (alt17) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:318:21: NUMBER
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:321:21: NUMBER
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    NUMBER135=(Token)match(input,NUMBER,FOLLOW_NUMBER_in_el_port_list_item1088); 
-                    NUMBER135_tree = (Object)adaptor.create(NUMBER135);
-                    adaptor.addChild(root_0, NUMBER135_tree);
+                    NUMBER136=(Token)match(input,NUMBER,FOLLOW_NUMBER_in_el_port_list_item1121); 
+                    NUMBER136_tree = (Object)adaptor.create(NUMBER136);
+                    adaptor.addChild(root_0, NUMBER136_tree);
 
 
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:318:30: ( 'range' NUMBER NUMBER )
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:321:30: ( RANGE_WORD NUMBER NUMBER )
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:318:30: ( 'range' NUMBER NUMBER )
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:318:31: 'range' NUMBER NUMBER
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:321:30: ( RANGE_WORD NUMBER NUMBER )
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:321:31: RANGE_WORD NUMBER NUMBER
                     {
-                    string_literal136=(Token)match(input,69,FOLLOW_69_in_el_port_list_item1093); 
-                    string_literal136_tree = (Object)adaptor.create(string_literal136);
-                    adaptor.addChild(root_0, string_literal136_tree);
+                    RANGE_WORD137=(Token)match(input,RANGE_WORD,FOLLOW_RANGE_WORD_in_el_port_list_item1126); 
+                    RANGE_WORD137_tree = (Object)adaptor.create(RANGE_WORD137);
+                    adaptor.addChild(root_0, RANGE_WORD137_tree);
 
-                    NUMBER137=(Token)match(input,NUMBER,FOLLOW_NUMBER_in_el_port_list_item1095); 
-                    NUMBER137_tree = (Object)adaptor.create(NUMBER137);
-                    adaptor.addChild(root_0, NUMBER137_tree);
-
-                    NUMBER138=(Token)match(input,NUMBER,FOLLOW_NUMBER_in_el_port_list_item1097); 
+                    NUMBER138=(Token)match(input,NUMBER,FOLLOW_NUMBER_in_el_port_list_item1128); 
                     NUMBER138_tree = (Object)adaptor.create(NUMBER138);
                     adaptor.addChild(root_0, NUMBER138_tree);
+
+                    NUMBER139=(Token)match(input,NUMBER,FOLLOW_NUMBER_in_el_port_list_item1130); 
+                    NUMBER139_tree = (Object)adaptor.create(NUMBER139);
+                    adaptor.addChild(root_0, NUMBER139_tree);
 
 
                     }
@@ -4505,23 +4557,23 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_size_spec"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:319:1: el_size_spec : ( ( KMG_NUMBER ) | 'unlimited' | 'default' );
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:322:1: el_size_spec : ( ( KMG_NUMBER ) | UNLIMITED_WORD | DEFAULT_WORD );
     public final Bind9ConfigParser.el_size_spec_return el_size_spec() throws RecognitionException {
         Bind9ConfigParser.el_size_spec_return retval = new Bind9ConfigParser.el_size_spec_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token KMG_NUMBER139=null;
-        Token string_literal140=null;
-        Token string_literal141=null;
+        Token KMG_NUMBER140=null;
+        Token UNLIMITED_WORD141=null;
+        Token DEFAULT_WORD142=null;
 
-        Object KMG_NUMBER139_tree=null;
-        Object string_literal140_tree=null;
-        Object string_literal141_tree=null;
+        Object KMG_NUMBER140_tree=null;
+        Object UNLIMITED_WORD141_tree=null;
+        Object DEFAULT_WORD142_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:319:14: ( ( KMG_NUMBER ) | 'unlimited' | 'default' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:322:14: ( ( KMG_NUMBER ) | UNLIMITED_WORD | DEFAULT_WORD )
             int alt18=3;
             switch ( input.LA(1) ) {
             case KMG_NUMBER:
@@ -4529,12 +4581,12 @@ public class Bind9ConfigParser extends Parser {
                 alt18=1;
                 }
                 break;
-            case 70:
+            case UNLIMITED_WORD:
                 {
                 alt18=2;
                 }
                 break;
-            case 71:
+            case DEFAULT_WORD:
                 {
                 alt18=3;
                 }
@@ -4548,16 +4600,16 @@ public class Bind9ConfigParser extends Parser {
 
             switch (alt18) {
                 case 1 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:319:16: ( KMG_NUMBER )
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:322:16: ( KMG_NUMBER )
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:319:16: ( KMG_NUMBER )
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:319:17: KMG_NUMBER
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:322:16: ( KMG_NUMBER )
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:322:17: KMG_NUMBER
                     {
-                    KMG_NUMBER139=(Token)match(input,KMG_NUMBER,FOLLOW_KMG_NUMBER_in_el_size_spec1106); 
-                    KMG_NUMBER139_tree = (Object)adaptor.create(KMG_NUMBER139);
-                    adaptor.addChild(root_0, KMG_NUMBER139_tree);
+                    KMG_NUMBER140=(Token)match(input,KMG_NUMBER,FOLLOW_KMG_NUMBER_in_el_size_spec1139); 
+                    KMG_NUMBER140_tree = (Object)adaptor.create(KMG_NUMBER140);
+                    adaptor.addChild(root_0, KMG_NUMBER140_tree);
 
 
                     }
@@ -4566,25 +4618,25 @@ public class Bind9ConfigParser extends Parser {
                     }
                     break;
                 case 2 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:319:29: 'unlimited'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:322:29: UNLIMITED_WORD
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    string_literal140=(Token)match(input,70,FOLLOW_70_in_el_size_spec1109); 
-                    string_literal140_tree = (Object)adaptor.create(string_literal140);
-                    adaptor.addChild(root_0, string_literal140_tree);
+                    UNLIMITED_WORD141=(Token)match(input,UNLIMITED_WORD,FOLLOW_UNLIMITED_WORD_in_el_size_spec1142); 
+                    UNLIMITED_WORD141_tree = (Object)adaptor.create(UNLIMITED_WORD141);
+                    adaptor.addChild(root_0, UNLIMITED_WORD141_tree);
 
 
                     }
                     break;
                 case 3 :
-                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:319:41: 'default'
+                    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:322:44: DEFAULT_WORD
                     {
                     root_0 = (Object)adaptor.nil();
 
-                    string_literal141=(Token)match(input,71,FOLLOW_71_in_el_size_spec1111); 
-                    string_literal141_tree = (Object)adaptor.create(string_literal141);
-                    adaptor.addChild(root_0, string_literal141_tree);
+                    DEFAULT_WORD142=(Token)match(input,DEFAULT_WORD,FOLLOW_DEFAULT_WORD_in_el_size_spec1144); 
+                    DEFAULT_WORD142_tree = (Object)adaptor.create(DEFAULT_WORD142);
+                    adaptor.addChild(root_0, DEFAULT_WORD142_tree);
 
 
                     }
@@ -4615,27 +4667,27 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "el_yes_or_no"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:320:1: el_yes_or_no : ( 'yes' | 'no' | 'true' | 'false' | '0' | '1' );
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:323:1: el_yes_or_no : ( YES_OR_NO_WORD | YES_OR_NO_NUM );
     public final Bind9ConfigParser.el_yes_or_no_return el_yes_or_no() throws RecognitionException {
         Bind9ConfigParser.el_yes_or_no_return retval = new Bind9ConfigParser.el_yes_or_no_return();
         retval.start = input.LT(1);
 
         Object root_0 = null;
 
-        Token set142=null;
+        Token set143=null;
 
-        Object set142_tree=null;
+        Object set143_tree=null;
 
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:320:14: ( 'yes' | 'no' | 'true' | 'false' | '0' | '1' )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:323:14: ( YES_OR_NO_WORD | YES_OR_NO_NUM )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:
             {
             root_0 = (Object)adaptor.nil();
 
-            set142=(Token)input.LT(1);
-            if ( (input.LA(1)>=72 && input.LA(1)<=77) ) {
+            set143=(Token)input.LT(1);
+            if ( (input.LA(1)>=YES_OR_NO_WORD && input.LA(1)<=YES_OR_NO_NUM) ) {
                 input.consume();
-                adaptor.addChild(root_0, (Object)adaptor.create(set142));
+                adaptor.addChild(root_0, (Object)adaptor.create(set143));
                 state.errorRecovery=false;
             }
             else {
@@ -4669,55 +4721,55 @@ public class Bind9ConfigParser extends Parser {
 
  
 
-    public static final BitSet FOLLOW_entity_in_list105 = new BitSet(new long[]{0x0001000100000002L});
+    public static final BitSet FOLLOW_entity_in_list105 = new BitSet(new long[]{0x0400080000000002L});
     public static final BitSet FOLLOW_BAD_in_list111 = new BitSet(new long[]{0x0000000000004002L});
     public static final BitSet FOLLOW_zone_in_entity121 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_testing_in_entity126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_zone139 = new BitSet(new long[]{0x0000000000038000L});
-    public static final BitSet FOLLOW_zone_name_in_zone141 = new BitSet(new long[]{0x0000001E00000000L});
-    public static final BitSet FOLLOW_zone_class_in_zone143 = new BitSet(new long[]{0x0000001E00000000L});
+    public static final BitSet FOLLOW_43_in_zone139 = new BitSet(new long[]{0x00000000007F8000L});
+    public static final BitSet FOLLOW_zone_name_in_zone141 = new BitSet(new long[]{0x0000F00000000000L});
+    public static final BitSet FOLLOW_zone_class_in_zone143 = new BitSet(new long[]{0x0000F00000000000L});
     public static final BitSet FOLLOW_zone_forward_block_in_zone146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_zone166 = new BitSet(new long[]{0x0000000000038000L});
-    public static final BitSet FOLLOW_zone_name_in_zone168 = new BitSet(new long[]{0x0000001E00000000L});
-    public static final BitSet FOLLOW_zone_class_in_zone170 = new BitSet(new long[]{0x0000001E00000000L});
+    public static final BitSet FOLLOW_43_in_zone166 = new BitSet(new long[]{0x00000000007F8000L});
+    public static final BitSet FOLLOW_zone_name_in_zone168 = new BitSet(new long[]{0x0000F00000000000L});
+    public static final BitSet FOLLOW_zone_class_in_zone170 = new BitSet(new long[]{0x0000F00000000000L});
     public static final BitSet FOLLOW_zone_delegation_block_in_zone173 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_identifier_in_zone_name196 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lex_identifier_in_zone_name196 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_zone_class0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_zone_forward_block228 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_zone_type_forward_in_zone_forward_block231 = new BitSet(new long[]{0x0000006000000000L});
-    public static final BitSet FOLLOW_zone_forward_param_in_zone_forward_block233 = new BitSet(new long[]{0x0000006000000000L});
-    public static final BitSet FOLLOW_37_in_zone_forward_block236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_zone_forward_block228 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_zone_type_forward_in_zone_forward_block231 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_zone_forward_param_in_zone_forward_block233 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_48_in_zone_forward_block236 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_zone_forward_switch_def_in_zone_forward_param258 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_zone_delegation_block268 = new BitSet(new long[]{0x0000040000000000L});
-    public static final BitSet FOLLOW_zone_type_delegation_in_zone_delegation_block270 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_zone_delegation_block272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_zone_forward_switch_def285 = new BitSet(new long[]{0x0000030000000000L});
-    public static final BitSet FOLLOW_zone_forward_switch_in_zone_forward_switch_def287 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_zone_forward_switch_def289 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_zone_delegation_block268 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_zone_type_delegation_in_zone_delegation_block270 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_zone_delegation_block272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_zone_forward_switch_def285 = new BitSet(new long[]{0x000C000000000000L});
+    public static final BitSet FOLLOW_zone_forward_switch_in_zone_forward_switch_def287 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_zone_forward_switch_def289 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_zone_forward_switch0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_zone_type_master327 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_43_in_zone_type_master329 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_zone_type_master331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_zone_type_slave345 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_44_in_zone_type_slave347 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_zone_type_slave349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_zone_type_stub363 = new BitSet(new long[]{0x0000200000000000L});
-    public static final BitSet FOLLOW_45_in_zone_type_stub365 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_zone_type_stub367 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_zone_type_forward381 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_38_in_zone_type_forward383 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_zone_type_forward385 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_zone_type_hint399 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_46_in_zone_type_hint401 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_zone_type_hint403 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_zone_type_delegation417 = new BitSet(new long[]{0x0000800000000000L});
-    public static final BitSet FOLLOW_47_in_zone_type_delegation419 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_zone_type_delegation421 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_testing437 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_52_in_zone_type_master327 = new BitSet(new long[]{0x0020000000000000L});
+    public static final BitSet FOLLOW_53_in_zone_type_master329 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_zone_type_master331 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_zone_type_slave345 = new BitSet(new long[]{0x0040000000000000L});
+    public static final BitSet FOLLOW_54_in_zone_type_slave347 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_zone_type_slave349 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_zone_type_stub363 = new BitSet(new long[]{0x0080000000000000L});
+    public static final BitSet FOLLOW_55_in_zone_type_stub365 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_zone_type_stub367 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_zone_type_forward381 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_zone_type_forward383 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_zone_type_forward385 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_zone_type_hint399 = new BitSet(new long[]{0x0100000000000000L});
+    public static final BitSet FOLLOW_56_in_zone_type_hint401 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_zone_type_hint403 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_zone_type_delegation417 = new BitSet(new long[]{0x0200000000000000L});
+    public static final BitSet FOLLOW_57_in_zone_type_delegation419 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_zone_type_delegation421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_58_in_testing437 = new BitSet(new long[]{0x0000800000000000L});
     public static final BitSet FOLLOW_testing_block_in_testing439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_testing_block461 = new BitSet(new long[]{0xFBFE002000000000L});
-    public static final BitSet FOLLOW_testing_param_in_testing_block464 = new BitSet(new long[]{0xFBFE002000000000L});
-    public static final BitSet FOLLOW_37_in_testing_block467 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_testing_block461 = new BitSet(new long[]{0xF801000000000000L,0x00000000000001FFL});
+    public static final BitSet FOLLOW_testing_param_in_testing_block464 = new BitSet(new long[]{0xF801000000000000L,0x00000000000001FFL});
+    public static final BitSet FOLLOW_48_in_testing_block467 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_testing_element_domain_name_in_testing_param487 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_testing_element_acl_in_testing_param492 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_testing_element_ip4_in_testing_param497 = new BitSet(new long[]{0x0000000000000002L});
@@ -4732,86 +4784,87 @@ public class Bind9ConfigParser extends Parser {
     public static final BitSet FOLLOW_testing_element_port_list_in_testing_param542 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_testing_element_size_spec_in_testing_param547 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_testing_element_yes_or_no_in_testing_param552 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_testing_element_acl562 = new BitSet(new long[]{0x0000000000018000L});
-    public static final BitSet FOLLOW_el_acl_name_in_testing_element_acl564 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_acl566 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_testing_element_domain_name586 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_el_domain_name_in_testing_element_domain_name588 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_domain_name590 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_testing_element_ip4610 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_el_ip4_addr_in_testing_element_ip4612 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_ip4614 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_testing_element_ip6634 = new BitSet(new long[]{0x00000000000B8000L});
-    public static final BitSet FOLLOW_el_ip6_addr_in_testing_element_ip6636 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_ip6638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_testing_element_ip658 = new BitSet(new long[]{0x00000000000F8000L});
-    public static final BitSet FOLLOW_el_ip_addr_in_testing_element_ip660 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_ip662 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_testing_element_ip_port682 = new BitSet(new long[]{0x0000000000010000L,0x0000000000000002L});
-    public static final BitSet FOLLOW_el_ip_port_in_testing_element_ip_port684 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_ip_port686 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_testing_element_ip_prefix706 = new BitSet(new long[]{0x0000000000350000L});
-    public static final BitSet FOLLOW_el_ip_prefix_in_testing_element_ip_prefix708 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_ip_prefix710 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_testing_element_key_id730 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_el_key_id_in_testing_element_key_id732 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_key_id734 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_57_in_testing_element_key_list754 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_58_in_testing_element_key_list756 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_el_key_list_in_testing_element_key_list758 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_58_in_testing_element_key_list760 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_key_list762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_59_in_testing_element_number782 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_el_number_in_testing_element_number784 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_number786 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_60_in_testing_element_path_name806 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_el_path_name_in_testing_element_path_name808 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_path_name810 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_testing_element_port_list830 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_58_in_testing_element_port_list832 = new BitSet(new long[]{0x0000000000010000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_el_port_list_in_testing_element_port_list834 = new BitSet(new long[]{0x0400000000000000L});
-    public static final BitSet FOLLOW_58_in_testing_element_port_list836 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_port_list838 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_62_in_testing_element_size_spec858 = new BitSet(new long[]{0x0000000000020000L,0x00000000000000C0L});
-    public static final BitSet FOLLOW_el_size_spec_in_testing_element_size_spec860 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_size_spec862 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_testing_element_yes_or_no882 = new BitSet(new long[]{0x0000000000000000L,0x0000000000003F00L});
-    public static final BitSet FOLLOW_el_yes_or_no_in_testing_element_yes_or_no884 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_testing_element_yes_or_no886 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_identifier0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_el_acl_name0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ALPHANUM_WORD_in_el_domain_name940 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_64_in_el_domain_name941 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_ALPHANUM_WORD_in_el_domain_name944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_el_ip4_addr_in_el_ip_addr954 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_el_ip6_addr_in_el_ip_addr958 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IP4_ADDR_in_el_ip4_addr965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_IP6_ADDR_in_el_ip6_addr972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_identifier_in_el_ip6_addr976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_testing_element_acl562 = new BitSet(new long[]{0x00000000007F8000L});
+    public static final BitSet FOLLOW_el_acl_name_in_testing_element_acl564 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_acl566 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_60_in_testing_element_domain_name586 = new BitSet(new long[]{0x00000000007F8000L});
+    public static final BitSet FOLLOW_el_domain_name_in_testing_element_domain_name588 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_domain_name590 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_61_in_testing_element_ip4610 = new BitSet(new long[]{0x0000000000800000L});
+    public static final BitSet FOLLOW_el_ip4_addr_in_testing_element_ip4612 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_ip4614 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_62_in_testing_element_ip6634 = new BitSet(new long[]{0x00000000017F8000L});
+    public static final BitSet FOLLOW_el_ip6_addr_in_testing_element_ip6636 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_ip6638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_testing_element_ip658 = new BitSet(new long[]{0x0000000001FF8000L});
+    public static final BitSet FOLLOW_el_ip_addr_in_testing_element_ip660 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_ip662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_testing_element_ip_port682 = new BitSet(new long[]{0x0000000002010000L});
+    public static final BitSet FOLLOW_el_ip_port_in_testing_element_ip_port684 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_ip_port686 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_testing_element_ip_prefix706 = new BitSet(new long[]{0x000000000C810000L});
+    public static final BitSet FOLLOW_el_ip_prefix_in_testing_element_ip_prefix708 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_ip_prefix710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_testing_element_key_id730 = new BitSet(new long[]{0x00000000007F8000L});
+    public static final BitSet FOLLOW_el_key_id_in_testing_element_key_id732 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_key_id734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_testing_element_key_list754 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_DOUBLE_QUOTE_in_testing_element_key_list756 = new BitSet(new long[]{0x00000000007F8000L});
+    public static final BitSet FOLLOW_el_key_list_in_testing_element_key_list758 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_DOUBLE_QUOTE_in_testing_element_key_list760 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_key_list762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_testing_element_number782 = new BitSet(new long[]{0x0000000000090000L});
+    public static final BitSet FOLLOW_el_number_in_testing_element_number784 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_number786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_testing_element_path_name806 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_el_path_name_in_testing_element_path_name808 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_path_name810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_testing_element_port_list830 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_DOUBLE_QUOTE_in_testing_element_port_list832 = new BitSet(new long[]{0x0000000000110000L});
+    public static final BitSet FOLLOW_el_port_list_in_testing_element_port_list834 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_DOUBLE_QUOTE_in_testing_element_port_list836 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_port_list838 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_testing_element_size_spec858 = new BitSet(new long[]{0x0000000000620000L});
+    public static final BitSet FOLLOW_el_size_spec_in_testing_element_size_spec860 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_size_spec862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_testing_element_yes_or_no882 = new BitSet(new long[]{0x00000000000C0000L});
+    public static final BitSet FOLLOW_el_yes_or_no_in_testing_element_yes_or_no884 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_testing_element_yes_or_no886 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_lex_identifier0 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_lex_number0 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lex_identifier_in_el_acl_name962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lex_identifier_in_el_domain_name972 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000200L});
+    public static final BitSet FOLLOW_73_in_el_domain_name973 = new BitSet(new long[]{0x00000000007F8000L});
+    public static final BitSet FOLLOW_lex_identifier_in_el_domain_name976 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_el_ip4_addr_in_el_ip_addr986 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_el_ip6_addr_in_el_ip_addr990 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IP4_ADDR_in_el_ip4_addr997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_IP6_ADDR_in_el_ip6_addr1004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lex_identifier_in_el_ip6_addr1008 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_el_ip_port0 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_set_in_el_ip_prefix993 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_66_in_el_ip_prefix1008 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_NUMBER_in_el_ip_prefix1009 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_el_domain_name_in_el_key_id1017 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_el_key_id_in_el_key_list1024 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_el_key_list1027 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_el_key_id_in_el_key_list1029 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_el_key_list1033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NUMBER_in_el_number1040 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_el_path_name1048 = new BitSet(new long[]{0xFFFFFFFFFFFFFFF0L,0x0000000000003FE7L});
-    public static final BitSet FOLLOW_set_in_el_path_name1052 = new BitSet(new long[]{0xFFFFFFFFFFFFFFF0L,0x0000000000003FE7L});
-    public static final BitSet FOLLOW_58_in_el_path_name1063 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_el_port_list_item_in_el_port_list1071 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_el_port_list1074 = new BitSet(new long[]{0x0000000000010000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_el_port_list_item_in_el_port_list1076 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_el_port_list1080 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_NUMBER_in_el_port_list_item1088 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_el_port_list_item1093 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_NUMBER_in_el_port_list_item1095 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_NUMBER_in_el_port_list_item1097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_KMG_NUMBER_in_el_size_spec1106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_el_size_spec1109 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_el_size_spec1111 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_set_in_el_ip_prefix1025 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_FORWARD_SLASH_in_el_ip_prefix1040 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_NUMBER_in_el_ip_prefix1042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_el_domain_name_in_el_key_id1050 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_el_key_id_in_el_key_list1057 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_el_key_list1060 = new BitSet(new long[]{0x00000000007F8000L});
+    public static final BitSet FOLLOW_el_key_id_in_el_key_list1062 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_el_key_list1066 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_lex_number_in_el_number1073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DOUBLE_QUOTE_in_el_path_name1081 = new BitSet(new long[]{0xFFFFFFFE7FFFFFF0L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_set_in_el_path_name1085 = new BitSet(new long[]{0xFFFFFFFE7FFFFFF0L,0x00000000000003FFL});
+    public static final BitSet FOLLOW_DOUBLE_QUOTE_in_el_path_name1096 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_el_port_list_item_in_el_port_list1104 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_el_port_list1107 = new BitSet(new long[]{0x0000000000110000L});
+    public static final BitSet FOLLOW_el_port_list_item_in_el_port_list1109 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_SEMICOLON_in_el_port_list1113 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_NUMBER_in_el_port_list_item1121 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RANGE_WORD_in_el_port_list_item1126 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_NUMBER_in_el_port_list_item1128 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_NUMBER_in_el_port_list_item1130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_KMG_NUMBER_in_el_size_spec1139 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_UNLIMITED_WORD_in_el_size_spec1142 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_DEFAULT_WORD_in_el_size_spec1144 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_set_in_el_yes_or_no0 = new BitSet(new long[]{0x0000000000000002L});
 
 }
