@@ -556,9 +556,17 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_validMastersList() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { masters_list another_list; 192.168.2.7; 10.2.3.15 port 1127; 2001:db8:0:1::15; } ";
+        cmd = "testing { masters_list another_list; 192.168.2.7; 10.2.3.15 port 1127 key \"asdf\"; 2001:db8:0:1::15; } ";
 
         successStage1();
     }
 
+    @Test
+    public void test_validAddressMatchList() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { address_match_list 10.2.3.0/8;172.16.30.0/16;!192.168.0.0/16;{192.168.1.1;};; } ";
+
+        successStage1();
+    }
 }

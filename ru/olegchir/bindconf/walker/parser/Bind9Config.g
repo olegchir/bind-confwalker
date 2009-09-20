@@ -260,6 +260,7 @@ testing_param
 	|	testing_element_dialup_option_default
 	|	testing_element_dialup_option_slavestub
 	|	testing_element_masters_list
+	|	testing_element_address_match_list
 	;
 testing_element_acl
 	:	'acl_name' el_acl_name ';' -> ^(PLIST_PARAM 'acl_name' el_acl_name)
@@ -312,6 +313,9 @@ testing_element_dialup_option_slavestub
 testing_element_masters_list
 	:	'masters_list' el_masters_list ';' -> ^(PLIST_PARAM 'masters_list' el_masters_list)
 	;
+testing_element_address_match_list
+	:	'address_match_list' el_address_match_list ';' -> ^(PLIST_PARAM 'address_match_list' el_address_match_list)
+	;
 			
 //Semantic support for Configfile elements. 
 lex_identifier	:	ALPHANUM_NONSTD | NUMBER | KMG_NUMBER | lex_yes_or_no
@@ -324,7 +328,9 @@ lex_yes_or_no	:	 YES_OR_NO_WORD | TRUE_OR_FALSE_WORD | ZERO_OR_ONE_WORD;
 
 //Configfile elements	
 el_acl_name	: 	lex_identifier;
-el_masters_list	:	el_masters_list_item (SEMICOLON el_masters_list_item)+ SEMICOLON?;	
+el_address_match_list : el_address_match_list_item (SEMICOLON el_address_match_list_item)* SEMICOLON;	
+el_address_match_list_item : EXCLAM? (el_ip_addr | el_ip_prefix | KEY_WORD el_key_id | el_acl_name | LBRACE el_address_match_list RBRACE );	
+el_masters_list	:	el_masters_list_item (SEMICOLON el_masters_list_item)* SEMICOLON?;	
 el_masters_list_item :	(lex_identifier | (el_ip_addr (PORT_WORD el_ip_port)?))(KEY_WORD ONE_LINE_DOUBLE_QUOTED_STRING)? ;
 el_domain_name 	: 	DOMAIN_NAME;	
 el_ip_addr 	: 	el_ip4_addr | el_ip6_addr;
@@ -396,6 +402,12 @@ COLON
 DOT	:	'.'
 	;
 PERCENT :	'%'
+	;
+EXCLAM 	:	'!'
+	;
+LBRACE	:	'{'
+	;
+RBRACE	:	'}'
 	;	
 
 //Words, that must be recognized on stage1, but also can match identifiers
