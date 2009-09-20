@@ -320,7 +320,7 @@ lex_yes_or_no	:	 YES_OR_NO_WORD | TRUE_OR_FALSE_WORD | ZERO_OR_ONE_WORD;
 
 //Configfile elements	
 el_acl_name	: 	lex_identifier;
-el_domain_name 	: 	(lex_identifier'.')+lex_identifier;	
+el_domain_name 	: 	DOMAIN_NAME;	
 el_ip_addr 	: 	el_ip4_addr | el_ip6_addr;
 el_ip4_addr	:	IP4_ADDR;
 el_ip6_addr	:	IP6_ADDR | lex_identifier;
@@ -438,6 +438,10 @@ fragment DIGIT	: '0'..'9';
 
 KMG_NUMBER
 	:	NUMBER ('K'|'k'|'M'|'m'|'G'|'g');
+	
+DOMAIN_NAME
+	:	(ALPHANUM_NONSTD'.')+ALPHANUM_NONSTD
+	;
 	
 ALPHANUM_NONSTD	
 	:	('a'..'z'|'A'..'Z'|'_'|'0'..'9')* 
