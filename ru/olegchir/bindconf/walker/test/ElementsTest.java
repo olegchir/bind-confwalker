@@ -113,9 +113,9 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_invalidIP6() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { ip6 @; } ";
+        cmd = "testing { ip6  ::XXX; } ";
 
-        failStage1Silent("IP6 must be in valid format (at least 1::2::3::4!)");
+        failStage1Silent("IP6 must contain only hexadecimal or binary chars");
     }
 
     @Test
@@ -551,4 +551,14 @@ public class ElementsTest extends ParserTestTemplate {
 
         failStage1Silent("dialup_option in default zone types must be yes_or_no or notify only. ");
     }
+
+    @Test
+    public void test_validMastersList() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { masters_list another_list; 192.168.2.7; 10.2.3.15 port 1127; 2001:db8:0:1::15; } ";
+
+        successStage1();
+    }
+
 }
