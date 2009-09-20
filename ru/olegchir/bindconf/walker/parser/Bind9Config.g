@@ -310,10 +310,10 @@ testing_element_dialup_option_slavestub
 	;
 			
 //Semantic support for Configfile elements. 
-//We need this because some token types are too ambigous to detect it in stage1 lexer.
 lex_identifier	:	ALPHANUM_NONSTD | NUMBER | KMG_NUMBER | lex_yes_or_no
 		|	RANGE_WORD | UNLIMITED_WORD | DEFAULT_WORD
 		|	NOTIFY_WORD | NOTIFYPASSIVE_OR_REFRESH_OR_PASSIVE_WORD
+		|	PORT_WORD | KEY_WORD | FFFF_WORD
 		;
 lex_number	:	NUMBER | ZERO_OR_ONE_WORD;
 lex_yes_or_no	:	 YES_OR_NO_WORD | TRUE_OR_FALSE_WORD | ZERO_OR_ONE_WORD;
@@ -323,7 +323,11 @@ el_acl_name	: 	lex_identifier;
 el_domain_name 	: 	DOMAIN_NAME;	
 el_ip_addr 	: 	el_ip4_addr | el_ip6_addr;
 el_ip4_addr	:	IP4_ADDR;
-el_ip6_addr	:	IP6_ADDR | lex_identifier;
+el_ip6_addr	:	(IP6_NORM_ADDR_BASE | IP6_SHORTLEFT_ADDR_BASE | IP6_SHORTRIGHT_ADDR_BASE
+			|IP6_SHORTMID_ADDR_BASE | IP6_IP4COMPAT_ADDR_BASE | IP6_IP4LINK_ADDR_BASE
+			| DOUBLE_COLON | NUMBER )
+			(PERCENT lex_identifier )?
+		;
 el_ip_port	:	NUMBER|ASTERISK;
 el_ip_prefix	: 	(NUMBER | IP4_SHORT_2 | IP4_SHORT_3 | IP4_ADDR)FORWARD_SLASH NUMBER;
 el_key_id	: 	el_domain_name;
@@ -376,6 +380,16 @@ SEMICOLON
 	;
 DOUBLE_QUOTE
 	:	'"'
+	;
+DOUBLE_COLON
+	:	COLON COLON
+	;
+COLON
+	:	':'
+	;
+DOT	:	'.'
+	;
+PERCENT :	'%'
 	;	
 
 //Words, that must be recognized on stage1, but also can match identifiers
@@ -414,22 +428,36 @@ NOTIFY_WORD
 	;
 NOTIFYPASSIVE_OR_REFRESH_OR_PASSIVE_WORD
 	:	'notify-passive'|'refresh'|'passive'
+	;
+	
+//For MASTERS_LIST element:
+PORT_WORD 
+	:	'port'
+	;
+	
+KEY_WORD:	'key'
+	;
+	
+//For IPv6 binmask
+
+FFFF_WORD
+	:	'ffff'|'FFFF'|'fFFF'|'ffFF'|'fffF'|'FFFf'|'FFff'|'Ffff'|'fFFf'|'FffF'
 	;	
 
 //IP addresses. All IPs contains a dot ('.'), so can be recognized lexically	
-IP4_ADDR:	THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER
+IP4_ADDR:	THREE_DIGIT_NUMBER DOT THREE_DIGIT_NUMBER DOT THREE_DIGIT_NUMBER DOT THREE_DIGIT_NUMBER
 	;
 IP4_SHORT_3
-	:	THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER
+	:	THREE_DIGIT_NUMBER DOT THREE_DIGIT_NUMBER DOT THREE_DIGIT_NUMBER
 	;
 IP4_SHORT_2
-	:	THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER
+	:	THREE_DIGIT_NUMBER DOT THREE_DIGIT_NUMBER
 	;
 fragment THREE_DIGIT_NUMBER 
 	:	DIGIT
 	|	DIGIT DIGIT
 	|	DIGIT DIGIT DIGIT
-	;
+	;	
 
 //Numbers and Alphanumeric words. Many of Alphanumerics catched by prefedined Words.
 NUMBER	:	DIGIT+;
@@ -443,19 +471,62 @@ DOMAIN_NAME
 	:	(ALPHANUM_NONSTD'.')+ALPHANUM_NONSTD
 	;
 	
+IP6_NORM_ADDR_BASE 
+	:	FOUR_CHAR_HEXNUM COLON	
+		FOUR_CHAR_HEXNUM COLON	
+		FOUR_CHAR_HEXNUM COLON	
+		FOUR_CHAR_HEXNUM COLON	
+		FOUR_CHAR_HEXNUM COLON	
+		FOUR_CHAR_HEXNUM COLON	
+		FOUR_CHAR_HEXNUM COLON	
+		FOUR_CHAR_HEXNUM
+	;
+	
+IP6_SHORTLEFT_ADDR_BASE 
+	:	DOUBLE_COLON	
+		(FOUR_CHAR_HEXNUM COLON)*	
+		FOUR_CHAR_HEXNUM
+	;
+IP6_SHORTRIGHT_ADDR_BASE 
+	:	FOUR_CHAR_HEXNUM	
+		(FOUR_CHAR_HEXNUM COLON)*			
+		DOUBLE_COLON
+	;
+IP6_SHORTMID_ADDR_BASE 
+	:	FOUR_CHAR_HEXNUM	
+		(COLON FOUR_CHAR_HEXNUM )*			
+		DOUBLE_COLON
+		(FOUR_CHAR_HEXNUM COLON)*	
+		FOUR_CHAR_HEXNUM
+	;
+IP6_IP4COMPAT_ADDR_BASE
+	:	DOUBLE_COLON IP4_ADDR
+	;
+IP6_IP4LINK_ADDR_BASE
+	:	DOUBLE_COLON FFFF_WORD COLON IP4_ADDR
+	;		
+	
+fragment FOUR_CHAR_HEXNUM
+	: 	HEXNUM_CHAR HEXNUM_CHAR HEXNUM_CHAR HEXNUM_CHAR
+	|	HEXNUM_CHAR HEXNUM_CHAR HEXNUM_CHAR
+	|	HEXNUM_CHAR HEXNUM_CHAR
+	|	HEXNUM_CHAR		
+	;
+	
+fragment HEXNUM_CHAR 
+	:	('a'..'f'|'A'..'F'|'0'..'9')
+	;
+	
 ALPHANUM_NONSTD	
-	:	('a'..'z'|'A'..'Z'|'_'|'0'..'9')* 
+	:	ALPHANUM_CHAR* 
+	;
+	
+fragment ALPHANUM_CHAR 
+	:	('a'..'z'|'A'..'Z'|'_'|'0'..'9')
 	;
 	
 fragment ANY_ASCII_ALPHANUM
 	:	('\u0020'..'\u007F')
-	;
-	
-IP6_ADDR:	(IP6_VALID_CHAR)+
-	;
-	
-fragment IP6_VALID_CHAR
-	: (('a'..'z')|('A'..'Z')|':'|'%'|('0'..'9'))+
 	;
 	
 BAD 	: . { overrider.registerLexicalError("The character '" + $text + "' mismatched."); } 

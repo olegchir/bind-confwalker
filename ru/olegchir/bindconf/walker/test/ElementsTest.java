@@ -41,7 +41,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_IP6type1() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { ip6 a::1::2::3; } ";
+        cmd = "testing { ip6 1:2:3:4:5:6:7:8%ne; } ";
 
         successStage1();
     }
@@ -50,7 +50,61 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_IP6type2() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { ip6 asdf; } ";
+        cmd = "testing { ip6 ::1; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_IP6type3() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip6 1::; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_IP6type4() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip6 1::2; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_IP6type5() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip6 ::192.168.1.1; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_IP6type6() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip6 ::ffff:192.168.1.1; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_IP6type7() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip6 ::%ne0; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_IP6type8() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { ip6 001; } ";
 
         successStage1();
     }
@@ -77,7 +131,7 @@ public class ElementsTest extends ParserTestTemplate {
     public void test_IPtype2() throws Exception {
         trace(Thread.currentThread().getStackTrace());
 
-        cmd = "testing { ip 1::2::3::4; } ";
+        cmd = "testing { ip 1:2:3:4:5:6:7:8; } ";
 
         successStage1();
     }
