@@ -257,6 +257,8 @@ testing_param
 	|	testing_element_port_list
 	|	testing_element_size_spec
 	|	testing_element_yes_or_no
+	|	testing_element_dialup_option_default
+	|	testing_element_dialup_option_slavestub
 	;
 testing_element_acl
 	:	'acl_name' el_acl_name ';' -> ^(PLIST_PARAM 'acl_name' el_acl_name)
@@ -300,6 +302,12 @@ testing_element_size_spec
 testing_element_yes_or_no
 	:	'yes_or_no' el_yes_or_no ';' -> ^(PLIST_PARAM 'yes_or_no' el_yes_or_no)
 	;
+testing_element_dialup_option_default
+	:	'dialup_option_default' el_dialup_option_default ';' -> ^(PLIST_PARAM 'yes_or_no' el_dialup_option_default)
+	;
+testing_element_dialup_option_slavestub
+	:	'dialup_option_slavestub' el_dialup_option_slavestub ';' -> ^(PLIST_PARAM 'yes_or_no' el_dialup_option_slavestub)
+	;
 			
 //Semantic support for Configfile elements. 
 //We need this because some token types are too ambigous to detect it in stage1 lexer.
@@ -324,7 +332,9 @@ el_path_name	:	DOUBLE_QUOTE! (~(CR|LF|DOUBLE_QUOTE))* DOUBLE_QUOTE!;
 el_port_list	:	el_port_list_item (SEMICOLON el_port_list_item)* SEMICOLON; 
 el_port_list_item :	NUMBER | (RANGE_WORD NUMBER NUMBER);
 el_size_spec	:	(KMG_NUMBER)|UNLIMITED_WORD|DEFAULT_WORD;
-el_yes_or_no	:	lex_yes_or_no;	
+el_yes_or_no	:	lex_yes_or_no;
+el_dialup_option_default : lex_yes_or_no | NOTIFY_WORD;
+el_dialup_option_slavestub : el_dialup_option_default | NOTIFYPASSIVE_OR_REFRESH_OR_PASSIVE_WORD;		
 
 //Comments
 COMMENT	:	(C_COMMENT | CPP_COMMENT | PERL_COMMENT){ $channel=HIDDEN; }
@@ -368,6 +378,8 @@ DOUBLE_QUOTE
 	;	
 
 //Words, that must be recognized on stage1, but also can match identifiers
+
+//For YES_OR_NO element:
 YES_OR_NO_WORD
 	:	('yes'|'no')
 	;
@@ -379,7 +391,8 @@ TRUE_OR_FALSE_WORD
 ZERO_OR_ONE_WORD
 	:	('0'|'1')
 	;	
-	
+
+//For PORT_LIST element:	
 RANGE_WORD
 	:	'range'
 	;
@@ -388,9 +401,17 @@ UNLIMITED_WORD
 	;
 DEFAULT_WORD
 	:	'default'
+	;
+	
+//For DIALUP_OPTION element:
+NOTIFY_WORD
+	:	'notify'
+	;
+NOTIFYPASSIVE_OR_REFRESH_OR_PASSIVE_WORD
+	:	'notify-passive'|'refresh'|'passive'
 	;	
 
-//IP addresses. All IPs contain dot ('.'), so can be recognized lexically	
+//IP addresses. All IPs contains a dot ('.'), so can be recognized lexically	
 IP4_ADDR:	THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER
 	;
 IP4_SHORT_3

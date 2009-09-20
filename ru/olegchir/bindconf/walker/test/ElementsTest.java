@@ -452,4 +452,40 @@ public class ElementsTest extends ParserTestTemplate {
 
         failStage1Silent("yes_or_no can be only 'yes','no','true','false','1','0' ");
     }
+
+    @Test
+    public void test_validDialupOptionDefault() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { dialup_option_default no; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validDialupOptionSlaveOrStubType1() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { dialup_option_slavestub passive; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validDialupOptionSlaveOrStubType2() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { dialup_option_slavestub yes; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_invalidDialupOptionDefault() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { testing { dialup_option_default passive; }  } ";
+
+        failStage1Silent("dialup_option in default zone types must be yes_or_no or notify only. ");
+    }
 }
