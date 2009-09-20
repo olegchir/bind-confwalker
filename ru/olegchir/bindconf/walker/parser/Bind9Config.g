@@ -256,6 +256,7 @@ testing_param
 	|	testing_element_path_name
 	|	testing_element_port_list
 	|	testing_element_size_spec
+	|	testing_element_yes_or_no
 	;
 testing_element_acl
 	:	'acl_name' el_acl_name ';' -> ^(PLIST_PARAM 'acl_name' el_acl_name)
@@ -295,6 +296,9 @@ testing_element_port_list
 	;
 testing_element_size_spec
 	:	'size_spec' el_size_spec ';' -> ^(PLIST_PARAM 'size_spec' el_size_spec)
+	;
+testing_element_yes_or_no
+	:	'yes_or_no' el_yes_or_no ';' -> ^(PLIST_PARAM 'yes_or_no' el_yes_or_no)
 	;		
 //Semantic support for Configfile elements
 identifier	:	ALPHANUM_WORD | NUMBER | KMG_NUMBER;
@@ -312,7 +316,8 @@ el_number	:	NUMBER;
 el_path_name	:	'"'! (~('\r'|'\n'|'"'))* '"'!;
 el_port_list	:	el_port_list_item (';' el_port_list_item)* ';'; 
 el_port_list_item :	NUMBER | ('range' NUMBER NUMBER);
-el_size_spec	:	(KMG_NUMBER)|'unlimited'|'default';	
+el_size_spec	:	(KMG_NUMBER)|'unlimited'|'default';
+el_yes_or_no	:	'yes'|'no'|'true'|'false'|'0'|'1';	
 
 //Comments
 COMMENT	:	(C_COMMENT | CPP_COMMENT | PERL_COMMENT){ $channel=HIDDEN; }
@@ -334,10 +339,6 @@ fragment NL
 	: ('\r'? '\n')=> '\r'? '\n'
   	| '\r'
   	;		
-//Pure lexical part
-fragment TYPE_YES_OR_NO
-	:	'yes'|'no'|'true'|'false'|'0'|'1'
-	;
 	
 IP4_ADDR:	THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER'.'THREE_DIGIT_NUMBER
 	;

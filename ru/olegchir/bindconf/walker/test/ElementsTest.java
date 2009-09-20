@@ -389,4 +389,67 @@ public class ElementsTest extends ParserTestTemplate {
 
         failStage1Silent("size_spec must be [number followed by K,k,M,m] or word 'unlimited' or word 'default'");
     }
+
+    @Test
+    public void test_validYesOrNoType1() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { yes_or_no yes; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validYesOrNoType2() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { yes_or_no no; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validYesOrNoType3() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { yes_or_no true; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validYesOrNoType4() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { yes_or_no false; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validYesOrNoType5() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { yes_or_no 0; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_validYesOrNoType6() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { yes_or_no 1; } ";
+
+        successStage1();
+    }
+
+    @Test
+    public void test_invalidTypeYesOrNo() throws Exception {
+        trace(Thread.currentThread().getStackTrace());
+
+        cmd = "testing { testing { yes_or_no OMG_WTF_APSTENU!; }  } ";
+
+        failStage1Silent("yes_or_no can be only 'yes','no','true','false','1','0' ");
+    }
 }
