@@ -1,4 +1,4 @@
-// $ANTLR 3.1.2 O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g 2009-09-20 14:57:22
+// $ANTLR 3.1.2 O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g 2009-09-20 15:04:49
 
 package ru.olegchir.bindconf.walker.parser.generated;
 import ru.olegchir.bindconf.walker.parser.override.Bind9ParserOverrider;
@@ -504,7 +504,7 @@ public class Bind9ConfigParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: zone_forward_block, zone_class, zone_name
+                    // elements: zone_name, zone_class, zone_forward_block
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -582,7 +582,7 @@ public class Bind9ConfigParser extends Parser {
 
 
                     // AST REWRITE
-                    // elements: zone_class, zone_name
+                    // elements: zone_name, zone_class
                     // token labels: 
                     // rule labels: retval
                     // token list labels: 
@@ -1026,7 +1026,7 @@ public class Bind9ConfigParser extends Parser {
 
 
             // AST REWRITE
-            // elements: 54, zone_forward_switch
+            // elements: zone_forward_switch, 54
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2217,7 +2217,7 @@ public class Bind9ConfigParser extends Parser {
 
 
             // AST REWRITE
-            // elements: 64, el_acl_name
+            // elements: el_acl_name, 64
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2393,7 +2393,7 @@ public class Bind9ConfigParser extends Parser {
 
 
             // AST REWRITE
-            // elements: el_ip4_addr, 66
+            // elements: 66, el_ip4_addr
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2481,7 +2481,7 @@ public class Bind9ConfigParser extends Parser {
 
 
             // AST REWRITE
-            // elements: 67, el_ip6_addr
+            // elements: el_ip6_addr, 67
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2657,7 +2657,7 @@ public class Bind9ConfigParser extends Parser {
 
 
             // AST REWRITE
-            // elements: el_ip_port, 69
+            // elements: 69, el_ip_port
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -2833,7 +2833,7 @@ public class Bind9ConfigParser extends Parser {
 
 
             // AST REWRITE
-            // elements: 71, el_key_id
+            // elements: el_key_id, 71
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3097,7 +3097,7 @@ public class Bind9ConfigParser extends Parser {
 
 
             // AST REWRITE
-            // elements: el_path_name, 74
+            // elements: 74, el_path_name
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3273,7 +3273,7 @@ public class Bind9ConfigParser extends Parser {
 
 
             // AST REWRITE
-            // elements: 76, el_size_spec
+            // elements: el_size_spec, 76
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3361,7 +3361,7 @@ public class Bind9ConfigParser extends Parser {
 
 
             // AST REWRITE
-            // elements: 77, el_yes_or_no
+            // elements: el_yes_or_no, 77
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3413,7 +3413,7 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "testing_element_dialup_option_default"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:305:1: testing_element_dialup_option_default : 'dialup_option_default' el_dialup_option_default ';' -> ^( PLIST_PARAM 'yes_or_no' el_dialup_option_default ) ;
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:305:1: testing_element_dialup_option_default : 'dialup_option_default' el_dialup_option_default ';' -> ^( PLIST_PARAM 'dialup_option_default' el_dialup_option_default ) ;
     public final Bind9ConfigParser.testing_element_dialup_option_default_return testing_element_dialup_option_default() throws RecognitionException {
         Bind9ConfigParser.testing_element_dialup_option_default_return retval = new Bind9ConfigParser.testing_element_dialup_option_default_return();
         retval.start = input.LT(1);
@@ -3431,7 +3431,7 @@ public class Bind9ConfigParser extends Parser {
         RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
         RewriteRuleSubtreeStream stream_el_dialup_option_default=new RewriteRuleSubtreeStream(adaptor,"rule el_dialup_option_default");
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:306:2: ( 'dialup_option_default' el_dialup_option_default ';' -> ^( PLIST_PARAM 'yes_or_no' el_dialup_option_default ) )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:306:2: ( 'dialup_option_default' el_dialup_option_default ';' -> ^( PLIST_PARAM 'dialup_option_default' el_dialup_option_default ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:306:4: 'dialup_option_default' el_dialup_option_default ';'
             {
             string_literal106=(Token)match(input,78,FOLLOW_78_in_testing_element_dialup_option_default908);  
@@ -3449,7 +3449,7 @@ public class Bind9ConfigParser extends Parser {
 
 
             // AST REWRITE
-            // elements: el_dialup_option_default, 77
+            // elements: el_dialup_option_default, 78
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3459,14 +3459,14 @@ public class Bind9ConfigParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 306:57: -> ^( PLIST_PARAM 'yes_or_no' el_dialup_option_default )
+            // 306:57: -> ^( PLIST_PARAM 'dialup_option_default' el_dialup_option_default )
             {
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:306:60: ^( PLIST_PARAM 'yes_or_no' el_dialup_option_default )
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:306:60: ^( PLIST_PARAM 'dialup_option_default' el_dialup_option_default )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, (Object)adaptor.create(77, "77"));
+                adaptor.addChild(root_1, stream_78.nextNode());
                 adaptor.addChild(root_1, stream_el_dialup_option_default.nextTree());
 
                 adaptor.addChild(root_0, root_1);
@@ -3501,7 +3501,7 @@ public class Bind9ConfigParser extends Parser {
     };
 
     // $ANTLR start "testing_element_dialup_option_slavestub"
-    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:308:1: testing_element_dialup_option_slavestub : 'dialup_option_slavestub' el_dialup_option_slavestub ';' -> ^( PLIST_PARAM 'yes_or_no' el_dialup_option_slavestub ) ;
+    // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:308:1: testing_element_dialup_option_slavestub : 'dialup_option_slavestub' el_dialup_option_slavestub ';' -> ^( PLIST_PARAM 'dialup_option_slavestub' el_dialup_option_slavestub ) ;
     public final Bind9ConfigParser.testing_element_dialup_option_slavestub_return testing_element_dialup_option_slavestub() throws RecognitionException {
         Bind9ConfigParser.testing_element_dialup_option_slavestub_return retval = new Bind9ConfigParser.testing_element_dialup_option_slavestub_return();
         retval.start = input.LT(1);
@@ -3519,7 +3519,7 @@ public class Bind9ConfigParser extends Parser {
         RewriteRuleTokenStream stream_SEMICOLON=new RewriteRuleTokenStream(adaptor,"token SEMICOLON");
         RewriteRuleSubtreeStream stream_el_dialup_option_slavestub=new RewriteRuleSubtreeStream(adaptor,"rule el_dialup_option_slavestub");
         try {
-            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:309:2: ( 'dialup_option_slavestub' el_dialup_option_slavestub ';' -> ^( PLIST_PARAM 'yes_or_no' el_dialup_option_slavestub ) )
+            // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:309:2: ( 'dialup_option_slavestub' el_dialup_option_slavestub ';' -> ^( PLIST_PARAM 'dialup_option_slavestub' el_dialup_option_slavestub ) )
             // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:309:4: 'dialup_option_slavestub' el_dialup_option_slavestub ';'
             {
             string_literal109=(Token)match(input,79,FOLLOW_79_in_testing_element_dialup_option_slavestub932);  
@@ -3537,7 +3537,7 @@ public class Bind9ConfigParser extends Parser {
 
 
             // AST REWRITE
-            // elements: 77, el_dialup_option_slavestub
+            // elements: 79, el_dialup_option_slavestub
             // token labels: 
             // rule labels: retval
             // token list labels: 
@@ -3547,14 +3547,14 @@ public class Bind9ConfigParser extends Parser {
             RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.tree:null);
 
             root_0 = (Object)adaptor.nil();
-            // 309:61: -> ^( PLIST_PARAM 'yes_or_no' el_dialup_option_slavestub )
+            // 309:61: -> ^( PLIST_PARAM 'dialup_option_slavestub' el_dialup_option_slavestub )
             {
-                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:309:64: ^( PLIST_PARAM 'yes_or_no' el_dialup_option_slavestub )
+                // O:\\Projects\\test\\parallels\\bind-webconf\\bind-confwalker\\src\\ru\\olegchir\\bindconf\\walker\\parser\\Bind9Config.g:309:64: ^( PLIST_PARAM 'dialup_option_slavestub' el_dialup_option_slavestub )
                 {
                 Object root_1 = (Object)adaptor.nil();
                 root_1 = (Object)adaptor.becomeRoot((Object)adaptor.create(PLIST_PARAM, "PLIST_PARAM"), root_1);
 
-                adaptor.addChild(root_1, (Object)adaptor.create(77, "77"));
+                adaptor.addChild(root_1, stream_79.nextNode());
                 adaptor.addChild(root_1, stream_el_dialup_option_slavestub.nextTree());
 
                 adaptor.addChild(root_0, root_1);

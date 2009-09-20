@@ -303,10 +303,10 @@ testing_element_yes_or_no
 	:	'yes_or_no' el_yes_or_no ';' -> ^(PLIST_PARAM 'yes_or_no' el_yes_or_no)
 	;
 testing_element_dialup_option_default
-	:	'dialup_option_default' el_dialup_option_default ';' -> ^(PLIST_PARAM 'yes_or_no' el_dialup_option_default)
+	:	'dialup_option_default' el_dialup_option_default ';' -> ^(PLIST_PARAM 'dialup_option_default' el_dialup_option_default)
 	;
 testing_element_dialup_option_slavestub
-	:	'dialup_option_slavestub' el_dialup_option_slavestub ';' -> ^(PLIST_PARAM 'yes_or_no' el_dialup_option_slavestub)
+	:	'dialup_option_slavestub' el_dialup_option_slavestub ';' -> ^(PLIST_PARAM 'dialup_option_slavestub' el_dialup_option_slavestub)
 	;
 			
 //Semantic support for Configfile elements. 
